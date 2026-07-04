@@ -1,5 +1,5 @@
 {
-  "id": "abfalter",
+  "id": "customgame",
   "title": "Anima Beyond Fantasy Altered",
   "description": "Engligh Version of 'Fantasy Flight Games' Anima Beyond Fantasy System altered by some house rules.",
   "version": "1.6.3",
@@ -9,16 +9,15 @@
   },
   "authors": [
     {
-      "name": "Jesse Davis (Luminita)",
-      "email": "Davis.Jesse97@outlook.com",
-      "discord": "lumenita"
+      "name": "2econd",
+      "email": "jamster7787@yahoo.com"
     }
   ],
   "esmodules": [
-    "module/abfalter.js"
+    "module/customgame.js"
   ],
   "styles": [
-    "css/abfalter.css"
+    "css/customgame.css"
   ],
   "primaryTokenAttribute": "lp",
   "grid": {
@@ -26,9 +25,9 @@
     "units": "ft"
   },
   "license": "LICENSE.txt",
-  "url": "https://github.com/Lumenita/abfalter",
-  "manifest": "https://raw.githubusercontent.com/Lumenita/abfalter/main/system.json",
-  "download": "https://github.com/Lumenita/abfalter/releases/download/v1.6.3/abfalter.zip",
+  "url": "https://github.com/2econd/customgame",
+  "manifest": "https://raw.githubusercontent.com/2econd/customgame/main/system.json",
+  "download": "https://github.com/2econd/customgame/releases/download/v1.6.3/customgame.zip",
   "languages": [
     {
       "lang": "en",
@@ -55,7 +54,7 @@
     {
       "name": "compendiums",
       "label": "System Tutorials",
-      "system": "abfalter",
+      "system": "customgame",
       "path": "./packs/compendiums",
       "type": "JournalEntry",
       "private": false,
@@ -64,7 +63,7 @@
     {
       "name": "classes",
       "label": "Classes",
-      "system": "abfalter",
+      "system": "customgame",
       "path": "./packs/classes",
       "type": "Item",
       "private": false,
@@ -73,7 +72,7 @@
     {
       "name": "advantages-and-disadvantages",
       "label": "Advantages & Disadvantages",
-      "system": "abfalter",
+      "system": "customgame",
       "path": "./packs/advantages-and-disadvantages",
       "type": "Item",
       "private": false,
@@ -82,7 +81,7 @@
     {
       "name": "equipment",
       "label": "Equipment",
-      "system": "abfalter",
+      "system": "customgame",
       "path": "./packs/equipment",
       "type": "Item",
       "private": false,
@@ -91,7 +90,7 @@
     {
       "name": "spells",
       "label": "Spells",
-      "system": "abfalter",
+      "system": "customgame",
       "path": "./packs/spells",
       "type": "Item",
       "private": false,
@@ -100,7 +99,7 @@
     {
       "name": "psychic-powers",
       "label": "Psychic Powers",
-      "system": "abfalter",
+      "system": "customgame",
       "path": "./packs/psychic-powers",
       "type": "Item",
       "private": false,
@@ -109,7 +108,7 @@
     {
       "name": "martial-arts",
       "label": "Martial Arts",
-      "system": "abfalter",
+      "system": "customgame",
       "path": "./packs/martial-arts",
       "type": "Item",
       "private": false,
@@ -118,7 +117,7 @@
     {
       "name": "incarnations",
       "label": "Incarnations",
-      "system": "abfalter",
+      "system": "customgame",
       "path": "./packs/incarnations",
       "type": "Item",
       "private": false,
@@ -127,7 +126,7 @@
     {
       "name": "invocations",
       "label": "Invocations",
-      "system": "abfalter",
+      "system": "customgame",
       "path": "./packs/invocations",
       "type": "Item",
       "private": false,
@@ -137,7 +136,7 @@
     {
       "name": "creature-powersabilities",
       "label": "Creature Powers",
-      "system": "abfalter",
+      "system": "customgame",
       "path": "./packs/creature-powersabilities",
       "type": "Item",
       "private": false,
@@ -146,7 +145,7 @@
     {
       "name": "combat-modules",
       "label": "Combat Modules",
-      "system": "abfalter",
+      "system": "customgame",
       "path": "./packs/combat-modules",
       "type": "Item",
       "private": false,
@@ -155,7 +154,7 @@
     {
       "name": "ki-techniques",
       "label": "Ki Techniques",
-      "system": "abfalter",
+      "system": "customgame",
       "path": "./packs/ki-techniques",
       "type": "Item",
       "private": false,
@@ -164,7 +163,7 @@
     {
       "name": "roll-tables",
       "label": "Roll Tables",
-      "system": "abfalter",
+      "system": "customgame",
       "path": "./packs/roll-tables",
       "type": "RollTable",
       "private": false
@@ -172,7 +171,7 @@
     {
       "name": "macros",
       "label": "System Macros",
-      "system": "abfalter",
+      "system": "customgame",
       "path": "./packs/macros",
       "type": "Macro",
       "private": false
@@ -180,7 +179,7 @@
     {
       "name": "characters-and-creatures",
       "label": "Characters & Creatures",
-      "system": "abfalter",
+      "system": "customgame",
       "path": "./packs/characters-and-creatures",
       "type": "Actor",
       "private": false
@@ -188,7 +187,7 @@
     {
       "name": "references",
       "label": "References",
-      "system": "abfalter",
+      "system": "customgame",
       "path": "./packs/references",
       "type": "JournalEntry",
       "private": false
@@ -196,7 +195,7 @@
     {
       "name": "backgrounds",
       "label": "Background Items",
-      "system": "abfalter",
+      "system": "customgame",
       "path": "./packs/backgrounds",
       "type": "Item",
       "private": false,
@@ -205,7 +204,7 @@
     {
       "name": "cultural-roots",
       "label": "Cultural Roots",
-      "system": "abfalter",
+      "system": "customgame",
       "path": "./packs/cultural-roots",
       "type": "Item",
       "private": false,
@@ -214,7 +213,7 @@
     {
       "name": "elan",
       "label": "Elan",
-      "system": "abfalter",
+      "system": "customgame",
       "path": "./packs/elan",
       "type": "Item",
       "private": false,
@@ -223,7 +222,7 @@
     {
       "name": "raceslegacies",
       "label": "Races & Legacies",
-      "system": "abfalter",
+      "system": "customgame",
       "path": "./packs/raceslegacies",
       "type": "Item",
       "private": false,
