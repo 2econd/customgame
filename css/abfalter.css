@@ -1,0 +1,7821 @@
+.image-popout .window-header .window-title {
+    visibility: hidden;
+}
+
+/* #region @GlobalV2 Actor Styles @v2 */
+.tab {
+    overflow-y: auto;
+}
+h1 {
+    color: var(--color-text-alt);
+}
+h2 {
+    color: var(--color-text-alt);
+}
+h3 {
+    color: var(--color-text-alt);
+    border-bottom: 1px solid var(--boxColor);
+}
+h5 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 0 0 -3px 0;
+    font-weight: normal;
+    font-size: var(--font-size-24);
+    color: var(--boxColor);
+}
+h6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-weight: normal;
+    font-size: var(--font-size-16);
+    color: var(--boxColor);
+}
+
+.baseAbfalterV2 select {
+    height: 20px;
+    line-height: normal;
+    font-size: var(--font-size-13);
+    border: 0px;
+    padding: 1px 0 0 0;
+    border-bottom: 1px solid var(--inputBorder);
+    text-align: center;
+    appearance: none;
+    color: var(--textColor);
+    background-color: var(--buttonBg);
+}
+.baseAbfalterV2 select option {
+    background: var(--color-select-bg);
+}
+.baseAbfalterV2 textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--font-size-13);
+    border: none;
+    width: 100%;
+    resize: none;
+    padding: 3px;
+    text-align: justify;
+    border-radius: 0px;
+    margin: 0px;
+    background: var(--color-textarea-bg);
+    color: var(--textColor);
+}
+.baseAbfalterV2 .abfDivFormat input[type="radio"] {
+    --checkbox-checked-color: var(--armorPen);
+    --checkbox-background-color: var(--color-checkbox-bg);
+}
+.baseAbfalterV2 .abfDivFormat button {
+    background: var(--buttonBg);
+    color: var(--textColor);
+    line-height: normal;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    height: 20px;
+}
+.baseAbfalterV2 .abfDivFormat button:hover {
+    background: var(--buttonHover);
+}
+.baseAbfalterV2 .abfDivFormat button:focus {
+    outline: none;
+    box-shadow: none;
+}
+.baseAbfalterV2 .abfDivFormat label {
+    margin: 0px;
+    padding: 1px 0px;
+}
+.baseAbfalterV2 .abfDivFormat span {
+    font-size: var(--font-size-13);
+    align-content: center;
+    color: var(--textColor);
+    --input-height: 20px;
+}
+.baseAbfalterV2 .abfDivFormat input {
+    padding: 1px 0 0 0;
+    font-size: var(--font-size-13);
+    text-align: center;
+    border: 0px;
+    border-radius: 0px;
+    border-bottom: 1px solid var(--inputBorder);
+    background-color: var(--buttonBg);
+    color: var(--textColor);
+    --input-height: 20px;
+}
+.baseAbfalterV2 .abfDivFormat input:read-only {
+    padding: 1px 0 0 0;
+    border: 0;
+    background-color: transparent;
+}
+.baseAbfalterV2 .abfDivFormat a {
+    text-align: center;
+    align-self: center;
+}
+.baseAbfalterV2 .itemControlsV2 {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--boxColor);
+    color: var(--textColor);
+    padding: 0 1% !important; 
+    font-size: var(--font-size-13);
+}
+.baseAbfalterV2 .fieldsetContainerColumnV2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.baseAbfalterV2 .fieldsetContainerRowV2 {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.baseAbfalterV2 .fieldSetRowV2 {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+.baseAbfalterV2 .fieldSetColumnV2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.baseAbfalterV2 .fieldSetRowV2 legend,
+.baseAbfalterV2 .fieldSetColumnV2 legend {
+    padding: 0 0.3rem;
+    color: var(--boxColor);
+    font-size: var(--font-size-20);
+    margin: 0 7%;
+}
+.baseAbfalterV2 .fieldSetRowV2 fieldset,
+.baseAbfalterV2 .fieldSetColumnV2 fieldset {
+    border: 2px solid var(--boxColor);
+    padding: 0;
+    border-radius: 12px;
+    height: fit-content;
+}
+.baseAbfalterActorV2 .window-content {
+    padding: 3px;
+}
+.baseAbfalterV2 .abfEditorFormat > span {
+    border-bottom: 1px solid var(--boxColor);
+    font-size: var(--font-size-16);
+    margin: 0 0 0 5px;
+    width: 95%;
+    display: inline-block;
+}
+.baseAbfalterV2 .abfEditorFormat .editor {
+    min-height: 350px;
+}
+.actorPage {
+    min-width: 878px;
+}
+.lockLabel {
+    pointer-events: none;
+}
+
+/* #endRegion */
+
+/* #region @!Important classes  @v2 */
+.hidden {
+    display: none !important;
+}
+.visibilityOff {
+    visibility: hidden !important;
+}
+.showOpacity {
+    opacity: 1 !important;
+}
+/* #endRegion */
+
+/* #region @Context-Menu @v2 */
+#context-menu.abfalterContextMenu li.context-item {
+    text-align: start;
+    color: var(--color-text-alt);    
+    padding: 8px 10px;
+}
+#context-menu.abfalterContextMenu .context-items > li:nth-of-type(5),
+#context-menu.abfalterContextMenu .context-items > li:nth-of-type(6) {
+    border-top: 1px solid var(--boxColor);
+}
+.chat-message #context-menu li.context-item {
+    color: var(--armoryItemHeader);
+} 
+/* #endregion */
+
+/* #region @ProseMirror-Text-Editor */
+prose-mirror.editor.prosemirror.inactive > button.icon.toggle {
+    display: flex !important;
+}
+/* #endregion */
+
+
+
+
+
+
+
+
+
+
+
+/* #region @Color Theme */
+:root {
+    --abfalter-font-roboto-condensed: "Roboto Condensed", sans-serif;
+    --abfalter-font-roboto-slab: "Roboto Slab", serif;
+    --color-background: #15202B;
+    --color-background-header: #081426c2;
+    --color-navbar: #333a7e;
+    --color-navbar-hover: #2a7bc9;
+    --color-navbar-active: #1c69c1;
+    --color-checkbox-bg: #252944;
+    --color-select-bg: #252944;
+    --color-textarea-bg: #58598757;
+    /* Armory Colors */
+    --armoryItemHeader: #021839ad;
+    --armoryItemBackground: #2b2c5780;
+    --armoryButtonBackground: rgb(11 10 18 / 50%);
+    /* text Colors */
+    --textColor: #bbbbbb;
+    --color-text-alt: #dddddd;
+    --armoryTagText: #e7d1b1;
+
+    --dropdownColor: #252944;
+    --buttonBg: #5859872e;
+    --inputBorder: #747493;
+    --boxColor: #687591;
+    --itemOffSet: #2b3046;
+    --physical: #429f42;
+    --mental: #375fd1;
+    --armorPen: #d37e27;
+    --equipped: #1bb936;
+    --kiBought: #4b47b7;
+    --kiFree: #106810;
+    --buttonHover: #455069;
+    --customTooltip: #1f3449;
+    --warningColor: #d2621e;
+    --errorColor: #ff0000;
+
+    --scrollbarColor: #555595;
+
+    --color-border-dark: #8aa9cb;
+    --color-border-dark-5: #12172ee8;
+    --color-text-dark-secondary: #979797;
+    --color-border-light-tertiary: #618e9f;
+    --color-border-highlight: #152cc1;
+    --color-border-highlight-alt: #152cc1;
+    --color-shadow-highlight: #1f6cc5;
+    --color-bg-btn-minor-active: #9aabcb;
+    --color-bg-btn-minor-inactive: #354766;
+    --color-shadow-primary: #5c9be9;
+    --item-subTitle: #7a7971;
+    --item-summary: #afaea9;
+    --effect-border: #2c3850;
+    --effect-bg: rgb(32 44 66);
+
+}
+[data-theme="light"] {
+    --abfalter-font-roboto-condensed: "Roboto Condensed", sans-serif;
+    --abfalter-font-roboto-slab: "Roboto Slab", serif;
+    --color-background: #d5d4cb;
+    --color-background-header: #3b0707c2;
+    --color-navbar: #c5b498;
+    --color-navbar-hover: #b97d37;
+    --color-navbar-active: #c1571c;
+    --color-checkbox-bg: #cfc9bf;
+    --color-select-bg: #cfc9bf;
+    --color-textarea-bg: #87775857;
+    /* Armory Colors */
+    --armoryItemHeader: #af5b31;
+    --armoryItemBackground: #00000012;
+    --armoryButtonBackground: #df922e42;
+    /* text Colors */
+    --textColor: #111111;
+    --color-text-alt: #dec9ab;
+    --armoryTagText: #3a3a3a;
+
+
+    --buttonBg: #c9c1b6;
+    --buttonHover: #c58b58;
+    --inputBorder: #3b0707;
+    --boxColor: #7b0d0d;
+
+    --dropdownColor: #e7e7e7;
+
+    --itemOffSet: #c7beb3;
+
+    --armorPen: #e5550d;
+
+    --physical: #10ad10;
+    --mental: #0043ff;
+    --equipped: #128d2d;
+    
+    --kiBought: #d7885b;
+    --kiFree: #4aad4a;
+
+    --scrollbarColor: #955555;
+
+    --customTooltip: #dbd1b6;
+    --item-subTitle: #7a7971;
+    --item-summary: #4b4a44;
+    --effect-border: #10141c;
+    --effect-bg: rgb(81 121 163 / 29%);
+
+    --color-border-dark: inherit;
+    --color-border-dark-5: inherit;
+    --color-border-light-tertiary: inherit;
+    --color-border-highlight: inherit;
+    --color-border-highlight-alt: inherit;
+    --color-shadow-highlight: inherit;
+    --color-bg-btn-minor-active: inherit;
+    --color-bg-btn-minor-inactive: inherit;
+    --color-shadow-primary: inherit;
+}
+.window-header {
+    background: var(--color-background-header);
+}
+.standard-form .form-group > label {
+    color: var(--textColor);
+}
+.standard-form .form-group > label:hover {
+    color: var(--textColor);
+}
+.window-content {
+    overflow-x: auto;
+    background: var(--color-background);
+    color: var(--textColor);
+}
+.sheet.journal-entry .journal-entry-content {
+    background: var(--color-background);
+}
+.macro-sheet .form-group.command textarea {
+    color: var(--textColor);
+}
+#hotbar .macro,
+#hotbar .bar-controls,
+#hotbar #hotbar-page-controls,
+#controls ol.control-tools > li,
+#navigation #scene-list .scene.view, #navigation #scene-list .scene.context,
+#navigation #nav-toggle,
+.app {
+    background: var(--color-background);
+}
+.editor-box {
+    background-color: aliceblue;
+}
+.sheet-tabs > ul > li > .active {
+    background-color: var(--color-navbar-active);
+}
+.itemStyle:nth-child(2n) {
+    background: var(--itemOffSet);
+}
+.prosemirror menu button:hover, 
+.prosemirror menu button.active,
+.window-app .window-content button {
+    color: var(--buttonHover);
+}
+.directory .directory-header .header-search input,
+.prosemirror menu .pm-dropdown,
+.window-app .window-content input,
+.window-app .window-content select {
+    color: var(--textColor);
+    background-color: var(--buttonBg);
+}
+.directory .directory-header .header-search input::placeholder,
+.window-app .window-content input::placeholder {
+    color: #919191;
+}
+.prosemirror menu .pm-dropdown ul,
+.window-app .window-content option {
+    background: var(--dropdownColor);
+}
+a.content-link {
+    background-color: var(--buttonBg);
+    border: 1px solid #0080ffb0;
+}
+.prosemirror menu .pm-dropdown ul li:hover,
+.prosemirror menu button.active,
+.prosemirror menu button:hover {
+    background: var(--buttonHover);
+}
+#keybindings .binding .key.uneditable {
+    background: inherit;
+}
+#module-management .package-list .package-title, #module-management .package-list .package-metadata, #module-management .package-list .package-description {
+    color: inherit;
+}
+.baseAbfalter .general span,
+.baseAbfalter .actorHeader1 span,
+.baseAbfalter .navTabsYes span,
+.baseAbfalter .armory span,
+.baseAbfalter .background span,
+.baseAbfalter .ki span,
+.baseAbfalter .settings span,
+.baseAbfalter .psychic span,
+.baseAbfalter .magic span {
+    color: var(--textColor);
+}
+.settings-sidebar button,
+.directory .action-buttons button,
+.baseAbfalter button {
+    background: var(--buttonBg);
+    color: var(--textColor);
+}
+    .fa-comment-dots:before {
+    color: #728ca3;
+}
+
+.baseAbfalter span {
+    color: var(--textColor);
+}
+.baseAbfalter input {
+    background: var(--buttonBg);
+    color: var(--textColor);
+}
+.baseAbfalter input:read-only {
+    background-color: transparent;
+}
+.baseAbfalter select {
+    color: var(--textColor);
+    background-color: var(--buttonBg);
+    line-height: 20px;
+}
+.baseAbfalter select option {
+    background: var(--color-select-bg);
+}
+.baseAbfalter textarea {
+    background: var(--buttonBg);
+    color: var(--textColor);
+}
+.baseAbfalter button {
+    background: var(--buttonBg);
+    color: var(--textColor);
+}
+.baseAbfalter hr {
+    border-bottom: 1px solid #5c9be9;
+}
+
+.form-fields > select option {
+    background: var(--color-select-bg);
+}
+.fumbleRoll {
+    color: red !important;
+}
+.openRoll {
+    color: forestgreen;
+}
+.normalRoll {
+    color: black;
+}
+.notEquipped > span {
+    color: #878787;
+}
+.physical {
+    color: var(--physical) !important;
+}
+.mental {
+    color: var(--mental) !important;
+}
+.armorpenalty {
+    color: var(--armorPen) !important;
+}
+.baseAbfalterV2 .abfDivFormat .equipped {
+    color: var(--equipped);
+}
+.equipped > span {
+    color: var(--equipped) !important;
+}
+.weaponEquipped {
+    color: var(--equipped) !important;
+}
+.kiBought {
+    background-color: var(--kiBought) !important;
+}
+.kiFree {
+    background-color: var(--kiFree) !important;
+}
+.natemph {
+    color: var(--armorPen) !important;
+}
+.warningAbfalter {
+    color: #d2621e !important;
+}
+.errorAbfalter {
+    color: var(--errorColor) !important;
+}
+/* #endregion */
+
+/* #region @Global Actor Styles */
+/* legacy, remove when all tabs are reworked */
+h5 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 0 0 -3px 0;
+    font-weight: normal;
+    font-size: 25px;
+    color: var(--boxColor);
+}
+h6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-weight: normal;
+    font-size: 17px;
+    color: var(--boxColor);
+}
+.baseAbfalter label {
+    margin: 0px;
+    padding: 0px;
+}
+.baseAbfalter span {
+    font-size: 0.82rem;
+    align-items: center;
+    height: 20px;
+    display: grid;
+}
+.baseAbfalter input {
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 0.82rem;
+    text-align: center;
+    border: 0px;
+    height: 20px;
+    border-radius: 0px;
+    border-bottom: 1px solid var(--inputBorder);
+}
+.baseAbfalter input:read-only {
+    padding: 1px 0 0 0;
+    border: 0;
+}
+.baseAbfalter select {
+    height: 20px;
+    font-size: 0.82rem;
+    border: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-bottom: 1px solid var(--inputBorder);
+    text-align: center;
+    appearance: none;
+}
+.baseAbfalter a {
+    text-align: center;
+    align-self: center;
+}
+.baseAbfalter textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.82rem;
+    border: none;
+    width: 100%;
+    resize: none;
+    padding: 3px;
+    text-align: justify;
+    border-radius: 0px;
+    margin: 0px;
+}
+.baseAbfalter hr {
+    border-bottom: 1px solid #5c9be9;
+}
+.baseAbfalter button {
+    line-height: normal;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0px;
+    height: 20px;
+}
+.baseAbfalter button:hover {
+    background: var(--buttonHover);
+}
+.baseAbfalter button:focus {
+    outline: none;
+    box-shadow: none;
+}
+.baseAbfalter fieldset {
+    border: 2px solid var(--boxColor);
+    padding: 0;
+    border-radius: 12px;
+
+}
+.baseAbfalter legend {
+    color: var(--boxColor);
+    font-size: 1.5rem;
+    text-align: center;
+}
+.fieldsetContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.fieldsetContainerRow {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.fieldSetRow {
+    display: flex;
+    gap: 1rem;
+}
+.fieldSetRow > fieldset {
+    height: fit-content;
+}
+
+/*Unknown*/
+
+.notExpand {
+    display: none;
+}
+.expand-box {
+    width: 0%;
+}
+.expand-box > input {
+    height: 18px;
+    width: 18px;
+}
+
+/* Actor Stats Styles */
+.simpleDetails > label {
+    display: flex;
+    padding: 0 10px;
+}
+.simpleDetails > label > span {
+    width: 80%
+} 
+.simpleDetails > label > input {
+    width: 20%
+} 
+
+/* Actor Handling Item Styles*/
+.itemStyle {
+    padding: 3px;
+}
+.itemStyle > div {
+    display: flex;
+}
+.itemStyle .editor {
+    height: auto;
+}
+.itemStyle .editor .editor-content {
+    margin: 5px 3px;
+    color: inherit;
+}
+.itemStyle .editor .editor-content span {
+    display: contents;
+    color: inherit;
+}
+.itemControls {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--boxColor);
+    color: var(--textColor);
+    padding: 0 1% !important; 
+}
+.itemToggleA > a {
+    font-size: 15px;
+    width: 5%;
+    opacity: 0;
+    color: var(--textColor);
+}
+.itemToggleA:hover > a {
+    opacity: 1;
+}
+.itemToggleB > a {
+    font-size: 15px;
+    width: 5%;
+    opacity: 1;
+    color: var(--textColor);
+}
+
+/* Scrollbar */
+* {
+    scrollbar-color: initial;
+    scrollbar-color: var(--scrollbarColor) transparent;
+    scrollbar-width: thin;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbarColor);
+    border: 1px solid #6d879f;
+}
+@-moz-document url-prefix() {
+    * {
+        scrollbar-color: #782e22 transparent;
+        scrollbar-width: thin;
+    }
+}
+
+/* Select Box Custom Arrow & Center Contents */
+.csSelect::after,
+.csSelect1::after,
+.csSelect2::after {
+    content: "\203A"
+}
+.csSelect,
+.csSelect1,
+.csSelect2 {
+    position: relative
+}
+.csSelect::after {
+    position: absolute;
+    top: -3px;
+    right: 5px;
+    pointer-events: none;
+    font-size: 20px;
+    transform: rotate(90deg);
+}
+.csSelect1::after {
+    position: absolute;
+    top: -3px;
+    right: 20px;
+    pointer-events: none;
+    font-size: 20px;
+    transform: rotate(90deg);
+}
+.csSelect2::after {
+    position: absolute;
+    top: -3px;
+    right: 45px;
+    pointer-events: none;
+    font-size: 20px;
+    transform: rotate(90deg);
+}
+
+.baseAbfalter .editor .editor-content span {
+    height: inherit;
+}
+.baseAbfalter .editor-content p:empty {
+    display: block;
+    min-height: 1em;
+}
+
+/* Text Area Auto Resize */
+.baseAbfalter .editor-menu {
+    flex-wrap: nowrap;
+    padding: 5px;
+}
+
+.editor-box {
+    height: 200px;
+    border: 1px solid black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.textarea-auto-resize, .textarea-auto-resize-sibling {
+    scrollbar-width: none;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    box-sizing: border-box;
+    overflow-x: auto;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 3px;
+    margin: 0 0 1px 0;
+}
+.textarea-auto-resize::-webkit-scrollbar {
+    display: none; 
+}
+.textarea-div {
+    justify-content: initial !important;
+    padding: 3px 0;
+}
+/* Show Text Area with the right format */
+.showTextAreaDesc {
+    border: 1px solid var(--boxColor);
+    white-space: pre-wrap;
+    margin: 0 0 7px 0;
+    padding: 3px;
+}
+.form-footer > button {
+    border:none;
+}
+/* #endregion */
+
+/* #region Prompt Dialog */
+.abfalterPromptDialog .dialog-content > div > label > span {
+    font-size: 0.9rem;
+    margin: 0 5px 0 0;
+}
+.abfalterPromptDialog .dialog-content > div > label > input {
+    font-size: 0.9rem;
+    --input-height: 1.5rem;
+}
+.abfalterPromptDialog .dialog-form .form-footer > button {
+    background: var(--buttonBg);
+    color: var(--buttonText);
+}
+.abfalterPromptDialog .dialog-form .form-footer > button:hover {
+    background: var(--buttonHover);
+}
+.abfalterPromptDialog .dialog-form .form-footer > button:focus {
+    outline: none;
+    box-shadow: none;
+}
+/* #endregion*/
+
+/* #region @Header @v2 */
+.headerFormat {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-auto-rows: 30px;
+    grid-auto-flow: dense;
+    gap: 5px;
+}
+.headerFormat .actorToken {
+    grid-column: span 3;
+    grid-row: span 3;
+    justify-items: anchor-center;
+}
+.headerFormat .actorToken > img {
+    max-height: 100%;
+    max-width: 100%;
+    border: none;
+}
+/* #region @Region #1 Name & Class */
+.headerFormat .headerName {
+    grid-column: span 13;
+    grid-row: span 2;   
+}
+.headerFormat .headerName .headerNamespace {
+    display: flex;
+}
+.headerFormat .headerName .headerNamespace > span,
+.headerFormat .headerName .headerNamespace > input {
+    height: 40px;
+    font-size: 30px;
+    text-align: left;
+    background: none;
+    border: none;
+    width: 95%;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+}
+.headerFormat .headerName .headerNamespace > input {
+    border-bottom: 1px solid var(--boxColor);
+}
+.headerFormat .headerName .headerNamespace > a {
+    width: 5%;
+    font-size: 25px;
+}
+.headerFormat .headerName .headerClass {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    width: 95%;
+}
+.headerFormat .headerName .headerClass > span {
+    margin: 1px 0 0 0;
+    font-size: 0.9rem;
+    padding: 0 0 0 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* #endregion */
+/* #region @Region #2 Stats */
+.headerFormat .headerStats {
+    grid-column: span 6;
+    grid-row: span 1;
+}
+.headerFormat .headerStats > div {
+    height: 100%;
+    align-content: center;
+}
+.headerFormat .headerStats > div > span {
+    display: block;
+    font-size: 0.9rem;
+}
+.headerFormat .headerStats > div > label {
+    display: flex;
+}
+.headerFormat .headerStats > div > label > span {
+    font-size: 0.9rem;
+    margin: 0 5px 0 0;
+}
+.headerFormat .headerStats > div > label > input {
+    font-size: 0.9rem;
+    width: 30%;
+}
+.headerFormat .headerStats > div > label > input:placeholder-shown {
+    border: 1px solid var(--errorColor);
+}
+/* #endregion */
+/* #region @Region #3 Rest */
+.headerFormat .headerRest {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+.headerFormat .headerRest > div > button {
+    border: 1px solid var(--boxColor);
+    width: 100%;
+}
+/* #endregion */
+/* #region @Region #4 Exp */
+.headerFormat .headerExp {
+    grid-column: span 8;
+    grid-row: span 1;
+    height: 100%;
+    align-content: center;
+}
+.headerFormat .headerExp > div {
+    display: flex;
+    gap: 3px;
+    flex-direction: row;
+}
+.headerFormat .headerExp > div > input {
+    width: 15%;
+}
+.headerFormat .headerExp > div span {
+    margin: 1px 0 0 0;
+}
+/* #endregion */
+/* #region @Region #5 Life, Shield, Fatigue Bars */
+.headerFormat .headerBars {
+    grid-column: span 7;
+    grid-row: span 4;
+}
+.headerFormat .headerBars .barButton {
+    height: 17%;
+    width: 99%;
+    justify-items: center;
+}
+.headerFormat .headerBars .barButton > button {
+    border: 1px solid var(--boxColor);
+    padding: 1px 0 0 0;
+    width: 35%;
+}
+.headerFormat .headerBars .barsBars {
+    height: 83%;
+    width: 99%;
+}
+.barContainer {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    background-color: #222;
+    border: 1px solid #444;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.hp-text,
+.shield-text,
+.fatigue-text {
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    color: #dddddd;
+}
+.lpBar {
+    position: absolute;
+    inset: 0 auto 0 0;
+    height: 100%;
+    width: calc(var(--lp) * 100%);
+    background-color: hsl(calc(var(--lp) * 120), 70%, 40%);
+    transition: width 0.4s ease, background-color 0.4s ease;
+    opacity: 0.8;
+    mix-blend-mode: lighten;
+}
+.negBar {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: calc(var(--neg) * 100%);
+    height: 100%;
+    background-color: hsl(280deg 88% 39%);
+    transition: width 0.4s ease, background-color 0.4s ease;
+    opacity: 0.8;
+    mix-blend-mode: lighten;
+}
+.shieldBar {
+    position: absolute;
+    inset: 0 auto 0 0;
+    height: 100%;
+    width: calc(var(--shield) * 100%);
+    background-color: hsl(calc(200 + var(--shield) * 40), 80%, calc(40% + var(--shield) * 30%));
+    transition: width 0.4s ease, background-color 0.4s ease;
+    opacity: 0.8;
+    mix-blend-mode: lighten;
+}
+.fatigueBar {
+    position: absolute;
+    inset: 0 auto 0 0;
+    height: 100%;
+    width: calc(var(--fatigue) * 100%);
+    background-color: hsl(calc(28 + var(--fatigue) * 20), 90%, calc(50% + var(--fatigue) * 10%));
+    transition: width 0.4s ease, background-color 0.4s ease;
+    opacity: 0.8;
+    mix-blend-mode: lighten;
+}
+.abfalterPromptDialog .resolveWindow-label > label  {
+    justify-content: space-between;
+    display: flex;
+    align-items: anchor-center;
+}
+.abfalterPromptDialog .resolveWindow-label > label > span {
+    width: 60%;
+}
+.abfalterPromptDialog .resolveWindow-label > label > input {
+    width: 40%;
+}
+
+/* #endregion */
+/* #region @Region #6 Armor */
+.headerFormat .headerArmor {
+    grid-column: span 9;
+    grid-row: span 4;
+}
+.headerFormat .headerArmor > fieldset {
+    border: 2px solid var(--boxColor);
+    padding: 0;
+    border-radius: 12px;
+    height: 100%;
+}
+.headerFormat .headerArmor > fieldset > legend {
+    padding: 0 0.3rem;
+    color: var(--boxColor);
+    font-size: 1.1rem;
+    text-align: center;
+}
+.headerFormat .headerArmor .armorContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    place-content: space-between;
+}
+.headerFormat .headerArmor .armorContainer .armorTop {
+    display: flex;
+    flex-direction: row;
+}
+.headerFormat .headerArmor .armorContainer .armorSubTop {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.headerFormat .headerArmor .armorContainer .armorSubTop > label {
+    display: flex;
+    padding: 0 10px;
+}
+.headerFormat .headerArmor .armorContainer .armorSubTop > label > span {
+    width: 70%;
+}
+.headerFormat .headerArmor .armorContainer .armorSubTop > label > span:nth-of-type(2) {
+    width: 25%;
+    text-align: center;
+}
+.headerFormat .headerArmor .armorContainer .armorBottom {
+    display: flex;
+    flex-direction: column;
+}
+.headerFormat .headerArmor .armorContainer .armorBottom > label {
+    font-size: 1rem;
+    padding: 0 10px 2px 10px;
+    border-bottom: 1px solid var(--boxColor);
+    margin: 0 0 2px 0;
+}
+.headerFormat .headerArmor .armorContainer .armorBottom > label > a {
+    font-size: 0.9rem;
+
+}
+.headerFormat .headerArmor .armorContainer .armorBottom .armorAtValues {
+    display: flex;
+    flex-direction: row;
+    padding: 0 10px;
+    justify-content: space-between;
+}
+.headerFormat .headerArmor .armorContainer .armorBottom .armorAtBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* #endregion */
+/* #region @Region #7 AAM */
+.headerFormat .headerAam {
+    grid-column: span 5;
+    grid-row: span 4;
+}
+.headerFormat .headerAam > fieldset {
+    border: 2px solid var(--boxColor);
+    padding: 0;
+    border-radius: 12px;
+    height: fit-content;
+}
+.headerFormat .headerAam > fieldset > legend {
+    padding: 0 0.3rem;
+    color: var(--boxColor);
+    font-size: 1.1rem;
+    text-align: center;
+}
+.headerFormat .headerAam > fieldset > div > label {
+    display: flex;
+    padding: 0 10px;
+}
+.headerFormat .headerAam > fieldset > div > label:last-of-type {
+    border-top: 1px solid var(--boxColor);
+    padding: 3px 10px 0 10px;
+    margin: 3px 0 0 0;
+}
+.headerFormat .headerAam > fieldset > div > label > span {
+    width: 70%;
+}
+.headerFormat .headerAam > fieldset > div > label > span:nth-of-type(2) {
+    width: 30%;
+    text-align: center;
+}
+.headerFormat .headerAam > fieldset > div > label > input {
+    width: 30%;
+}
+/* #endregion */
+/* #region @Region #8 Initiative */
+.headerFormat .headerinitiative {
+    grid-column: span 3;
+    grid-row: span 3;
+}
+.headerFormat .headerinitiative > fieldset {
+    border: 2px solid var(--boxColor);
+    padding: 5px;
+    border-radius: 12px;
+    height: 100%;
+}
+.headerFormat .headerinitiative > fieldset > legend {
+    padding: 0 0.3rem;
+    color: var(--boxColor);
+    font-size: 1.1rem;
+    text-align: center;
+}
+.headerFormat .headerinitiative > fieldset > legend > a {
+    font-size: 0.9rem;
+}
+.headerFormat .headerinitiative > fieldset > div > button {
+    justify-self: center;
+    width: 75%;
+}
+.headerFormat .headerinitiative > fieldset > div > span {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    text-align: center;
+    height: 35px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+.initiativeWindow {
+    height: fit-content !important;
+}
+.initiativeWindow .headerIniDets > label {
+    display: flex;
+    padding: 0 10px 2px 10px;
+}
+.initiativeWindow .headerIniDets > label:nth-last-of-type(2),
+.initiativeWindow .headerIniDets > label:nth-last-of-type(4),
+.initiativeWindow .headerIniDets > label:nth-last-of-type(6),
+.initiativeWindow .headerIniDets > label:nth-last-of-type(8) {
+    border-bottom: 1px solid var(--boxColor);
+    margin: 0 0 2px 0;
+    padding: 0 10px 2px 10px;
+}
+.initiativeWindow .headerIniDets > label > span {
+    width: 70%;
+}
+.initiativeWindow .headerIniDets > label > span:nth-of-type(2) {
+    text-align: center;
+    width: 30%;
+}
+.initiativeWindow .headerIniDets > label > input {
+    width: 30%;
+}
+/* #endregion */
+/* #endregion */
+
+/* #region @Navigation Tabs */
+.sheet-tabs > ul > li > .active {
+    transform: inherit;
+}
+.abfalter .tabs .item.active {
+    text-decoration: underline;
+    text-shadow: none;
+}
+.abfalter .tabs .item {
+    font-weight: bold;
+}
+.navTabsYes {
+    max-height: 37px;
+    min-width: 878px;
+    margin: 8px 0 0 0 !important;
+    border-top: none !important;
+    border-bottom: none !important;
+}
+.sheet-tabs > ul {
+    transform: skew(-25deg);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 95%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.sheet-tabs > ul > li {
+    background-color: var(--color-navbar);
+    float: left;
+    border-right: 1px solid var(--color-navbar);
+    height: 35px;
+    width: 12%;
+}
+.sheet-tabs > ul > li:hover {
+    background-color: var(--color-navbar-hover);
+}
+.sheet-tabs > ul > li:first-child > .active,
+.sheet-tabs > ul > li:first-child {
+    border-radius: 7px 0 0 7px;
+}
+.sheet-tabs > ul > li:last-child > .active,
+.sheet-tabs > ul > li:last-child {
+    border-right: none;
+    border-radius: 0 7px 7px 0;
+}
+.sheet-tabs > ul > li > a { 
+    display:block;
+    height: 100%;
+}
+.sheet-tabs > ul > li > a > span { 
+    transform: skew(25deg);
+    text-shadow: none;
+    height: 100%;
+}
+/* #endregion */
+
+/*
+    ************
+    ------------
+    GENERAL PAGE
+    ------------
+    ************
+*/
+/* #region Containers */
+.general {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+    min-width: 878px;
+}
+.g1,
+.secondary,
+.characteristics,
+.resistances {
+    width: 49%
+}
+
+.g1 > div:nth-of-type(2),
+.g1 > div:nth-of-type(3) {
+    display: flex;
+    justify-content: space-between;
+}
+.movement {
+    width: 33%;
+}
+.g2 {
+    width: 28%;
+}
+.regeneration {
+    width: 35%;
+}
+.fieldSetNarrowGap {
+    gap: 0.5rem !important;
+}
+/* #endregion */
+
+/* #region @Characteristics */
+.characteristics > div {
+    display: flex;
+}
+.characteristics > div:first-of-type {
+    border-bottom: 1px solid var(--boxColor);
+    margin: -5px 0 0px 0px;
+}
+.characteristics > div:first-of-type > span:last-of-type {
+    margin-right: 10%;
+}
+.characteristics > div > span {
+    width: 33.33%;
+    text-align: center;
+}
+.characteristics > div > .compact {
+    width: 90%;
+    display: flex;
+    height: 20px;
+}
+.characteristics > div > .compact > button:first-of-type {
+    width: 66.66%;
+    border-right: 1px solid var(--boxColor);
+}
+.characteristics > div > .compact > button {
+    width: 33.33%;
+    font-size: 0px;
+    border: 0px;
+}
+.characteristics > div > .compact > button:first-of-type > span {
+    padding: 0px;
+    width: 50%;
+}
+.characteristics > div > .compact > button:last-of-type > span {
+    padding: 0px;
+    width: 100%;
+}
+.characteristics > div > .compact > button {
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0px;
+    display: flex;
+}
+.characteristics > div > label > a {
+    margin-left: 5px;
+    font-size: 0.95rem;
+    opacity: 0;
+}
+.characteristics > div:hover > label > a {
+    opacity: 1;
+}
+.characteristics > div > .extend {
+    width: 80%;
+    margin: 0 0 5px 10%;
+}
+.characteristics > div > .extend > h6 {
+    border-bottom: 1px solid var(--boxColor);
+    margin: 1px 0 0 0;
+    padding-bottom: 1px;
+}
+.characteristics > div > .extend  > label {
+    display: flex;
+    border-right: 1px solid var(--boxColor);
+    border-left: 1px solid var(--boxColor);
+
+}
+.characteristics > div > .extend  > label > span {
+    width: 45%;
+    text-align: start;
+    margin: 0 0 0 10%;
+}
+.characteristics > div > .extend > label > input {
+    width: 35%;
+    margin: 0 10% 0 0;
+}
+.characteristics > div > .extend > label:nth-of-type(4) {
+    border-top: 1px solid var(--boxColor);
+    padding-top: 3px;
+}
+.characteristics > div > .extend > label:nth-of-type(4) > span,
+.characteristics > div > .extend > label:nth-of-type(5) > span,
+.characteristics > div > .extend > label:nth-of-type(7) > span {
+    font-weight: bold;
+}
+.characteristics > div > .extend > label:nth-of-type(6) {
+    border-top: 1px solid var(--boxColor);
+    border-bottom: 1px solid var(--boxColor);
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.characteristics > div > .extend > label:nth-of-type(7) {
+    border-bottom: 1px solid var(--boxColor);
+}
+/* #endregion */
+
+/* #region @Resistance */
+.resistances > div {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.resistances > div:first-of-type {
+    border-bottom: 1px solid var(--boxColor);
+    margin: -5px 0 0px 0px;
+}
+.resistances > div > span {
+    display: flex;
+    width: 33.33%;
+    justify-content: center;
+}
+.resistances > div > div {
+    display: flex;
+    width: 100%;
+    height: 20px;
+}
+.resistances > div > div > button {
+    width: 66.66%;
+    display: flex;
+    border: 0px;
+    border-right: 1px solid var(--boxColor);
+    font-size: 0px;
+}
+.resistances > div > div > button > span {
+    width: 50%;
+}
+.resistances > div > div > input {
+    width: 33%;
+}
+/* All Action Modifier */
+.modactions {
+    border-top: 1px solid var(--boxColor);
+    margin-bottom: 3px;
+    padding-top: 3px;
+}
+.modactions > label {
+    display: flex;
+    width: 100%;
+}
+.modactions > label:not(:last-of-type) {
+    margin-bottom: 5px;
+}
+.modactions > label > span:first-of-type {
+    display: flex;
+    font-weight: bold;
+    width: 65%;
+    margin: 0 0 0 5%;
+}
+.modactions > label > span:last-of-type {
+    width: 25%;
+    text-align: center;
+}
+/* #endregion */
+
+/* #region @Movement */
+.movement > legend {
+    display: flex;
+    font-size: 1.3rem;
+}
+.movement > div > label {
+    display : flex;
+    width: 100%;
+    padding: 0 10px 0 10px;
+}
+.movement > div > div > label {
+    display : flex;
+    width: 100%;
+    padding: 0 10px 0 10px;
+}
+.movement > div > label:nth-of-type(3) {
+    border-top: 1px solid var(--boxColor);
+    border-bottom: 1px solid var(--boxColor);
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.movement > div > div > label > span,
+.movement > div > label > span {
+    display: flex;
+    width: 55%;
+}
+.movement > div > label:nth-of-type(1) > span:last-of-type, 
+.movement > div > label:nth-of-type(3) > span:last-of-type, 
+.movement > div > label:nth-of-type(4) > span:last-of-type, 
+.movement > div > label:nth-of-type(5) > span:last-of-type, 
+.movement > div > label:nth-of-type(6) > span:last-of-type, 
+.movement > div > div > label > input,
+.movement > div > label > input {
+    width: 45%;
+    justify-content: center;
+}
+.movement > div > label:nth-of-type(3) > span,
+.movement > div > label:nth-of-type(4) > span,
+.movement > div > label:nth-of-type(5) > span,
+.movement > div > label:nth-of-type(6) > span {
+    font-weight: bold;
+}
+
+/* #endregion */
+
+/* #region @LP, Fatigue & Regen */
+.lifepoints > legend,
+.fatigue > legend,
+.regeneration > legend {
+    font-size: 1.3rem;
+}
+.lifepoints {
+    margin: 0 2px 3px 2px;
+}
+.lifepoints > div > label,
+.fatigue > div > label {
+    display: flex;
+    padding: 0 10px 0 10px;
+}
+.regeneration > label {
+    display: flex;
+    padding: 0 5px 0 5px;
+}
+.lifepoints > div > label > span,
+.fatigue > div > label > span {
+    display: flex;
+    width: 55%;
+}
+.lifepoints > h5 > label > a {
+    opacity: 0;
+}
+.lifepoints:hover > h5 > label > a {
+    opacity: 1;
+}
+.fatigue > h5 > label > a {
+    opacity: 0;
+}
+.fatigue:hover > h5 > label > a {
+    opacity: 1;
+}
+.regeneration > label > span {
+    display: flex;
+    width: 60%;
+}
+.lifepoints > div > label > input,
+.fatigue > div > label > input {
+    width: 45%;
+}
+.regeneration > label > input {
+    width: 40%;
+}
+.regeneration > label:nth-of-type(4) {
+    border-top: 1px solid var(--boxColor);
+    border-bottom: 1px solid var(--boxColor);
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.lpCompact > label:nth-of-type(3),
+.fatCompact > label:nth-of-type(3) {
+    border-top: 1px solid var(--boxColor);
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.lifepoints > div > label:nth-of-type(2) > span,
+.lifepoints > div > label:nth-of-type(3) > span,
+.fatigue > div > label:nth-of-type(2) > span,
+.fatigue > div > label:nth-of-type(3) > span,
+.regeneration > label:nth-of-type(4) > span,
+.regeneration > label:nth-of-type(5) > span,
+.regeneration > label:nth-of-type(6) > span,
+.regeneration > label:nth-of-type(7) > span {
+    font-weight: bold;
+}
+/* #endregion */
+
+/* #region @Attack, @Block, & @Dodge */
+.atkdef {
+    width: 30%;
+}
+.atkdef > legend > label > a {
+    opacity: 0;
+}
+.atkdef:hover > legend > label > a {
+    opacity: 1;
+}
+.atkdef > div > label {
+    display: flex;
+    padding: 0 10px 0 10px;
+}
+.atkdef > div > label > span {
+    width: 55%;
+    text-align: start;
+}
+.atkdef > div > label > input {
+    width: 45%;
+}
+.atkdef > div:last-of-type > label:last-of-type {
+    border-top: 1px solid var(--boxColor);
+    border-bottom: 1px solid var(--boxColor);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-weight: bold;
+}
+.atkdef > div > button {
+    margin: 0px;
+    width: 100%;
+    height: 25px;
+    border-radius: 0px;
+    border: 0px;
+}
+/* #endregion */
+
+/* #region @Advantages & @Dis-advantages */
+.advantage-item,
+.disadvantage-item {
+    padding: 0 2.5%;
+}
+.advdis > div:last-of-type {
+    border-top: 1px solid var(--boxColor);
+}
+.advdis > div:first-of-type,
+.advantage-item > div:first-of-type,
+.disadvantage-item > div:first-of-type {
+    display: flex;
+    justify-content: flex-start;
+}
+.advdis > div:first-of-type {
+    border-bottom: 1px solid var(--boxColor);
+    margin: -7px 0 0 0px;
+}
+.advdis > div:first-of-type > span:first-of-type {
+    width: 75.05%;
+    margin: 0 0 0 2.375%;
+}
+.advdis > div:first-of-type > span:nth-of-type(2){
+    width: 14.25%;
+    margin: 0 0 0 0.95%;
+}
+.advantage-item > div > span,
+.disadvantage-item > div > span,
+.advdis > div:first-of-type > span {
+    text-align: center;
+}
+.advantage-item > div > input:first-of-type,
+.advantage-item > div > span:first-of-type,
+.disadvantage-item > div > input:first-of-type,
+.disadvantage-item > div > span:first-of-type {
+    width: 79%;
+    margin: 0px;
+}
+.advantage-item > div > input:nth-of-type(2),
+.advantage-item > div > span:nth-of-type(2),
+.disadvantage-item > div > input:nth-of-type(2),
+.disadvantage-item > div > span:nth-of-type(2) {
+    width: 15%;
+    margin: 0 0 0 1%;
+}
+.advantage-item > div:nth-of-type(2),
+.disadvantage-item > div:nth-of-type(2) {
+    padding: 3px 0;
+}
+
+/* #endregion */
+
+/* #region @Secondary-Abilities */
+.secondary {
+    height: fit-content;
+}
+.secondary > div > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.secondary > div > div:first-of-type {
+    border-top: 1px solid var(--boxColor);
+    border-bottom: 1px solid var(--boxColor);
+}
+.secondary > div:first-of-type > div:first-of-type {
+    border-bottom: 1px solid var(--boxColor);
+    border-top: none;
+    margin: -5px 0 0 0;
+}
+.secondary > div:last-of-type > div:first-of-type {
+    border-top: 1px solid var(--boxColor);
+    border-bottom: none;
+}
+.secondary .customSecondaryListArea .secondary-item:first-of-type{
+    border-top: 1px solid var(--boxColor);
+}
+.secondary > div > div > a {
+    width: 5%;
+    font-size: .95rem;
+    opacity: 0;
+}
+.secondary > div > div:hover > a {
+    opacity: 1;
+}
+.secondary > div > div:first-of-type > div {
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+}
+.secondary > div > div:first-of-type > div > span:first-of-type {
+    padding: 0 0 0 4%;
+}
+.secondary > div > div:first-of-type > div > span:last-of-type,
+.secondary > div > div > span{
+    text-align: center;
+}
+.secondary > div > div:first-of-type > div > span:last-of-type,
+.secondary > div > div > button > span:nth-of-type(2) {
+    padding: 0 10% 0 0;
+}
+.secondary > div > div:first-of-type > span,
+.secondary > div > div > input {
+    width: 11.5%;
+    margin: 0 0 0 1%;
+}
+.secondary > div > div:first-of-type > span:nth-of-type(5),
+.secondary > div > div > span {
+    width: 9%;
+    margin: 0 0 0 1%;
+}
+.secondary > div > div > button {
+    height: 20px;
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    border-radius: 0px;
+    border: 0px;
+    font-size: 13px;
+}
+.secondary > div > div > button > span {
+    padding: 0 0 0 4%
+}
+.secondary > div > .extend {
+    padding-left: 15px;
+}
+.secondary > div > .extend  > span:first-of-type {
+    width: 10%;
+    text-align: end;
+}
+.secondary > div > .extend  > span:nth-of-type(2) {
+    width: 10%;
+    text-align: end;
+}
+.secondary > div > .extend  > span:last-of-type {
+    width: 22%;
+    text-align: end;
+    padding: 0 0 0 5%;
+}
+.secondary > div > .extend > input[type="number"] {
+    width: 12%;
+}
+.secondary > div > .extend > input[type="number"]:last-of-type {
+    width: 8%;
+}
+.secondary > div > .extend > a {
+    margin: 0 0 0 10px;
+}
+.secondary > div > .extend > a {
+    opacity: 1;
+}
+.secondary-item > div {
+    align-items: anchor-center;
+    display: flex;
+}
+.secondary-item > div > span {
+    text-align: center;
+}
+.secondary-item .secondaryEdit > input:first-of-type {
+    width: 35%;
+    margin: 0;
+}
+.secondary-item > div > button > span:nth-of-type(2) {
+    padding: 0 10% 0 0;
+}
+.secondary-item > div > input {
+    width: 11.5%;
+    margin: 0 0 0 1%;
+}
+.secondary-item > div:first-of-type > span:nth-of-type(5),
+.secondary-item > div > select,
+.secondary-item > div > span {
+    width: 9%;
+    margin: 0 0 0 1%;
+}
+.secondary-item > div > button {
+    height: 20px;
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    border-radius: 0px;
+    border: 0px;
+    font-size: 13px;
+}
+.secondary-item .secondaryEditExtend {
+    padding-left: 15px;
+}
+.secondary-item .secondaryEditExtend  > span:first-of-type {
+    width: 10%;
+    text-align: end;
+}
+.secondary-item .secondaryEditExtend  > span:nth-of-type(2) {
+    width: 10%;
+    text-align: end;
+}
+.secondary-item .secondaryEditExtend  > span:last-of-type {
+    width: 22%;
+    text-align: end;
+    padding: 0 0 0 5%;
+}
+.secondary-item .secondaryEditExtend > input[type="number"] {
+    width: 12%;
+}
+.secondary-item .secondaryEditExtend > input[type="number"]:last-of-type {
+    width: 8%;
+}
+.secondary-item .secondaryEditExtend > a {
+    margin: 0 0 0 10px;
+}
+.secondary-item .secondaryEditExtend > a {
+    opacity: 1;
+}
+.secondary-item .secondaryEdit > a {
+    width: 5%;
+}
+.secondary-item .secondaryEditCollapsed > a {
+    width: 5%;
+    opacity: 0;
+}
+.secondary-item .secondaryEditCollapsed > button > span:first-of-type {
+    padding: 0 0 0 4%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    align-content: center;
+}
+.secondary-item .secondaryEditCollapsed:hover > a {
+    opacity: 1;
+}
+.secondary .customSecAddArea {
+    display: flex;
+    place-content: space-between;
+    border-top: 1px solid var(--boxColor);
+    color: var(--textColor);
+    padding: 0 1%;
+}
+.secondary .customSecAddArea > a {
+    text-align: center;
+    align-self: center;
+    width: inherit;
+    opacity: 1;
+    font-size: inherit;
+}
+.secondary .customSecondaryListArea {
+    display: inherit;
+}
+/* #endregion */
+
+/*
+    ***************
+    ---------------
+    BACKGROUND PAGE
+    ---------------
+    ***************
+*/
+/* #region Containers */
+.backgroundProf {
+    width: 66%
+}
+.backgroundStats {
+    width: 33%;
+}
+.backgroundElan,
+.backgroundBlood {
+    width: 100%;
+}
+.backgrounRace,
+.backgroundCultural,
+.backgroundNotes {
+    width: 49%;
+}
+/* #endregion */
+
+/* #region @Proficiency */
+.backgroundProf > div:first-of-type {
+    display: flex;
+    border-bottom: 1px solid var(--boxColor);
+    padding: 0 3px;
+    margin: -13px 0 0 0;
+}
+.backgroundProf > div:first-of-type > span,
+.prof-item > div > span,
+.prof-item > div > input {
+    width: 58%;
+}
+.backgroundProf > div:first-of-type > span:nth-of-type(2),
+.prof-item > div > span:nth-of-type(2),
+.prof-item > div > div {
+    width: 25%;
+    margin: 0 0 0 1%;
+}
+.prof-item > div > div > select {
+    width: 100%;
+}
+.backgroundProf > div:first-of-type > span:nth-of-type(3),
+.prof-item > div > span:nth-of-type(3),
+.prof-item > div > input:nth-of-type(2) {
+    width: 10%;
+    margin: 0 0 0 1%;
+}
+.backgroundProf > div:first-of-type > span,
+.prof-item > div > span {
+    text-align: center;
+}
+.backgroundProf .prof-item .editor {
+    border: 1px solid var(--boxColor);
+    margin: 2px 7px;
+}
+.prof-item .editor .editor-content {
+    width: 100%;
+}
+/* #endregion */
+
+/* #region @Natura */
+.backgroundStats > div:first-of-type {
+    margin: -10px 0 3px 0;
+    padding: 0 0 3px 0;
+    border-bottom: 1px dashed var(--boxColor);
+}
+.backgroundStats .mentalHealthFirst {
+    margin: 3px 0 0 0;
+    padding: 3px 0 0 0;
+    border-top: 1px dashed var(--boxColor);
+}
+/* #endregion */
+
+/* #region @Elan */
+.backgroundElanIcon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: none;
+}
+.backgroundElanInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5%;
+    border-bottom: 1px solid var(--boxColor);
+    width: 100%;
+}
+.backgroundElanInfo > div {
+    width: 70%;
+    margin: 0 0 0 2%;
+}
+.backgroundElanInfo > div > input:first-of-type,
+.backgroundElanInfo > div > span:first-of-type {
+    height: 35px;
+    font-size: 1.7rem;
+}
+.backgroundElanInfo > div > input,
+.backgroundElanInfo > div > span {
+    height: 25px;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 1px 3px;
+    margin: 0;
+}
+.backgroundElanInfo > input{
+    width: 10%;
+}
+.backgrounElanDesc {
+    gap: 2.5%;
+    margin: 0 2%;
+}
+.backgrounElanDesc > fieldset {
+    width: 50%;
+    border: 1px solid var(--boxColor);
+}
+.backgrounElanDesc > fieldset > legend {
+    font-size: 1.2rem;
+}
+
+.backgroundElanGifts {
+    flex-direction: column;
+    padding: 0 2%;
+    margin: 7px 0 0 0;
+}
+.backgroundElanGifts > label {
+    display: flex;
+    justify-content: space-between;
+}
+.backgroundElanGifts > label > span:first-of-type {
+    font-size: 1.2rem;
+}
+.backgroundElanGifts > label {
+    display: flex;
+    padding: 0 10px;
+}
+.backgroundElanGifts > div {
+    border: 1px solid var(--boxColor);
+    border-radius: 12px;
+}
+.backElanBorder {
+    border-bottom: 1px solid var(--boxColor);
+}
+.backgroundElanGifts .elanHideDescToggle a {
+    visibility: hidden;
+}
+.backgroundElanGifts:hover .elanHideDescToggle a {
+    visibility: visible;
+}
+/* #endregion */
+
+/* #region @Elan @Item */
+.giftEntryEdit > h6,
+.giftEntryNoEdit > h6 {
+    justify-content: start;
+    border-bottom: 1px solid var(--boxColor);
+    padding: 15px 10px 0 10px;
+}
+.giftEntryNoEdit > h6 {
+    padding: 0px 10px 0 10px;
+}
+.giftEntryNoEdit > h6 > span:first-of-type {
+    margin: 0 0 0 40%;
+}
+.giftEntryNoEdit > h6 > span {
+    margin: 0 0 0 5%;
+}
+.giftEntryEdit .editor {
+    overflow: visible;
+}
+.giftEntryEdit prose-mirror.editor.prosemirror.active {
+    height: 160px;
+    min-height: 160px;
+}
+.giftEntryEdit > prose-mirror {
+    min-height: 100px;
+    height: 100px;
+}
+.giftEntryEdit .editor .editor-content {
+    padding: 0 10px;
+}
+.giftEntryNoEdit > div {
+    padding: 0 10px;
+}
+.giftExpandBox {
+    width: 0%;
+}
+.giftExpandBox > a {
+    padding: 0 5px;
+}
+.addElanGifts {
+    justify-self: center;
+    margin: 10px 0 0 0 !important;
+    width: 30%;
+    border: none;
+}
+.totalGiftCost {
+    justify-self: end;
+    margin: 0 5% 0 0;
+    padding: 10px 0 0 0;
+}
+/* #endregion */
+
+/* #region @Blood-Bond same as Race Format*/
+
+/* #endregion */
+
+/* #region @Race-Nephelim */
+.backRace-item .raceInfo {
+    justify-content: space-between;
+}
+.backRace-item .raceInfo > input,
+.backRace-item .raceInfo > span {
+    width: 60%;
+    height: auto;
+    text-align: center;
+    font-size: 1.3rem;
+}
+.backRace-item .raceInfo .raceInfoBorder > span:first-of-type {
+    border-bottom: 1px solid var(--boxColor);
+}
+.backRace-item .raceInfo .raceInfoBorder > span:last-of-type {
+    font-size: 0.75rem;
+    font-style: italic;
+}
+.backRace-item .raceInfo > label {
+    width: 15%;
+    text-align: center;
+}
+.backRace-item .editor {
+    border: 1px solid var(--boxColor);
+    margin: 2px 7px;
+}
+/* #endregion */
+
+/* #region @Cultural-Roots */
+.cultureInfo-item .culInfo,
+.cultureInfo-item .culInfoB {
+    justify-content: space-between;
+}
+.cultureInfo-item .culInfo > input,
+.cultureInfo-item .culInfoB > span {
+    width: 90%;
+    padding: 0 0 0 2%;
+    height: auto;
+    text-align: start;
+    font-size: 1.2rem;
+}
+.cultureInfo-item .editor {
+    border: 1px solid var(--boxColor);
+    margin: 2px 7px;
+}
+.cultureInfo-item .culInfoRowB > label {
+    padding: 3px 0;
+}
+.cultureInfo-item .culInfoRowB > label,
+.cultureInfo-item .culInfoRow > label {
+    display: flex;
+    width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.cultureInfo-item .culInfoRow > label > span {
+    white-space: nowrap;
+    overflow: hidden;
+}
+.cultureInfo-item .culInfoRow > label > span:first-of-type {
+    padding: 0 3px 0 4%;
+}
+.cultureInfo-item .culInfoRowB > label > span {
+    text-align: end;
+    padding: 0 3px 0 0;
+    width: 25%;
+}
+.cultureInfo-item .culInfoRowB > label > input {
+    width: 70%
+}
+/* #endregion */
+
+/* #region @Notes */
+.e3 {
+    display: flex;
+    justify-content: flex-start;
+    margin: 1.5% 0 0 0;
+}
+.e3 > div:first-of-type {
+    margin: 0 2% 0 0;
+}
+.e3 > div {
+    width: 49%;
+}
+.e3 > div > div {
+    border: 2px solid var(--boxColor);
+}
+/* #endregion */
+
+/*
+    ************
+    ------------
+    MONSTER PAGE
+    ------------
+    ************
+*/
+/* #region Monster TODO Organize */
+.monsterChar {
+    width: 32%;
+}
+.monsterChar > div {
+    display: flex;
+    justify-content: space-between;
+}
+.monsterChar > div:first-of-type {
+    border-bottom: 1px solid var(--boxColor);
+    margin: -5px 0 0 0px;
+}
+.monsterChar > div > span {
+    text-align: center;
+    display: grid;
+}
+.monsterChar > div > span,
+.monsterChar > div > label {
+    width: 15%;
+}
+.monsterChar > div > label > select {
+    width: 100%;
+}
+.monsterChar > div:first-of-type > span:nth-of-type(4) {
+    width: 23%;
+}
+.monsterChar > div > input {
+    width: 15%;
+    margin: 0 4%
+}
+.monsterChar > div:first-of-type > span:nth-of-type(5),
+.monsterChar > div:not(:first-of-type) > span:nth-of-type(3) {
+    width: 20%;
+}
+.monsterChar > div:not(:first-of-type) > span:nth-of-type(2) {
+    border-right: 1px solid var(--boxColor);
+}
+.monsterInfo {
+    width: 32%;
+}
+.monsterInfo > div {
+    display: flex;
+    padding: 0 0 0 3px;
+}
+.monsterInfo > div:first-of-type {
+    margin: -5px 0 0 0px;
+}
+.monsterInfo > div:nth-of-type(2),
+.monsterInfo > div:nth-of-type(4) {
+    display: block;
+}
+.monsterInfo > div:nth-of-type(2) > label,
+.monsterInfo > div:nth-of-type(4) > label {
+    display: flex;
+    width: 100%;
+}
+.monsterInfo > div > span,
+.monsterInfo > div > label > span {
+    display: grid;
+    width: 75%;
+}
+.monsterInfo > div > label > input,
+.monsterInfo > div > label > span:nth-of-type(2) {
+    text-align: center;
+    width: 25%;
+}
+.monsterInfo > div > button {
+    width: 25%;
+    border: 0px;
+    font-size: 0px;
+}
+.monsterInfo > div:nth-of-type(2) {
+    border-bottom: 1px dashed var(--boxColor);
+}
+.monsterSettings {
+    width: 32%;
+}
+.monsterSettings > div {
+    display: flex;
+    padding: 0 0 0 3px;
+}
+.monsterSettings > div:first-of-type {
+    margin: -5px 0 0 0px;
+}
+.monsterSettings > div > label > span,
+.monsterSettings > div > span {
+    display: grid;
+    width: 75%;
+}
+.monsterSettings > div > button {
+    width: 25%;
+    border: 0px;
+    font-size: 0px;
+}
+.monsterSettings > div > label > input,
+.monsterSettings > div > label > span:nth-of-type(2) {
+    width: 25%;
+    text-align: center;
+}
+.monsterSettings > div:nth-of-type(6) {
+    display: block;
+}
+.monsterSettings > div:nth-of-type(6) > label {
+    display: flex;
+}
+.monsterSettings > div:nth-of-type(2), 
+.monsterSettings > div:nth-of-type(5) {
+    border-bottom: 1px dashed var(--boxColor);
+}
+.monsterSettings > div:last-of-type {
+    border-top: 1px solid var(--boxColor);
+    justify-content: space-between;
+}
+.monster .monsterBotContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 0 0;
+}
+.monsterSubContainer {
+    width: 49%;
+}
+.monsterSubContainer > div {
+    margin: 0 0 10px 0;
+}
+.monsterSubContainer > div > div:first-of-type {
+    display: flex;
+    justify-content: start;
+    border-bottom: 1px solid var(--boxColor);
+    padding: 0 2.5%;
+}
+.monsterPower-item {
+    padding: 0 2.5% 0 2.5%;
+}
+.monsterPower-item > div > input:first-of-type,
+.monsterPower-item > div > span:first-of-type,
+.monsterSubContainer > div > div:first-of-type > span:first-of-type {
+    width: 67%;
+    margin: 0%;
+}
+.monsterPower-item > div > input,
+.monsterPower-item > div > span,
+.monsterSubContainer > div > div:first-of-type > span {
+    width: 12%;
+    margin: 0 0 0 2%;
+    text-align: center;
+    display: grid;
+}
+.monsterPower-item > div > a {
+    width: 5%;
+}
+.monsterPower-item > div {
+    display: flex;
+}
+.monsterSubContainer > div > div {
+    border-right: 3px solid var(--boxColor);
+    border-left: 3px solid var(--boxColor);
+}
+.monsterSubContainer > div > div:first-of-type {
+    border-top: 3px solid var(--boxColor);
+}
+.monsterSubContainer > div > div:last-of-type {
+    border-bottom: 3px solid var(--boxColor);
+}
+.monstPowerInfo > textarea {
+    background: none;
+    border: 1px solid var(--boxColor);
+    cursor: default;
+}
+.monstPowerLongDesc,
+.monstPowerInfo {
+    padding: 0 0 10px 0;
+}
+.monsterPower-item:nth-child(2n) {
+    background: var(--itemOffSet);
+}
+/* #endregion */
+
+/*
+    ***************
+    ---------------
+         Magic
+    ---------------
+    ***************
+*/
+/* #region Containers */
+.magic > div:first-of-type {
+    justify-content: space-between;
+    width: 100%;
+}
+.s2,
+.summoning,
+.turnDayMaint,
+.spells,
+.metaMagic,
+.invocations,
+.incarnations {
+    margin: 0 0 7px 0;
+}
+.mprojContainer {
+    width: 29%;
+}
+.maccu, .mregen {
+    width: 24%;
+}
+.maccu2 > div,
+.mregen2 > div {
+    display: flex;
+    justify-content: space-between;
+}
+.zeonContainer {
+    width: 19%;
+}
+.magic .s1 {
+    width: 100%;
+    display: flex;
+    gap: 2%;
+}
+.magic .s1 > div {
+    width: 49%;
+}
+.mlevels {
+    width: 48%;
+}
+.spellPath {
+    width: 48%;
+}
+.minnate > div {
+    display: flex;
+}
+.magic .s2 {
+    display: flex;
+    justify-content: space-between;
+}
+/* #endregion */
+
+/* #region @Magic-Projection & @Magic-Theory */
+.mproj > label,
+.mproj > div > label {
+    display: flex;
+    padding: 0 10px 0 10px;
+}
+.mproj > label > span,
+.mproj > div > label > span {
+    width: 65%;
+    text-align: start;
+}
+.mproj > label > input,
+.mproj > div > label > input {
+    width: 35%;
+}
+.mproj > label:nth-of-type(1) {
+    border-bottom: 1px solid var(--boxColor);
+    padding: 0 10px 3px 10px;
+}
+.mproj > label:nth-of-type(1) > input:first-of-type,
+.mproj > div > label:nth-of-type(2) > input:first-of-type {
+    margin: 0 3% 0 0;
+}
+.mproj > label:nth-of-type(1) > input,
+.mproj > div > label:nth-of-type(2) > input {
+    width: 16%;
+}
+.mProjButton {
+    display: flex;
+}
+.mproj > div > button {
+    width: 50%;
+    height: 25px;
+    border: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-right-radius: 8px;
+}
+.mproj > div > button:first-of-type {
+    border-right: 1px solid var(--boxColor);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 0px;
+}
+.mproj > div > button > span:first-of-type {
+    padding-left: 20%;
+}
+.mproj > div > button > span:last-of-type {
+    padding-right: 20%;
+}
+.mproj > div > div {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3px 0 3px 0;
+}
+.mproj > div:last-of-type > label {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+}
+.mproj > div:last-of-type > label > select {
+    height: 20px;
+    text-align: center;
+    width: 70%;
+}
+.mTheory {
+    margin: 10px 0 0 0;
+}
+.mTheory > div {
+    text-align: center;
+}
+.mTheory > div > label > select {
+    width: 75%;
+}
+/* #endregion */
+
+/* #region @Magic-Accumulation & @Magic-Regeneration */
+.maccu > label,
+.maccu > div > label,
+.mregen > label,
+.mregen > div > label {
+    display: flex;
+    padding: 0 10px 0 10px;
+}
+.maccu > label > span,
+.maccu > div > label > span,
+.mregen > label > span,
+.mregen > div > label > span {
+    width: 60%;
+    text-align: start;
+}
+.maccu input,
+.mregen input {
+    width: 40%;
+}
+.maccu >  label:nth-of-type(3),
+.mregen > label:nth-of-type(2) {
+    border-top: 1px solid var(--boxColor);
+    border-bottom: 1px solid var(--boxColor);
+}
+.maccu > label:nth-of-type(2),
+.maccu > label:nth-of-type(3) > span,
+.mregen > label:nth-of-type(2) {
+    font-weight: bold;
+}
+.maccu > div:last-of-type,
+.mregen > div:last-of-type {
+    display: flex;
+    justify-content: end;
+}
+.maccu > div > button,
+.mregen > div > button {
+    width: 50%;
+    height: 25px;
+    border: 0px;
+    border-bottom-right-radius: 8px;
+}
+.maccu > div > button:first-of-type,
+.mregen > div > button:first-of-type  {
+    border-right: 1px solid var(--boxColor);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 0px;
+}
+
+/* #endregion */
+
+/* #region @Zeon */
+.zeon > label,
+.zeon > div > label {
+    display: flex;
+    padding: 0 10px 0 10px;
+}
+.zeon > label > span,
+.zeon > div > label > span {
+    width: 60%;
+    text-align: start;
+}
+.zeon > label > input,
+.zeon > div > label > input {
+    width: 40%;
+}
+.zeon > label:nth-of-type(3) {
+    border-top: 1px solid var(--boxColor);
+    padding: 0 10px;
+}
+.zeon > label:nth-of-type(2),
+.zeon > label:nth-of-type(3) {
+    font-weight: bold;
+}
+/* #endregion */
+
+/* #region @Innate-Magic */
+.minnate {
+    margin: 7px 0 0 0;
+}
+.minnate > legend {
+    font-size: 1.3rem;
+}
+.minnate > div > div > span {
+    justify-content: center;
+}
+.minnate > div > div > label {
+    display: flex;
+    justify-content: center;
+}
+.minnate > div > div > label > input {
+    width: 60%;
+}
+.minnate > div > div:last-of-type > span {
+    font-weight: bold;
+}
+/* #endregion */
+
+/* #region @Magic-Levels */
+/* Magic Levels */
+.mlevels > label,
+.mlevels > div > label {
+    display: flex;
+    padding: 0 10px;
+}
+.mlevels > label > span,
+.mlevels > div > label > span {
+    width: 60%;
+    text-align: start;
+}
+.mlevels > label > input,
+.mlevels > div > label > input {
+    width: 40%;
+}
+.mlevels > label:nth-of-type(3) {
+    border-top: 1px solid var(--boxColor);
+    padding: 0 10px;
+}
+.mlevels > label:nth-of-type(2),
+.mlevels > label:nth-of-type(3) {
+    font-weight: bold;
+}
+/* #endregion */
+
+/* #region @Spell-Paths */
+.spellPath > div:last-of-type {
+    display: flex;
+    place-content: space-between;
+    border-top: 1px solid var(--boxColor);
+}
+.spellPath > div:first-of-type {
+    border-bottom: 1px solid var(--boxColor);
+}
+.spellPath > div:first-of-type,
+.spellPath-item > div {
+    display: flex;
+    justify-content: flex-start;
+}
+.spellPath > div > span,
+.spellPath-item > div > span{
+    text-align: center;
+}
+.spellPath > div > span:first-of-type,
+.spellPath-item > div > input:first-of-type,
+.spellPath-item > div:nth-of-type(1) > span:first-of-type {
+    width: 79%;
+}
+.spellPath > div > span,
+.spellPath-item > div > input,
+.spellPath-item > div:nth-of-type(1) > span {
+    width: 20%;
+    margin: 0 0 0 1%;
+}
+.spellPath-item:nth-child(2n){
+    background: var(--itemOffSet);
+}
+/* #endregion */
+
+/* #region @Sumoning-Abilities */
+.summoning > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: anchor-center;
+}
+.summoning > div:first-of-type {
+    border-bottom: 1px solid var(--boxColor);
+}
+.summoning > div:first-of-type > span {
+    text-align: center;
+}
+.summoning > div:first-of-type > span:first-of-type {
+    width: 31%;
+    margin: 0 1.5% 0 0;
+}
+.summoning > div > button {
+    width: 31%;
+    margin: 0 1.5% 0 0;
+    height: 25px;
+    border: 0px;
+    border-right: 1px solid var(--boxColor);
+    font-size: 0px;
+}
+.summoning > div:first-of-type > span,
+.summoning > div > input {
+    width: 21%;
+    margin: 0 1.5% 0 0;
+}
+.summoning > div:first-of-type > span:last-of-type,
+.summoning > div > input:last-of-type {
+    margin: 0;
+}
+/* #endregion */
+
+/* #region @Turn-Maint & @Daily-Maint */
+.turnDayMaint > div:nth-of-type(2) {
+    width: 100%;
+    min-height: 5px;
+}
+.turnDayMaint > div:nth-of-type(2) > div {
+    padding: 0 2.5%;
+}
+.turnDayMaint > div:first-of-type,
+.turnDayMaint > div:nth-of-type(3),
+.turnMaint-item > div:first-of-type,
+.dailyMaint-item > div:first-of-type {
+    display: flex;
+    justify-content: flex-start;
+}
+.turnDayMaint > div > span,
+.turnMaint-item > div > span,
+.dailyMaint-item > div > span {
+    text-align: center;
+}
+.turnDayMaint > div:first-of-type {
+    border-bottom: 1px solid var(--boxColor);
+    padding-bottom: 3px;
+}
+.turnDayMaint > div:nth-of-type(3) {
+    border-bottom: 1px solid var(--boxColor);
+    border-top: 1px solid var(--boxColor);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-weight: bold;
+}
+.turnDayMaint > div:nth-of-type(3) > button {
+    width: 30%;
+    margin: 0 0 0 1%;
+    height: 20px;
+    border-radius: 0px;
+    border: 0px;
+    font-size: 13px;
+}
+.turnDayMaint > div:nth-of-type(3) > span {
+    width: 63%;
+    height: 26px;
+}
+.turnDayMaint > div:first-of-type > span:first-of-type {
+    width: 59.85%;
+    margin: 0 0 0 2.375%;
+}
+.turnDayMaint > div:first-of-type > span {
+    width: 14.25%;
+    margin: 0 0 0 0.95%;
+}
+.turnDayMaint > div:last-of-type {
+    display: flex;
+    place-content: space-between;
+}
+.turnMaint-item > div > input:first-of-type,
+.turnMaint-item > div > span:first-of-type,
+.dailyMaint-item > div > input:first-of-type,
+.dailyMaint-item > div > span:first-of-type {
+    width: 63%;
+    margin: 0px;
+}
+.turnMaint-item > div > input,
+.turnMaint-item > div > span,
+.dailyMaint-item > div > input,
+.dailyMaint-item > div > span {
+    width: 15%;
+    margin: 0 0 0 1%;
+}
+.turnMaint-item > div > a,
+.dailyMaint-item > div > a {
+    width: 5%;
+    font-size: .95rem;
+}
+.turnMaint-item > div > a,
+.dailyMaint-item > div > a {
+    opacity: 0;
+}
+.turnMaint-item > div:hover > a,
+.dailyMaint-item > div:hover > a {
+    opacity: 1;
+}
+.turnDayMaint > div > div > textarea {
+    margin: 3px 0 0 0;
+}
+.turnDayMaint > div > div:nth-child(2n) {
+    background: var(--itemOffSet);
+}
+/* #endregion */
+
+/* #region @Spell-Book */
+.spells > div:last-of-type {
+    display: flex;
+    border-top: 1px solid var(--boxColor);
+    place-content: space-between;
+}
+.spell-item:nth-child(2n) {
+    background: var(--itemOffSet);
+}
+.spell-item > div:not(:first-of-type) > label,
+.spell-item > div > div {
+    background: inherit;
+}
+.spell-item > div:not(:first-of-type),
+.spell-item > div:not(:first-of-type) > label,
+.spell-item > div > div {
+    display: flex;
+    justify-content: flex-start;
+}
+.spell-item > div > div > a {
+    width: 5%;
+}
+.spell-item > div > div > span {
+    text-align: center;
+}
+.spell-item > div > div > input:first-of-type,
+.spell-item > div > div > span:first-of-type {
+    width: 62%;
+}
+.spell-item > div > div > input:nth-of-type(2),
+.spell-item > div > div > span:nth-of-type(2) {
+    width: 18%;
+    margin: 0 0 0 1%;
+}
+.spell-item > div > div > input:nth-of-type(3),
+.spell-item > div > div > span:nth-of-type(3) {
+    width: 8%;
+    margin: 0 0 0 1%;
+}
+.spell-item > div > div:nth-of-type(2) > span {
+    font-size: 11px;
+}
+.spell-item > div > div:nth-of-type(2) > span:first-of-type {
+    width: 62%;
+    margin: 0 0 0 5%;
+}
+.spell-item > div:not(:first-of-type) > label {
+    width: 32.5%;
+}
+.spell-item > div:not(:first-of-type) > label:not(:first-of-type) {
+    margin: 0 0 0 1%;
+}
+.spell-item > div:not(:first-of-type) > label > span {
+    width: 49%;
+    text-align: center;
+}
+.spell-item > div:not(:first-of-type) > label > select,
+.spell-item > div:not(:first-of-type) > label > input {
+    width: 50%;
+    margin: 0 0 0 1%;
+}
+.spell-item > div:nth-of-type(5) > span {
+    text-align: center;
+    width: 23%;
+    margin: 0 0 0 1%;
+}
+.spell-item > div:nth-of-type(5) > span:first-of-type {
+    width: 18%;
+    margin: 0 0 0 10%;
+}
+.spell-item > div:nth-of-type(3),
+.spell-item > div:nth-of-type(6),
+.spell-item > div:nth-of-type(8),
+.spell-item > div:nth-of-type(10),
+.spell-item > div:nth-of-type(12) {
+    padding: 3px 0 0 0;
+}
+.spell-item > div:nth-of-type(6) > a,
+.spell-item > div:nth-of-type(8) > a,
+.spell-item > div:nth-of-type(10) > a,
+.spell-item > div:nth-of-type(12) > a {
+    width: 5%;
+    margin: 0 0 0 5%;
+}
+.spell-item > div:nth-of-type(6) > span,
+.spell-item > div:nth-of-type(8) > span,
+.spell-item > div:nth-of-type(10) > span,
+.spell-item > div:nth-of-type(12) > span {
+    width: 18%;
+    text-align: center;
+}
+.spell-item > div:nth-of-type(6) > input,
+.spell-item > div:nth-of-type(8) > input,
+.spell-item > div:nth-of-type(10) > input,
+.spell-item > div:nth-of-type(12) > input {
+    width: 23%;
+    margin: 0 0 0 1%;
+}
+.spell-item > div:nth-of-type(3) {
+    border-bottom: 1px solid var(--boxColor);
+    padding-bottom: 3px;
+}
+.spell-item > div:nth-of-type(5) {
+    border-bottom: 1px solid var(--boxColor);
+    border-top: 1px solid var(--boxColor);
+    margin: 3px 0 3px 0;
+    padding: 3px 0 3px 0;
+}
+.spell-item > div > div > a {
+    opacity: 0;
+}
+.spell-item > div > div:hover > a {
+    opacity: 1;
+}
+/* #endregion */
+
+/* #region @Item-Spell */
+.spellContentCont > div:first-of-type {
+    display: flex;
+    width: 100%;
+}
+.spellContentCont > div {
+    display: flex;
+}
+.spellContentCont > div > input,
+.spellContentCont > div > span {
+    width: 24.5%;
+    margin: 0 0.5% 0 0;
+}
+.spellContentCont > div > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spellContentCont > div:nth-of-type(2n) {
+    border-top: 2px solid var(--boxColor);
+    padding: 3px 0;
+}
+
+/* #endregion */
+
+/* #region @Metamagic */
+.metaMagic > div:first-of-type {
+    border-bottom: 1px solid var(--boxColor);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.metaMagic > div:first-of-type > span {
+    width: 25%;
+    padding: 0 0 0 10px;
+}
+.metaMagic > div:first-of-type > label {
+    display: flex;
+    width: 35%;
+}
+.metaMagic > div:first-of-type > label > span {
+    justify-content: end;
+    width: 60%;
+}
+.metaMagic > div:first-of-type > label > input {
+    margin: 0 0 0 5%;
+    width: 25%;
+}
+.metaMagic > div:first-of-type > button {
+    margin: 0px;
+    height: 25px;
+    border-radius: 0px;
+    border: 0px;
+    width: 35%;
+}
+.metaMagic > div:last-of-type {
+    border-top: 1px solid var(--boxColor);
+}
+.metaMagicDesc > div > span {
+    display: inline !important;
+}
+.metaMagicDesc > div > span:first-of-type {
+    font-weight: bold;
+}
+.metaMagicDesc > div {
+    padding: 0 10px;
+}
+.metaMagicDesc > h6 {
+    border-bottom: 1px solid var(--boxColor);
+}
+/* #endregion */
+
+/* #region @Metamagic-Tree-Page */
+.metaMagicGUI {
+    display: grid;
+    grid-template-columns: repeat(23,85px);
+    grid-template-rows: repeat(23,85px);
+    padding: 20px 10px;
+}
+.metaMagicGUI .bubble {
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #06054a 0%, #552670 66.6%, #2d3c66 66.6%, #4043a5 100%);
+    border: 4px solid #383838;
+    z-index: 1;
+}
+.bubbleBought {
+    border-color: var(--kiBought) !important;
+}
+.bubbleFree {
+    border-color: var(--kiFree) !important;
+}
+.metaMagicGUI .bubbleOffsetWide {
+    place-self: center;
+    width: 50%;
+    height: 100%;
+}
+.metaMagicGUI .bubbleOffsetTall {
+    place-self: center;
+    width: 100%;
+    height: 50%;
+}
+.metaMagicGUI .bubbleOffsetCapstone {
+    place-self: center;
+    width: 65%;
+    height: 65%;
+}
+.metaMagicGUI .bubbleLine {
+    z-index: 0;
+}
+.bubbleInfo {
+    display: grid;
+    grid-template-rows: 5px 50px 20px;
+    place-items: center;
+}
+.bubbleInfoCap {
+    display: grid;
+    grid-template-rows: 5px 70px 20px;
+    place-items: center;
+}
+.metaMagicGUI .bubbleInfo > span,
+.metaMagicGUI .bubbleInfoCap > span {
+    text-align: center;
+}
+.metaMagicGUI .bubbleInfo > span:nth-of-type(1) {
+    font-size: 30px;
+    color: #db48a0;
+    margin: 0 0 30px 0;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+.metaMagicGUI .bubbleInfo > span:nth-of-type(2) {
+    display: flex;
+    font-size: 14px;
+}
+.metaMagicGUI .bubbleInfo > span:nth-of-type(3) {
+    font-size: 20px;
+    display: flex;
+}
+.metaMagicGUI .bubbleInfoCap > span:nth-of-type(1) {
+    font-size: 30px;
+    color: #db48a0;
+    margin: 0 0 30px 0;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+.metaMagicGUI .bubbleInfoCap > span:nth-of-type(2) {
+    display: flex;
+    font-size: 14px;
+}
+.metaMagicGUI .bubbleInfoCap > span:nth-of-type(3) {
+    font-size: 20px;
+    display: flex;
+}
+.metaMagicGUI .arcanaTitle {
+    align-items: center;
+    display: grid;
+}
+.metaMagicGUI .arcanaTitle > h5 {
+    font-size: 50px;
+}
+/* #endregion */
+
+/* #region @Invocations & @Incarnations */
+.invocations > div:nth-of-type(2),
+.incarnations > div:nth-of-type(2) {
+    width: 100%;
+}
+.invocations > div:first-of-type,
+.incarnations > div:first-of-type,
+.invocation-item > div:first-of-type,
+.incarnation-item > div:first-of-type {
+    display: flex;
+    justify-content: flex-start;
+}
+.invocations > div:first-of-type,
+.incarnations > div:first-of-type {
+    border-bottom: 1px solid var(--boxColor);
+}
+.invocation-item,
+.incarnation-item {
+    padding: 0 2.5%;
+}
+.invocation-item:nth-child(2n),
+.incarnation-item:nth-child(2n) {
+    background: var(--itemOffSet);
+}
+.invocation-item > div > a,
+.incarnation-item > div > a {
+    width: 5%;
+    font-size: 15px;
+}
+.invocation-item > div > a,
+.incarnation-item > div > a {
+    opacity: 0;
+}
+.invocation-item > div:hover > a,
+.incarnation-item > div:hover > a {
+    opacity: 1;
+}
+.invocations > div > div > textarea,
+.incarnations > div > div > textarea {
+    margin: 3px 0;
+}
+.invocations > div:last-of-type,
+.incarnations > div:last-of-type {
+    display: flex;
+    place-content: space-between;
+    border-top: 1px solid var(--boxColor);
+}
+.invocations > div:first-of-type > span,
+.incarnations > div:first-of-type > span,
+.invocation-item > div > span,
+.incarnation-item > div > span {
+    text-align: center;
+}
+.invocations > div:first-of-type > span:first-of-type {
+    width: 59.85%;
+    margin: 0 0 0 2.375%;
+}
+.invocations > div:first-of-type > span {
+    width: 14.25%;
+    margin: 0 0 0 0.95%;
+}
+.invocation-item > div > input:first-of-type,
+.invocation-item > div > span:first-of-type {
+    width: 63%;
+    margin: 0px;
+}
+.invocation-item > div > input,
+.invocation-item > div > span {
+    width: 15%;
+    margin: 0 0 0 1%;
+}
+.incarnations > div:first-of-type > span:first-of-type {
+    width: 44.65%;
+    margin: 0 0 0 2.375%;
+}
+.incarnations > div:first-of-type > span {
+    width: 14.25%;
+    margin: 0 0 0 0.95%;
+}
+.incarnation-item > div > input:first-of-type,
+.incarnation-item > div > span:first-of-type {
+    width: 47%;
+    margin: 0px;
+}
+.incarnation-item > div > input,
+.incarnation-item > div > span {
+    width: 15%;
+    margin: 0 0 0 1%;
+}
+/* #endregion */
+
+/*
+    ***************
+    ---------------
+        Psychic
+    ---------------
+    ***************
+*/
+/* #region Containers */
+.s3,
+.s4 {
+    display: flex;
+    justify-content: space-between;
+}
+.s4 {
+    margin: 7px 0 0 0;
+}
+.ppoint,
+.ppotential,
+.pproj,
+.pdisc {
+    width: 23.5%;
+}
+.s4 > div {
+    width: 48%;
+}
+/* #endregion */
+
+/* #region @PP */
+.ppoint > *:nth-child(2) {
+    margin: -7px 0 0 0;
+}
+.ppoint > label,
+.ppoint > div > label {
+    display: flex;
+    padding: 0 10px 0 10px;
+}
+.ppoint > label > span,
+.ppoint > div > label > span {
+    width: 60%;
+    text-align: start
+}
+.ppoint > label > input,
+.ppoint > div > label > input {
+    width: 40%;
+}
+.ppoint > label:nth-of-type(2) {
+    border-bottom: 1px solid var(--boxColor);
+    border-top: 1px solid var(--boxColor);
+    padding: 0 10px;
+    font-weight: bold;
+}
+.ppoint > label:nth-of-type(3) {
+    font-weight: bold;
+}
+.ppoint > h5 > label > a {
+    opacity: 0;
+}
+.ppoint:hover > h5 > label > a {
+    opacity: 1;
+}
+/* #endregion */
+
+/* #region @Potential */
+.ppotential > *:nth-child(2) {
+    margin: -7px 0 0 0;
+}
+.ppotential > label,
+.ppotential > div > label,
+.ppotential > div > div > label {
+    display: flex;
+    padding: 0 10px;
+}
+.ppotential > label > span,
+.ppotential > div > label > span,
+.ppotential > div > div > label > span {
+    width: 60%;
+    text-align: start;
+}
+.ppotential > label > input,
+.ppotential > div > label > input,
+.ppotential > div > div > label > select {
+    width: 40%;
+}
+.ppotential > label:nth-of-type(2) {
+    border-top: 1px solid var(--boxColor);
+    border-bottom: 1px solid var(--boxColor);
+    padding: 3px 10px;
+    font-weight: bold;
+}
+.ppotential > h5 > label > a {
+    opacity: 0;
+}
+.ppotential:hover > h5 > label > a {
+    opacity: 1;
+}
+.ppotential > div > button {
+    width: 100%;
+    height: 25px;
+    border: 0px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+/* #endregion */
+
+/* #region @Projection */
+.pproj > *:nth-child(2) {
+    margin: -7px 0 0 0;
+}
+.pproj > label,
+.pproj > div > label {
+    display: flex;
+    padding: 0 10px;
+}
+.pproj > label > span,
+.pproj > div > label > span {
+    width: 60%;
+    text-align: start;
+}
+.pproj > label > input,
+.pproj > div > label > input {
+    width: 40%;
+}
+.pproj > label:nth-of-type(2) {
+    border-top: 1px solid var(--boxColor);
+    border-bottom: 1px solid var(--boxColor);
+    padding: 3px 10px;
+    font-weight: bold;
+}
+.pproj > h5 > label > a {
+    opacity: 0;
+}
+.pproj:hover > h5 > label > a {
+    opacity: 1;
+}
+.pproj > div > button {
+    width: 100%;
+    height: 25px;
+    border: 0px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.pmodButton {
+   display: flex;
+}
+.pmodButton > button {
+    width: 50%;
+}
+.pmodButton > button:first-of-type {
+    border-right: 1px solid black;
+}
+/* #endregion */
+
+/* #region @Disciplines */
+.discipline-item:nth-child(2n) {
+    background: var(--itemOffSet);
+}
+.discipline-item > div > span {
+    text-align: center;
+}
+.pdisc > div:last-of-type {
+    display: flex;
+    place-content: space-between;
+    border-top: 1px solid var(--boxColor);
+}
+/* #endregion */
+
+/* #region @Psychic-Patterns */
+.mentalPattern-item {
+    padding: 0 2.5%;
+}
+.ppaterns > div:first-of-type,
+.mentalPattern-item > div:first-of-type {
+    display: flex;
+    justify-content: flex-start;
+}
+.ppaterns > div:first-of-type {
+    border-bottom: 1px solid var(--boxColor);
+    margin: -7px 0 0 0;
+}
+.ppaterns > div > span,
+.mentalPattern-item > div:nth-of-type(1) > span {
+    text-align: center;
+}
+.ppaterns > div > span:first-of-type {
+    width: 52.25%;
+    margin: 0 0 0 2.5%;
+}
+.ppaterns > div > span:nth-of-type(2) {
+    width: 19.95%;
+    margin: 0 1% 0 1%;
+}
+.ppaterns > div > span:last-of-type {
+    width: 16.15%;
+}
+.ppaterns > div:last-of-type {
+    display: flex;
+    place-content: space-between;
+    border-top: 1px solid var(--boxColor);
+}
+.mentalPattern-item:nth-child(2n) {
+    background: var(--itemOffSet);
+}
+.mentalPattern-item > div > input:first-of-type,
+.mentalPattern-item > div:nth-of-type(1) > span:first-of-type {
+    width: 55%
+}
+.mentalPattern-item > div > input:nth-of-type(2),
+.mentalPattern-item > div:nth-of-type(1) > span:nth-of-type(2) {
+    width: 21%;
+    margin: 0 1% 0 1%;
+}
+.mentalPattern-item > div > button,
+.mentalPattern-item > div:nth-of-type(1) > span:last-of-type {
+    width: 17%;
+}
+.mentalPattern-item > div > a {
+    width: 5%;
+    font-size: 15px;
+}
+.mentalPattern-item > div > a {
+    opacity: 0;
+}
+.mentalPattern-item:hover > div > a {
+    opacity: 1;
+}
+.mentalPattern-item > div > button {
+    border: 0px;
+    font-size: 0px;
+}
+.mentalPattern-item > div:nth-of-type(2) {
+    display: flex;
+    margin: 3px 0 0 0;
+}
+.mentalPattern-item > div:nth-of-type(2) > label {
+    display: flex;
+    width: 50%;
+}
+.mentalPattern-item > div:nth-of-type(2) > label > span {
+    width: 40%;
+    text-align: center;
+}
+.mentalPattern-item > div:nth-of-type(2) > label > input {
+    width: 25%;
+}
+.mentalPattern-item > div:nth-of-type(3) > span {
+    border-top: 1px solid var(--boxColor);
+    border-bottom: 1px solid var(--boxColor);
+    padding: 3px 0 17px 0;
+}
+.mentalPattern-item > div:nth-of-type(3) {
+    text-align: center;
+    border-bottom: 1px solid var(--boxColor);
+}
+/* #endregion */
+
+/* #region @Psychic-Matrices */
+.psychicMatrix-item {
+    padding: 0 2.5%;
+}
+.psychicMatrix-item:nth-child(2n) {
+    background: var(--itemOffSet);
+}
+.ppowers > div:first-of-type,
+.psychicMatrix-item > div:first-of-type {
+    display: flex;
+    justify-content: flex-start;
+}
+.ppowers > div:first-of-type {
+    border-bottom: 1px solid var(--boxColor);
+    margin: -7px 0 0 0;
+}
+.ppowers > div:first-of-type > span,
+.psychicMatrix-item > div:nth-of-type(1) > span,
+.psychicMatrix-item > div > div:not(:first-of-type) > span,
+.psychicMatrix-item > div > div:not(:first-of-type) > label > span {
+    text-align: center;
+}
+.ppowers > div:first-of-type > span:first-of-type {
+    width: 70.3%;
+    margin: 0 0 0 7.25%;
+}
+.ppowers > div:first-of-type > span:nth-of-type(2){
+    width: 14.25%;
+    margin: 0 0 0 1%;
+}
+.ppowers > div:last-of-type {
+    display: flex;
+    place-content: space-between;
+    border-top: 1px solid var(--boxColor);
+}
+.psychicMatrix-item > div > input:first-of-type,
+.psychicMatrix-item > div:nth-of-type(1) > span:first-of-type {
+    width: 74%;
+}
+.psychicMatrix-item > div > input:nth-of-type(2),
+.psychicMatrix-item > div:nth-of-type(1) > span:nth-of-type(2) {
+    width: 15%;
+    margin: 0 0 0 1%;
+}
+.psychicMatrix-item > div > a {
+    width: 5%;
+    font-size: 15px;
+}
+.psychicMatrix-item > div > a {
+    opacity: 0;
+}
+.psychicMatrix-item > div:hover > a {
+    opacity: 1;
+}
+.psychicMatrix-item > div > div:not(:first-of-type) > label {
+    display: flex;
+}
+.psychicMatrix-item > div > div:first-of-type,
+.psychicMatrix-item > div > div:first-of-type > div  {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin: 2.5px 0 0 0;
+    width: 100%;
+}
+.psychicMatrix-item > div > div:first-of-type  > div > label {
+    display: contents;
+}
+.psychicMatrix-item > div > div:first-of-type > div > label > span {
+    width: 44%;
+    text-align: end;
+    margin-right: 5px;
+}
+.psychicMatrix-item > div > div:first-of-type > div > label > select {
+    width: 55%;
+}
+.psychicMatrix-item > div > div:nth-of-type(2) {
+    border-top: 1px solid var(--boxColor);
+    border-bottom: 1px solid var(--boxColor);
+    padding: 3px 0;
+}
+.psychicMatrix-item > div > div:nth-of-type(4) {
+    display: flex;
+    border-top: 1px solid var(--boxColor);
+    border-bottom: 1px solid var(--boxColor);
+    padding: 3px 0;
+}
+.psychicMatrix-item > div > div:nth-of-type(4) > span:first-of-type {
+    width: 25%;
+}
+.psychicMatrix-item > div > div:nth-of-type(4) > span:last-of-type {
+    width: 75%;
+}
+.psychicMatrix-item > div > div:nth-of-type(5) > label > span:first-of-type {
+    width: 7%;
+    border-right: 1px solid var(--boxColor);
+}
+.psychicMatrix-item > div > div:nth-of-type(5) > label > span:last-of-type {
+    width: 18%;
+}
+.psychicMatrix-item > div > div:nth-of-type(5) > label > input {
+    width: 75%;
+}
+.psychicMatrix-item > div:nth-of-type(2) {
+    border-bottom: 1px solid var(--boxColor);
+    padding: 0 0 3px 0;
+}
+.psychicMatrix > div > label {
+    display: flex;
+}
+.psychicMatrix > div:nth-of-type(1) {
+    display: flex;
+    text-align: center;
+    border-bottom: 1px solid var(--boxColor);
+}
+.psychicMatrix > div:nth-of-type(1) > span,
+.psychicMatrix > div:nth-of-type(2) > label > span {
+    display: grid;
+}
+.psychicMatrix > div:nth-of-type(1) > span:first-of-type {
+    width: 25%;
+}
+.psychicMatrix > div:nth-of-type(1) > span:last-of-type {
+    width: 75%;
+}
+.psychicMatrix > div:nth-of-type(2) > label {
+    text-align: center;
+}
+.psychicMatrix > div:nth-of-type(2) > label > span:first-of-type {
+    width: 7%;
+    border-right: 1px solid var(--boxColor);
+}
+.psychicMatrix > div:nth-of-type(2) > label > span:last-of-type {
+    width: 18%;
+}
+.psychicMatrix > div:nth-of-type(2) > label > input {
+    width: 75%;
+}
+.psychicMatrix > div > label > span,
+.psychicMatrix > div > span {
+    font-size: 13px;
+    align-items: center;
+    height: 20px;
+}
+.psyTempDesc {
+    padding: 0 0 0 3px;
+}
+.psyTempDesc p {
+    margin: 0;
+}
+/* #endregion */
+
+/* #region @Item-Psychic-Matrix @V2*/
+.psyTypeInfo {
+    display: flex;
+    padding: 2px 10px !important;  
+    font-style: italic;
+}
+.psyItemEachMatrix:not(:last-of-type) {
+    border-bottom: 1px solid var(--boxColor);
+}
+.psyItemDetHeader {
+    display: flex;
+    padding: 2px 10px !important;
+}
+.psyItemDetHeader > span:first-of-type {
+    width: 7%;
+    border-right: 1px solid var(--boxColor);
+}
+.psyItemDetHeader > span:nth-of-type(2) {
+    width: 83%;
+    padding: 0 0 0 2%;
+}
+.psyItemDetHeader > a {
+    width: 10%;
+    text-align: center;
+}
+.psyItemDescContainer {
+    padding: 2px 10px !important;
+}
+.psyItemDescHeader {
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--boxColor);
+}
+.psyItemDesc {
+    overflow-y: auto;
+}
+.psyItemDmgTypes {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 10px !important;
+}
+.psyItemDmgTypes > button {
+    width: 10%
+}
+.psyItemResTypes {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 10px !important;
+}
+.psyItemResTypes > button {
+    width: 18%
+}
+.psyItemEachCollapsed {
+    padding: 2px 10px 2px 54px !important;
+}
+.psyItemEachCollapsed p {
+    margin: 0;
+}
+/* #endregion */
+
+
+/* #region @Maintained-Matrices */
+.maintPower-item:nth-child(2n) {
+    background: var(--itemOffSet);
+}
+.pmaint > div:first-of-type {
+    margin: -7px 0 0 0;
+}
+.maintPower-item {
+    padding: 0 2.5%;
+}
+.pmaint > div:not(:nth-of-type(3)),
+.maintPower-item > div:first-of-type {
+    display: flex;
+    justify-content: flex-start;
+}
+.pmaint > div > label:first-of-type {
+    padding: 0 0 0 15px;
+    display: flex;
+}
+.pmaint > div > label:nth-of-type(2) {
+    padding: 0 15px 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.pmaint > div > label > input {
+    width: 15%;
+    margin: 0 0 0 5px;
+}
+.pmaint > div:nth-of-type(2) > span,
+.maintPower-item > div:nth-of-type(1) > span {
+    text-align: center;
+}
+.pmaint > div:nth-of-type(2) > span:first-of-type {
+    width: 75.05%;
+    margin: 0 0 0 2.5%;
+}
+.pmaint > div:nth-of-type(2) > span:nth-of-type(2) {
+    width: 14.25%;
+    margin: 0 0 0 1%;
+}
+.pmaint > div:nth-of-type(2) {
+    border-top: 1px solid var(--boxColor);
+    border-bottom: 1px solid var(--boxColor);
+}
+.pmaint > div:last-of-type {
+    display: flex;
+    place-content: space-between;
+    border-top: 1px solid var(--boxColor);
+}
+.maintPower-item > div > input:first-of-type,
+.maintPower-item > div:nth-of-type(1) > span:first-of-type {
+    width: 79%;
+}
+.maintPower-item > div > input:nth-of-type(2),
+.maintPower-item > div:nth-of-type(1) > span:nth-of-type(2) {
+    width: 15%;
+    margin: 0 0 0 1%;
+}
+.maintPower-item > div > a {
+    width: 5%;
+    font-size: 15px;
+}
+.maintPower-item > div > a {
+    opacity: 0;
+}
+.maintPower-item > div:hover > a {
+    opacity: 1;
+}
+.maintPower-item > div > textarea {
+    margin: 5px 0 0 0;
+}
+/* #endregion */
+
+/*
+    **************
+    --------------
+          Ki
+    --------------
+    **************
+*/
+/* #region Containers */
+.ki .fieldsetContainer {
+    flex-direction: row;
+}
+.ki .kiAbilities {
+    width: 33.5%;
+    display: block;
+}
+
+.s5 {
+    width: 64.5%;
+    flex-wrap: wrap;
+    gap: .5rem;
+    display: block;
+}
+.s5 > div:nth-of-type(1),
+.s5 > div:nth-of-type(2) {
+    display: flex;
+    justify-content: space-between;
+}
+.kipool {
+    width: 44%;
+}
+.kiPoolRightContainer {
+    width: 54%;
+}
+.kiMacroControls {
+    width: 44%;
+}
+.limits {
+    width: 54%;
+}
+.mk > div,
+.limits > div {
+    width: 95%;
+    margin: 0 0 0 2.5%;
+}
+.arsMagnus, .martialarts, .kiseals, .DragonSeals, .kiTech {
+    width: 100%;
+}
+/* #endregion */
+
+/* #region @Ki-Abilities */
+.kiSubsection > div:first-of-type {
+    margin: -7px 0 0 0;
+}
+.kiSubsection > div:first-of-type > span { 
+    padding: 0 0 0 3px;
+}
+.kiSubsection > div:last-of-type {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.kiSubsection > div:last-of-type > button {
+    border-bottom-right-radius: 8px;
+}
+.kiSubsection .kiAbility {
+    height: 25px;
+    border: 0px;
+    width: 15%;
+    font-size: 0px;
+}
+.kiSubsection > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.kiSubsection > div:nth-child(2n + 1) {
+    background: var(--itemOffSet);
+}
+.kiAbilities .subKi1 {
+    margin-left: 10px;
+}
+.kiAbilities .subKi2 {
+    margin-left: 30px;
+}
+.kiAbilities .subKi3 {
+    margin-left: 50px;
+}
+.kiAbilities .subKi4 {
+    margin-left: 70px;
+}
+.kiAbilities .subKi5 {
+    margin-left: 90px;
+}
+.kiActiveButton {
+    width: 17%;
+    margin: 0 0 0 7px;
+    height: 20px;
+    border-radius: 0px;
+    border: 0px;
+}
+.kiActiveButton1 {
+    width: 17%;
+    margin: 0 0 0 24px;
+    height: 20px;
+    border-radius: 0px;
+    border: 0px;
+}
+/* #endregion */
+
+/* #region @Ki-Abilities-Custom */
+.kiAbility-item > label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.kiAbility-item > label > button {
+    min-height: 25px;
+    border: 0px;
+    width: 15%;
+    font-size: 0px;
+}
+.kiAbility-item > label > span {
+    height: auto;
+}
+.kiAbility-item > label > input:nth-of-type(1) {
+    height: 20px;
+    width: 75%;
+}
+.kiAbility-item > label > input:nth-of-type(2) {
+    height: 25px;
+    width: 15%;
+}
+.subKiBase {
+    margin: 0 0 0 3px;
+}
+/* #endregion */
+
+/* #region @Ki-Pools */
+.kipool > div:not(:first-of-type) > div {
+    padding: 0 2.5%;
+}
+.kipool > div:first-of-type {
+    border-bottom: 1px solid var(--boxColor);
+    padding: 0 2.5%;
+    margin: -7px 0 0 0;
+}
+.kipool > div:first-of-type > span:first-of-type {
+    margin: 0 2.5% 0 19%;
+}
+.kipool > div:first-of-type,
+.kipool > div:nth-of-type(8) > div,
+.kipool > div > div {
+    display: flex;
+    justify-content: flex-start;
+}
+.kipool > div > div > span {
+    width: 19%;
+    justify-content: center;
+}
+.kipool > div > div > button {
+    width: 19%;
+    justify-content: center;
+    --button-size: 0em;
+}
+.kipool > div > span {
+    justify-content: center;
+    margin: 0 2% 0 0;
+    width: 17%;
+}
+.kipool > div > div > input {
+    margin: 0 2% 0 0;
+}
+.kipool > div > div > input,
+.kipool > div:nth-of-type(8) > div > input {
+    width: 17%;
+}
+.kipool > div > div > a {
+    width: 5%;
+    font-size: 15px;
+}
+.kipool > div > div >  a {
+    opacity: 0;
+}
+.kipool > div:hover > div > a {
+    opacity: 1;
+}
+.kipool > div > div:not(:first-of-type) > span {
+    font-size: 12px;
+    font-style: italic;
+    padding: 0 0 0 8px;
+}
+.kipool > div:nth-of-type(8) > div > span {
+    width: 36%;
+    margin: 0 2% 0 0;
+}
+/* #endregion */
+
+/* #region @MK */
+.mk > div:first-of-type {
+    margin: -5px 0 0 2.5%;
+}
+.mk > div,
+.mk > div > label {
+    display: flex;
+    justify-content: space-between;
+}
+.mk > div > label {
+    width: 50%;
+}
+.mk > div > label > span {
+    width: 60%;
+    display: flex;
+    padding: 0 0 0 4.5%;
+}
+.mk > div > label > input {
+    width: 35%;
+    margin: 0 4.5% 0 0;
+}
+.lastMK {
+    border-top: 1px solid var(--boxColor);
+    padding: 3px 0;
+}
+.mk > h5 > label > a {
+    opacity: 0;
+}
+.mk:hover > h5 > label > a {
+    opacity: 1;
+}
+/* #endregion */
+
+/* #region @Limits */
+.limits > div > select {
+    width: 100%;
+}
+.limits > div:first-of-type {
+    margin: -5px 0 0 2.5%;
+}
+
+/* #endregion */
+
+/* #region @Ki-Macro-Controls */
+.kiMacroControls > div {
+    display: flex;
+}
+.kiMacroControls > div > button {
+    width: 50%;
+    height: 25px;
+    border: 0px;
+    border-bottom: 1px solid var(--boxColor);
+}
+.kiMacroControls > div > button:first-of-type {
+    border-right: 1px solid var(--boxColor);
+}
+.kiMacroControls > button {
+    justify-self: anchor-center;
+    width: 75%;
+    height: 20px;
+    border: 0px;
+}
+/* #endregion */
+
+/* #region @Ars-Magnus */
+.arsMagnus > div:not(:nth-of-type(2)),
+.arsMagnus-item > div:first-of-type {
+    display: flex;
+}
+.arsMagnus > div:first-of-type {
+    border-bottom: 1px solid var(--boxColor);
+    margin: -7px 0 0 0;
+}
+.arsMagnus > div > span:first-of-type {
+    width: 69.35%;
+    margin: 0 0 0 2.5%;
+}
+.arsMagnus > div > span {
+    width: 9.5%;
+    margin: 0 0 0 1%;
+}
+.arsMagnus > div:nth-of-type(3) {
+    display: flex;
+    place-content: space-between;
+    border-top: 1px solid var(--boxColor);
+}
+.arsMagnus > div > span,
+.arsMagnus-item > div > span {
+    text-align: center;
+}
+.arsMagnus-item > div > a {
+    width: 5%;
+    font-size: 15px;
+}
+.arsMagnus-item:nth-child(2n) {
+    background: var(--itemOffSet);
+}
+.arsMagnus-item > div {
+    padding: 0 2.5%;
+}
+.arsMagnus-item > div > a {
+    opacity: 0;
+}
+.arsMagnus-item > div:hover > a {
+    opacity: 1;
+}
+.arsMagnus-item > div > span:first-of-type,
+.arsMagnus-item > div > input:first-of-type {
+    width: 73%;
+    margin: 0;
+}
+.arsMagnus-item > div > span,
+.arsMagnus-item > div > input {
+    width: 10%;
+    margin: 0 0 0 1%;
+}
+.arsMagnus-item > div:nth-of-type(2) {
+    padding: 3px 2.5%;
+}
+/* #endregion */
+
+/* #region @Dragon-Seals */
+.DragonSeals > div {
+    display: flex;
+    padding: 0 2.5%;
+    text-align: center;
+}
+.DragonSeals > div:first-of-type {
+    margin: -7px 0 0 0;
+}
+.DragonSeals > div > :nth-child(1) {
+    width: 48%;
+    margin: 0 2% 0 0;
+}
+.DragonSeals > div > :nth-child(2) {
+    width: 20%;
+    margin: 0 5% 0 0;
+}
+.DragonSeals > div > :nth-child(3) {
+    width: 20%;
+}
+/* #endregion */
+
+/* #region @Martial-Arts */
+.martialarts > div:first-of-type,
+.martialArt-item > div:first-of-type {
+    display: flex;
+    justify-content: flex-start;
+}
+.martialarts > div:first-of-type {
+    border-bottom: 1px solid var(--boxColor);
+    margin: -7px 0 0 0;
+}
+.martialArt-item > div {
+    padding: 0 2.5%;
+}
+.martialArt-item:nth-child(2n) {
+    background: var(--itemOffSet);
+}
+.martialarts > div > span,
+.martialArt-item > div > span {
+    text-align: center;
+}
+.martialarts > div > span:first-of-type {
+    width: 53.2%;
+    margin: 0 0 0 2.5%;
+}
+.martialarts > div > span:nth-of-type(2) {
+    width: 19%;
+}
+.martialarts > div > span {
+    width: 7.6%;
+    margin: 0 0 0 1%;
+}
+.martialarts > div:last-of-type {
+    display: flex;
+    place-content: space-between;
+    border-top: 1px solid var(--boxColor);
+}
+.martialArt-item > div > a {
+    width: 5%;
+    font-size: 15px;
+}
+.martialArt-item > div > a {
+    opacity: 0;
+}
+.martialArt-item > div:hover > a {
+    opacity: 1;
+}
+.martialArt-item > div > span:first-of-type,
+.martialArt-item > div > input:first-of-type {
+    width: 56%;
+    margin: 0;
+}
+.martialArt-item > div > span:nth-of-type(2),
+.martialArt-item > div:first-of-type > div {
+    width: 20%;
+    margin: 0 0 0 1%;
+}
+.martialArt-item > div > div > select {
+    width: 100%;
+}
+.martialArt-item > div > span,
+.martialArt-item > div > input {
+    width: 8%;
+    margin: 0 0 0 1%;
+}
+.martialArt-item > div:nth-of-type(2) {
+    padding: 3px 2.5%;
+}
+/* #endregion */
+
+/* #region @Unarmed-Damage */
+.unarmed > div,
+.unarmed > div > div {
+    display: flex;
+    justify-content: flex-start;
+}
+.unarmed > div:first-of-type {
+    border-bottom: 1px solid var(--boxColor);
+    margin: -7px 0 0 0;
+}
+.unarmed > div > span {
+    text-align: center;
+}
+.unarmed > div:first-of-type > span:first-of-type {
+    margin-left: 2.5%;
+}
+.unarmed > div > span:not(:nth-of-type(2)) {
+    width: 14.25%
+}
+.unarmed > div > input:first-of-type {
+    width: 15%;
+}
+.unarmed > div > span:nth-of-type(2) {
+    width: 66.5%
+}
+.unarmed > div > div {
+    width: 70%;
+}
+.unarmed > div > div > input {
+    width: 15%;
+}
+.unarmed > div > div > span {
+    width: 4%;
+}
+.unarmed > div > div > div {
+    width: 100%;
+}
+.unarmed > div > div > div > select {
+    width: 100%;
+}
+.unarmed > div > input:nth-of-type(2) {
+    width: 15%;
+}
+.unarmed > h5 > label > a {
+    opacity: 0;
+}
+.unarmed:hover > h5 > label > a {
+    opacity: 1;
+}
+/* #endregion */
+
+/* #region @Ki-Seal-Creatures */
+.kisealmast > div {
+    display: flex;
+    justify-content: space-evenly;
+}
+.kisealmast > div > span,
+.kiSealsCreatures > div > span,
+.kiSealCreature-item > div > span,
+.kiSealCreature-item > div:last-of-type > div > span{
+    text-align: center;
+}
+.kisealmast > div:first-of-type > span:first-of-type {
+    margin: 0 0 0 2.5%;
+}
+.kisealmast > div:first-of-type > span:last-of-type {
+    margin: 0 2.5% 0 0;
+}
+.kisealmast > div:not(:first-of-type) {
+    padding: 0 2.5%;
+}
+.kisealmast > div > span,
+.kisealmast > div > button {
+    width: 15%;
+    height: 30px;
+}
+.kisealmast > div > button {
+    font-size: 0px;
+    border-color: var(--boxColor);
+}
+.kiseals > div:first-of-type {
+    margin: -7px 0 0 0;
+}
+.kisealmast > div:first-of-type {
+    border-top: 1px solid var(--boxColor);
+}
+.kisealmast > div:last-of-type {
+    border-bottom: 1px solid var(--boxColor);
+    padding: 0 2.5% 5px 2.5%;
+}
+.kiSealsCreatures > div:first-of-type {
+    border-bottom: 1px solid var(--boxColor);
+}
+.kiSealCreature-item {
+    padding: 0 2.5%;
+}
+.kiSealCreature-item:nth-child(2n) {
+    background: var(--itemOffSet);
+}
+.kiSealsCreatures > div:first-of-type,
+.kiSealCreature-item > div:first-of-type {
+    display: flex;
+    justify-content: flex-start;
+}
+.kiSealsCreatures > div > span:first-of-type {
+    width: 70.3%;
+    margin: 0 0 0 7.25%;
+}
+.kiSealsCreatures > div > span {
+    width: 14.25%;
+    margin: 0 0 0 1%;
+}
+.kiSealsCreatures > div:last-of-type {
+    display: flex;
+    place-content: space-between;
+    border-top: 1px solid var(--boxColor);
+}
+.kiSealCreature-item > div > a {
+    width: 5%;
+    font-size: 15px;
+}
+.kiSealCreature-item > div > a {
+    opacity: 0;
+}
+.kiSealCreature-item > div:hover > a {
+    opacity: 1;
+}
+.kiSealCreature-item > div:first-of-type > span:first-of-type,
+.kiSealCreature-item > div:first-of-type > input:first-of-type {
+    width: 74%;
+    margin: 0;
+}
+.kiSealCreature-item > div:first-of-type > span,
+.kiSealCreature-item > div:first-of-type > input {
+    width: 15%;
+    margin: 0 0 0 1%;
+}
+.kiSealCreature-item > div:last-of-type > div {
+    display: flex;
+    justify-content: space-between;
+}
+.kiSealCreature-item > div:last-of-type > div > span:first-of-type {
+    width: 20%;
+}
+.kiSealCreature-item > div:last-of-type > div > span,
+.kiSealCreature-item > div:last-of-type > div > input {
+    width: 15%;
+}
+.kiSealCreature-item > div:last-of-type > textarea {
+    margin: 3px 0 0 0;
+}
+/* #endregion */
+
+/* #region @Item-Ki-Seals */
+.kiSealContent {
+    background: none !important;
+}
+.kiSealContent > div {
+    display: flex; 
+}
+.kiSealContent > div > span {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+.kiSealContent > div:nth-of-type(2) > span:first-of-type,
+.kiSealContent > div:nth-of-type(3) > span:first-of-type,
+.kiSealContent > div:first-of-type > span:first-of-type {
+    width: 20%;
+    margin: 0;
+}
+.kiSealContent > div > input,
+.kiSealContent > div:first-of-type > span {
+    width: 15%;
+    margin: 0 0 0 1%;
+}
+/* #endregion */
+
+/* #region @Ki-techniques */
+.kiTech > div:last-of-type {
+    display: flex;
+    place-content: space-between;
+    border-top: 1px solid var(--boxColor);
+}
+.kiTechnique-item {
+    padding: 0 2.5% 10px 2.5%;
+}
+.kiTechnique-item:nth-child(2n) {
+    background: var(--itemOffSet);
+}
+.kiTechStatsGrid {
+    display: grid;
+    grid-template-columns: 75px repeat(var(--char-count), 1fr);
+    gap: 5px 2px;
+    text-align: center;
+    align-items: center;
+    padding: 0 0 3px 0;
+}
+.kiTechStatsGrid .kiTechFirstGrid {
+    text-align: start;
+}
+.kiTechStatsGrid .kiTechFirstRow {
+    border-bottom: 1px dashed var(--boxColor);
+}
+.kiTechMainInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 0 0 0;
+}
+.kiTechMainInfo > span {
+    width: 64%;
+    border-bottom: 1px solid var(--boxColor);
+    height: auto;
+}
+.kiTechMainInfo > span:nth-of-type(2),
+.kiTechMainInfo > span:nth-of-type(3) {
+    width: 11%;
+    justify-content: center;
+}
+.kiTechMainInfo > a {
+    width: 5%;
+    height: auto;
+}
+.kiTechMainInfo > a {
+    width: 5%;
+    font-size: 0.85rem;
+}
+.kiTechMainInfo > a {
+    opacity: 0;
+}
+.kiTechnique-item:hover > div > a {
+    opacity: 1;
+}
+.kiTechSubheader {
+    justify-items: center;
+    font-style: italic;
+    border-bottom: 1px solid var(--boxColor);
+    margin: 3px 0 7px 0;  
+    font-size: 0.8rem;
+} 
+.kiTechnique-item .editor {
+    border: 1px solid var(--boxColor);
+    padding: 0 3px;
+    border-radius: 10px;
+    max-height: 250px;
+    overflow: auto;
+}
+.kiTechUnifiedMaint {
+    display: flex;
+    justify-content: center;
+}
+.kiTechUnifiedMaint > span:last-of-type {
+    padding: 0 0 0 5px;
+}
+/* #endregion */
+
+/* #region @Item-Ki-techniques */
+.kiTechGridContent {
+    display: grid;
+    grid-template-columns: 75px repeat(6, 1fr);
+    gap: 8px 2px;
+    text-align: center;
+    align-items: center;
+    padding: 0 10px;
+    margin: 0 0 5px 0;
+}
+.kiTechGridContent > input {
+    width: 80%;
+    justify-self: center;
+}
+.kiTechGridContent .kiTechGridUnderline {
+    border-bottom: 1px dashed var(--boxColor);
+}
+
+/* #endregion */
+
+/*
+    *************
+    -------------
+    ARMORY FORMAT
+    -------------
+    *************
+*/
+/* #region Containers @v2 */
+.wearArmor, .weightStats, .presenceStats, .currency {
+    width: 100%;
+}
+/* #endregion */
+
+/* #region @Currency @v2 */
+.fieldSetRowV2 .currency > div > label,
+.currency > div:first-of-type,
+.currency-item > div {
+    display: flex;
+    padding: 0 10px;
+}
+.currency > div:first-of-type {
+    display: flex;
+    border-bottom: 1px solid var(--boxColor);
+    margin: -10px 0 0 0;
+}
+.currency > div > span {
+    text-align: center;
+}
+.currency > div > span:first-of-type,
+.currency > div > label > span,
+.currency-item > div > span:first-of-type,
+.currency-item > div > input:first-of-type {
+    width: 69%;
+}
+.currency > div > span:last-of-type,
+.currency > div > label > input,
+.currency-item > div > input:last-of-type {
+    width: 30%;
+    margin: 0 0 0 1%;
+}
+.currency-item:nth-child(2n) {
+    background: var(--itemOffSet);
+}
+/* #endregion */
+
+/* #region @Weight-Stats @v2 */
+.weightStats .abfDivFormat > label,
+.weightStats .abfDivFormat > div > label {
+    display: flex;
+    padding: 0 10px;
+}
+.weightStats > div > label > span, 
+.weightStats > div > div > label > span,
+.weightStats > div > div > div > label > span {
+    width: 55%;
+    text-align: start;
+}
+.baseAbfalterV2  .weightStats > div > label > input,
+.baseAbfalterV2  .weightStats > div > div > label > input{
+    width: 45%;
+    text-align: end;
+}
+.baseAbfalterV2  .weightStats > div > div > div > label > select {
+    width: 45%;
+}
+.baseAbfalterV2  .weightStats > div > div > div::after{
+    right: 15px;
+}
+.weightStats > div > label:nth-of-type(2),
+.weightStats .abfDivFormat > div > label:last-of-type {
+    border-bottom: 1px solid var(--boxColor);
+    padding: 0 10px 2px 10px;
+    margin: 0px 0 2px 0;
+}
+
+/* #endregion */
+
+/* #region @Presence-Stats @v2 */
+.presenceStats .abfDivFormat > label,
+.presenceStats .abfDivFormat > div > label {
+    display: flex;
+    padding: 0 10px;
+}
+.presenceStats > div > label > span, 
+.presenceStats > div > div > label > span  {
+    width: 70%;
+    text-align: start;
+}
+.baseAbfalterV2  .presenceStats > div > label > input,
+.baseAbfalterV2  .presenceStats > div > div > label > input {
+    width: 30%;
+}
+.presenceStats > div > label:nth-of-type(2),
+.presenceStats .abfDivFormat > div > label:last-of-type {
+    border-bottom: 1px solid var(--boxColor);
+    padding: 0 10px 2px 10px;
+    margin: 0px 0 2px 0;
+}
+/* #endregion */
+
+/* #region @Wear-Armor @v2 */
+.wearArmor .abfDivFormat > label {
+    display: flex;
+    padding: 0 10px;
+}
+.wearArmor > div > label > span  {
+    width: 60%;
+    text-align: start;
+}
+.wearArmor > div > label > input {
+    width: 40%;
+}
+.wearArmor > div > label:nth-of-type(5) {
+    border-top: 1px solid var(--boxColor);
+    padding: 0 10px;
+    font-weight: bold;
+}
+/* #endregion */
+
+/* #region @addItemBox @v2 */
+.armoryAddBox {
+    position: absolute;
+    z-index: 1;
+    left: 95%;
+    top: 96%;
+    background: var(--buttonHover);
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    align-self: center;
+    border: 1px solid var(--boxColor);
+    font-size: var(--font-size-20);
+    padding: 1px 0 0px 1px;
+}
+.armoryAddBox a:hover {
+    text-shadow: 0 0 8px var(--armorPen);
+    color: var(--armorPen);
+}
+/* #endregion */
+
+/* #region @Items-Armory @v2 */
+.weapon > div:nth-of-type(n+3),
+.armor > div:nth-of-type(n+3),
+.ammo > div:nth-of-type(n+3),
+.inventory > div:nth-of-type(n+3) {
+    border-top: 1px solid var(--boxColor);
+}
+.inventory {
+    margin: 0 0 30px 0;
+}
+.armory .armoryItemHeader.armoryItemHeader,
+.armory .armory-item {
+    width: 98%;
+    justify-self: center;
+}
+.armory .armoryItemHeader {
+    display: flex;
+    height: 30px;
+    background: linear-gradient(to right, var(--color-navbar), var(--armoryItemHeader));
+    border-bottom: 1px solid black;
+}
+.armory .armoryItemHeader > span {
+    text-transform: uppercase;
+    font-family: var(--abfalter-font-roboto-condensed);
+    font-size: var(--font-size-11);
+    text-align: center;
+}
+.armory .armoryItemHeader > span:first-of-type {
+    font-family: var(--abfalter-font-roboto-slab);
+    font-size: var(--font-size-18);
+    text-transform: none;
+    text-align: start;
+    padding: 0 0 0 15px;
+    font-weight: bold;
+}
+.armory .armoryItemHeader .armoryNameHeader {
+    width: 59%;
+}
+.armory .armoryItemHeader .armoryPriceHeader {
+    width: 9%;
+}
+.armory .armoryItemHeader .armoryWeightHeader,
+.armory .armoryItemHeader .armoryQuantityHeader,
+.armory .armoryItemHeader .armoryChargesHeader,
+.armory .armoryItemHeader .armorHeaderEmpty {
+    width: 8%;
+}
+.armory-item {
+    background: var(--armoryItemBackground);
+    padding: 5px 0;
+}
+.armoryItemContainer {
+    display: flex;
+    flex-direction: row;
+}
+.armoryItemMain {
+    display: flex;
+    flex-direction: row;
+    width: 59%;
+}
+.armoryItemImg {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    min-width: 36px;
+    min-height: 36px;
+    align-self: center;
+    border: 1px solid #cf9e06;
+    box-shadow: 0px 0px 3px #cf9e06;
+    border-radius: 7px;
+}
+.armoryItemNames {
+    display: flex;
+    flex-direction: column;
+    width: -webkit-fill-available;
+    padding: 0 0 0 5px;
+}
+.armoryItemNames span:first-of-type {
+    font-size: var(--font-size-18);
+    cursor: pointer;
+}
+.armoryItemNames span:first-of-type:hover {
+    color: var(--armorPen);
+}
+.armoryItemNames span:last-of-type {
+    font-size: var(--font-size-11);
+    color: var(--armoryTagText);
+}
+.armoryTags {
+    width: 7%;
+    text-align: center;
+    align-self: center;
+}
+.armoryPrice {
+    display: flex;
+    width: 9%;
+}
+.armoryPrice > span {
+    display: flex;
+    justify-content: end;
+    align-self: center;
+    padding: 0 3px 0 0;
+    width: -webkit-fill-available;
+}
+.armoryPrice > img {
+    width: 13px;
+    height: 13px;
+    object-fit: cover;
+    min-width: 13px;
+    min-height: 13px;
+    align-self: center;
+}
+.armoryWeight {
+    text-align: center;
+    width: 8%;
+}
+.armoryQuantity {
+    display: flex;
+    justify-content: space-between;
+    width: 8%;
+}
+.armoryCharges {
+    width: 8%;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.armoryItemControls {
+    display: flex;
+    width: 8%;
+    align-items: stretch;
+    justify-content: start;
+    color: var(--item-control-color);
+    padding: 0 38px 0 4px;
+    position: relative;
+}
+.armory-item .armoryItemControls > a:first-of-type {
+    margin: 0 0.4rem;
+}
+.armoryDescription {
+    padding: 3px 10px;
+    max-height: 300px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.armoryTags {
+    display: flex;
+    flex-direction: row;
+    padding: 0 10px;
+    gap: 5px;
+}
+.armory-item .armoryTags span {
+    text-transform: uppercase;
+    border: 1px solid var(--boxColor);
+    width: fit-content;
+    font-size: var(--font-size-11);
+    white-space: nowrap;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 2px 2px 0 2px;
+}
+.armoryIndent {
+    width: 22px;
+    align-items: center;
+    display: flex;
+    padding: 4px 0 0 0;
+}
+
+/* #endregion */
+
+/* #region @Armory-Weapon Buttons @v2 */
+.armoryWepEquip {
+    display: flex;
+    align-items: center;
+    height: 29px;
+    padding: 0 0 0 5px;
+    color: var(--boxColor);
+}
+.baseAbfalterV2 .armoryWepEquip button {
+    height: 25px;
+    min-height: 0px;
+    border-radius: 0px;
+    border: 1px solid var(--boxColor);
+    background: var(--armoryButtonBackground);
+}
+.armoryWepCombat {
+    display: flex;
+    justify-content: end;
+    width: 42%;
+}
+.baseAbfalterV2 .armoryWepCombat > button {
+    width: 33.3%;
+}
+.armoryWepBreak {
+    display: flex;
+    justify-content: end;
+    width: 14%;
+    margin: 0 0 0 3%;
+}
+.armoryWepTrap, .armoryWepAmmo {
+    display: flex;
+    justify-content: end;
+    width: 14%;
+}
+.baseAbfalterV2 .armoryWepBreak > button,
+.baseAbfalterV2 .armoryWepTrap > button,
+.baseAbfalterV2 .armoryWepAmmo > button {
+    width: 100%;
+
+}
+/* #endregion */
+
+/* #region @Armory-Item-Creation @v2 */
+.armoryItemCreate {
+    width: 400px;
+}
+.baseAbfalterV2 .armoryItemCreate > input {
+    display: flex;
+    justify-content: center;
+    font-size: var(--font-size-28);
+    margin: 0 0 10px 0;
+    height: auto;
+}
+.baseAbfalterV2 .armoryItemCreate > div {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--boxColor);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--boxColor);
+    padding: 5px 10px;
+}
+.baseAbfalterV2  .armoryItemCreate > div > label {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+.baseAbfalterV2 .armoryItemCreate > div > label:not(:last-of-type) {
+    border-bottom: 1px solid var(--boxColor);
+}
+.baseAbfalterV2 .armoryItemCreate > div > label > img {
+    width: 40px;
+    height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    filter: invert(1);
+}
+.baseAbfalterV2 .armoryItemCreate > div > label > span {
+    padding: 0 0 0 15px;
+    font-size: var(--font-size-20);
+    width: -webkit-fill-available;
+}
+.baseAbfalterV2 .armoryItemCreate > div > label > input {
+    width: 10%;
+}
+
+
+/* #endregion */
+
+
+
+
+/* #region @Item-Armor */
+.armorContent {
+    padding: 0 10px;
+}
+.armorContent > label {
+    display: flex;
+    padding: 2px 0;
+}
+.armorContent > label > span {
+    display: grid;
+}
+.armorContent > label > span:first-of-type {
+    width: 65%;
+}
+.armorContent > label > input {
+    width: 17%;
+}
+.armorContent > label > span:nth-of-type(2) {
+    width: 1%;
+    text-align: center;
+}
+.armorContent > label > span:nth-of-type(3) {
+    width: 17%;
+    text-align: center;
+}
+.armorCard > div {
+    display: flex;
+    justify-content: space-around;
+    padding: 3px 0 0 0;
+}
+.armorCard > div:first-of-type {
+    border-bottom: 1px dotted var(--boxColor);
+}
+.armorCard > div > span:first-of-type {
+    width: 15%;
+}
+.armorCard > div > span {
+    width: 10%;
+    text-align: center;
+}
+.armorCard > div > input {
+    width: 10%;
+}
+.armorContentButtons {
+    display: flex;
+    justify-content: space-between;
+}
+/* #endregion */
+
+/* #region @Weapon */
+.weapons > div:first-of-type {
+    padding-bottom: 3px;
+}
+.weapons > div:last-of-type {
+    display: flex;
+    place-content: space-between;
+}
+.weapon-item:nth-child(2n) {
+    background: var(--itemOffSet);
+}
+.weapon-item {
+    padding: 5px;
+    border-bottom: 1px solid var(--boxColor);
+}
+.weapon-item > div {
+    display: flex;
+    justify-content: flex-start;
+}
+.weaponHeaderContainer {
+    display: flex;
+    align-items: center;
+}
+.weapon-item-img {
+    min-width: 50px;
+    width: 50px;
+    height: 50px; 
+    object-fit: cover; 
+    margin-right: 10px; 
+}
+.weaponContainerInfo {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    width: 100%;
+    justify-content: space-between; 
+}
+.weaponContainerInfo > div {
+    display: flex;
+    height: 25px;
+}
+.weaponContainerInfo > div > a {
+    display: grid;
+    align-items: center;
+    width: 5%;
+    height: 25px;
+}
+.weaponContainerInfo > div > span {
+    height: 25px;
+}
+.weaponContainerInfo .wepContainer1 > span:first-of-type {
+    width: 61%;
+    font-size: 20px;
+    margin: 0 2% 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.weaponContainerInfo .wepContainer1 > span:nth-of-type(2) {
+    width: 15%;
+}
+.weaponContainerInfo .wepContainer1 > span:nth-of-type(3) {
+    width: 12%;
+}
+.weaponContainerInfo .wepContainer1 > label {
+    width: 27%;
+}
+.weaponContainerInfo .wepContainer1 > label > span {
+    width: 100%;
+}
+.weaponContainerInfo .wepContainer2 > div {
+    width: 66%;
+    display: flex;
+    justify-content: end;
+    margin: 0 2% 0 0;
+}
+.weaponContainerInfo .wepContainer2 > div > button {
+    margin: 0px;
+    width: 33%;
+    height: 25px;
+    border-radius: 0px;
+    border: 1px solid var(--boxColor);
+}
+.weaponContainerInfo .wepContainer2 > span {
+    width: 15%;
+    height: 25px;
+}
+.weaponContainerInfo .wepContainer2 > span:nth-last-of-type(2) {
+    width: 17%;
+}
+.weaponContainerInfo .wepContainer2 > button {
+    margin: 0px;
+    width: 16%;
+    height: 25px;
+    border-radius: 0px;
+    padding: 0px;
+    border: 1px solid var(--boxColor);
+}
+.weapon-item .weaponSubHeaderContainer {
+    display: flex;
+    width: 100%;
+    padding: 5px 0 0 0;
+}
+.wepSubLeft {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+}
+.wepSubRight {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+}
+.weaponSubTrap {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+.weaponSubTrap > button {
+    margin: 0 0 0 3px;
+    width: 100px;
+    height: 20px;
+    border-radius: 0px;
+    border: 1px solid var(--boxColor);
+}
+.weaponSubThrow {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+.weaponSubThrow > span:nth-of-type(2) {
+    padding: 0 3px 0 5px;
+}
+.weaponSubThrow > a {
+    font-size: 13px;
+}
+.weaponSubThrow > span:nth-of-type(1) {
+    padding: 0 5px;
+}
+.weapons .itemControls {
+    border: none;
+}
+/* #endregion */
+
+/* #region Item Weapon*/
+.atkCustomTitleContainer {
+  position: relative;
+}
+.atkCustomTitle {
+  visibility: hidden;
+  opacity: 0;
+  background-color: #333;
+  color: #fff; 
+  text-align: center;
+  border-radius: 4px;
+  padding: 5px;
+  position: absolute;
+  top: -100%;
+  z-index: 10;
+  left: 50%;
+  width: 200px;
+  transform: translateX(-50%);
+  transition: opacity 0.2s ease-in-out;
+  font-size: 14px;
+  pointer-events: none;
+}
+.atkCustomTitleContainer:hover .atkCustomTitle {
+  visibility: visible;
+  overflow: visible;
+  opacity: 1;
+}
+
+.baseAbfalterV2 .weaponReqOnlyOne {
+    width: 35%;
+}
+.weaponVorpal {
+    display: flex;
+    padding: 2px 10px 2px 10px !important;
+}
+.weaponVorpal > span {
+    width: 32%;
+}
+.baseAbfalterV2 .weaponVorpal > div {
+    width: 31%;
+    margin: 0 2% 0 0;
+}
+.weaponVorpal > span:nth-of-type(2) {
+    width: 17%;           
+    margin: 0 1% 0 0;
+    text-align: center;
+}
+.weaponVorpal > input {
+    width: 17%;
+    text-align: center;
+}
+.weaponTrapping,
+.weaponTrapping2 {
+    display: flex;
+    padding: 2px 10px 2px 10px !important;
+}
+.weaponTrapping > span {
+    width: 65%
+}
+.baseAbfalterV2 .weaponTrapping > div {
+    width: 17%;
+}
+.weaponTrapping > span:nth-of-type(2) {
+    width: 1%;           
+    text-align: center;
+}
+.weaponTrapping2 > span {
+    width: 38%;
+}
+.weaponTrapping2 > span:nth-of-type(2) {
+    margin: 0 1% 0 0;
+    width: 30%;
+    text-align: right;
+}
+.weaponTrapping2 > button {
+    width: 25%;
+    margin: 0 2% 0 0;
+    font-size: 0px;
+    border: none;
+    align-self: center;
+}
+.weaponTrapping2 > input {
+    width: 6%;
+}
+
+.weaponReloadDisplay {
+    display: flex;
+    padding: 2px 10px 2px 10px !important;
+    justify-content: space-between;
+}
+.weaponReloadDisplay > span:nth-of-type(2) {
+    min-width: 35%;
+    text-align: center;
+}
+.weaponAmmoStr {
+    display: flex;
+    padding: 2px 10px 2px 10px !important;
+    align-items: center;
+}
+.weaponAmmoStr > span:first-of-type {
+    width: 31%;
+}
+.baseAbfalterV2  .weaponAmmoStr > button {
+    margin: 0 2% 0 0;
+    width: 20%;
+    border-radius: 0px;
+    border: none;
+    font-size: 0px;
+}
+.weaponAmmoStr > button:first-of-type {
+    width: 10%;
+}
+.weaponAmmoStr-doubleInput {
+    width: 17%;
+}
+.weaponAmmoStr-doubleInputSpan {
+    width: 1%;
+}
+.weaponAmmoStr-doubleInputSpanTwo {
+    text-align: center;
+    width: 17%;
+}
+.weaponAmmoStr-singleSpan {
+    width: 35%;
+    text-align: center;
+}
+.pushSpeedLabel {
+    display: flex;
+    padding: 2px 10px 2px 10px !important;
+}
+.pushSpeedLabel > span{
+    height: 20px;
+}
+.pushSpeedLabel > span:nth-of-type(1) {
+    width: 40%;
+}
+.pushSpeedLabel > span:nth-of-type(2) {
+    width: 25%;
+    text-align: center;
+}
+.pushSpeedLabel > span:nth-of-type(3) {
+    width: 17%;
+    text-align: center;
+}
+.pushSpeedLabel > span:nth-of-type(4) {
+    width: 1%;
+    text-align: center;
+}
+.pushSpeedLabel > span:nth-of-type(5) {
+    width: 17%;
+    text-align: center;
+}
+.pushSpeedContents {
+    display: flex;
+    padding: 2px 10px 2px 10px !important;
+}
+/* #endregion */
+
+/* #region Item Weapon Profile */
+.profile {
+    margin: 0px 0 5px 0;
+    border-bottom: 1px solid var(--boxColor);
+    padding: 0 0 5px 0;
+}
+.wepProfileName {
+    display: flex;
+    justify-content: space-between;
+}
+.wepProfileName > span {
+    width: 85%;
+}
+.wepProfileName > input {
+    width: 85%;
+}
+.wepProfileName > a {
+    width: 5%;
+}
+.wepProfileType {
+    display: flex;
+    width: 99%;
+    justify-content: space-between;
+    margin: 5px 0 0 0;
+}
+.wepProfileType > div > label {
+    display: flex;
+}
+.wepProfileSelector {
+    width: 40%;
+}
+.wepProfileSelector > label > span:first-of-type {
+    width: 40%;
+}
+.wepProfileSelector > label > select {
+    width: 60%;
+}
+.wepProfileStats {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 5px 0;
+}
+.wepProfileStats > label {
+    width: 30%;
+    display: flex;
+}
+.wepProfileStats > label:nth-of-type(3n + 1),
+.wepProfileStats > label:nth-of-type(3n + 2) {
+    margin: 0 5% 0 0;
+}
+.wepProfileStats > label > span {
+    width: 40%;
+}
+.wepProfileStats > label > input {
+    width: 27%;
+}
+.wepProfileStats > label > span:nth-of-type(2) {
+    width: 3%;
+    text-align: center;
+}
+.wepProfileStats > label > span:nth-of-type(3) {
+    width: 27%;
+    text-align: center;
+}
+.wepProfileBasic {
+    padding: 2px 0;
+}
+.wepProfileBasic > label,
+.wepProfileBasic > label > label {
+    display: flex;
+    align-items: center;
+}
+.wepProfileBasic > label > button {
+    min-height: 24px;
+    border: none;
+    border-radius: 0;
+}
+.wepProfileDmgTypeO > label > span {
+    width: 70%;
+}
+.wepProfileDmgTypeO > label > div {
+    width: 29%;
+}
+.wepProfileVorpalO > label > button:first-of-type {
+    width: 25%;
+    margin: 0 2% 0 0;
+}
+.wepProfileVorpalO > label > label:first-of-type {
+    width: 36%;
+    margin: 0 2% 0 0;
+}
+.wepProfileVorpalO > label > label:first-of-type > span {
+    width: 33%;
+}
+.wepProfileVorpalO > label > label:first-of-type > div {
+    width: 67%;
+}
+.wepProfileVorpalO > label > label:nth-of-type(2) {
+    width: 35%;
+}
+.wepProfileVorpalO > label > label:nth-of-type(2) > span{
+    width: 80%;
+}
+.wepProfileVorpalO > label > label:nth-of-type(2) > input{
+    width: 20%;
+}
+.wepProfileThrowableO > label > button:first-of-type {
+    width: 25%;
+    margin: 0 2% 0 0;
+}
+.wepProfileThrowableO > label > button:nth-of-type(2) {
+    width: 10%;
+    margin: 0 2% 0 0;
+}
+.wepProfileThrowableO > label > button:nth-of-type(3) {
+    width: 24%;
+    margin: 0 2% 0 0;
+}
+.wepProfileThrowableO > label > label {
+    width: 35%;
+}
+.wepProfileThrowableO > label > label > span {
+    width: 80%;
+}
+.wepProfileThrowableO > label > label > input {
+    width: 20%;
+}
+.wepProfileTrappingO > label > button:first-of-type {
+    width: 25%;
+    margin: 0 2% 0 0;
+}
+.wepProfileTrappingO > label > button:nth-of-type(2) {
+    width: 20%;
+    margin: 0 18% 0 0;
+}
+.wepProfileTrappingO > label > label {
+    width: 35%;
+}
+.wepProfileTrappingO > label > label > span {
+    width: 80%;
+}
+.wepProfileTrappingO > label > label > input {
+    width: 20%;
+}
+.wepProfileAmmunitionO > label > span:first-of-type {
+    width: 25%;
+    margin: 0 2% 0 0;
+    text-align: center;
+}
+.wepProfileAmmunitionO > label > button:nth-of-type(1) {
+    width: 10%;
+    margin: 0 2% 0 0;
+}
+.wepProfileAmmunitionO > label > button:nth-of-type(2) {
+    width: 24%;
+    margin: 0 2% 0 0;
+}
+.wepProfileAmmunitionO > label > label {
+    width: 35%;
+}
+.wepProfileAmmunitionO > label > label > span {
+    width: 80%;
+}
+.wepProfileAmmunitionO > label > label > input {
+    width: 20%;
+}
+.wepProfileNotesO > label:first-of-type {
+    margin: 0 0 3px 0;
+}
+.wepProfileNotesO > label > span {
+    width: 20%;
+}
+/* #endregion */
+
+
+
+/*
+    ***************
+    ---------------
+    BIO & INFO PAGE
+    ---------------
+    ***************
+*/
+/* #region Bio & Info @v2 */
+.bio {
+    margin: 5px 3px 0 0;
+}
+.bio .bioPictures {
+    display: flex;
+    min-width: 878px;
+    width: 100%;
+    justify-content: space-between;
+}
+.bio .bioPictures > div:first-of-type{
+    width: 25%;
+    height: 25%;
+}
+.bio .bioPictures > div:last-of-type {
+    max-width: 60%;
+}
+.bio .bioPictures > div:last-of-type > img {
+    max-height: 500px;
+}
+.bio .bioPictures > div:first-of-type > img {
+    border: none;
+}
+.bio .bioInformation {
+    padding: 10px 0 0 0;
+}
+.bio .bioInformation > div {
+    padding: 0 0 5px 0;
+    margin: 0 0 0 5px;
+
+}
+.bio .bioInformation > div > label {
+    display: inline-flex;
+    width: 20%;
+    padding: 0 15px 0 0;
+}
+.bio .bioInformation > div > label > span {
+    padding: 0 7px 0 0;
+}
+.baseAbfalterV2 .bio .bioInformation > div > label > input {
+    border-bottom: 1px solid var(--boxColor);
+    background: transparent;
+    text-align: left;
+}
+.baseAbfalterV2 .bio .bioInformation > div > label > input:placeholder-shown {
+    border: 1px solid var(--errorColor);
+}
+.bio .abfEditorFormat {
+    padding: 7px 0 0 0;
+}
+.bio .abfEditorFormat .editor {
+    min-height: 700px;
+}
+/* #endregion */
+
+/*
+    *************
+    -------------
+    SETTINGS PAGE
+    -------------
+    *************
+*/
+/* #region @Page-Settings @v2 */
+.settingsOptions {
+    width: 35%;
+}
+.settingsOptions .settingsSubsection > label {
+    display: flex;
+    padding: 0 10px;
+}
+.settingsOptions .settingsSubsection > label > button {
+    width: 30%;
+    border-radius: 0px;
+    align-self: center;
+    font-size: 0px;
+}
+.settingsOptions .settingsSubsection > label > span {
+    width: 70%;
+    text-align: start;
+}
+.settingsSubsectionIndent {
+    padding: 0 0 0 15px;
+}
+.innatePowerSetting > div {
+    width: 30%;
+}
+/* #endregion */
+
+/* #region Containers @v2*/
+.settings2 {
+    width: 63%;
+}
+.settings2 >  div:first-of-type {
+    display: flex;
+    gap: 1rem;
+}
+.settings2 >  div:first-of-type > div:first-of-type {
+    width: 43%;
+}
+.charOptions {
+    width: 53%;
+}
+/* #endregion */
+
+/* #region @RollRange @v2 */
+.rollRange > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.rollRange > div:last-of-type {
+    border-top: 1px solid var(--boxColor);
+}
+.rollRange > div > label {
+    display: flex;
+    width: 48%;
+    justify-content: space-between;
+}
+.rollRange > div > label > span {
+    width: 60%;
+    padding: 1px 0 0 0;
+}
+.rollRange > div > label > input {
+    width: 40%;
+}
+.rollRange > div > label > select {
+    width: 40%;
+}
+.rollRange > div > label > button {
+    font-size: 0px;
+    border-radius: 0px;
+    width: 40%;
+}
+.rollRange .openRollLimits {
+    padding: 2px 10px;
+}
+.openRollLimits > span {
+    width: 40%;
+}
+.openRollLimits > div {
+    width: 60%
+}
+.speakerOptions > label {
+    display: flex;
+    padding: 0 10px;
+}
+.speakerOptions > label > span {
+    width: 45%;
+}
+.speakerOptions > label > div {
+    width: 55%
+}
+/* #endregion */
+
+/* #region @Character-Options @v2 */
+.baseAbfalterV2 .charOptions > div > label {
+    display: flex;
+    padding: 0 10px;
+}
+.charOptions > div > label > span {
+    width: 60%;
+}
+.charOptions > div > label > input {
+    width: 40%;
+}
+.charOptions .lvlModLabel > input {
+    width: 19.5%;
+}
+.charOptions .lvlModLabel > span:nth-of-type(2) {
+    width: 1%;
+}
+.charOptions .lvlModLabel > span:nth-of-type(3) {
+    width: 19.5%;
+    text-align: center;
+}
+.charOptions .dpOffSetsLabel > span {
+    width: 30%;
+}
+.charOptions .dpOffSetsLabel > button {
+    width: 27%;
+    margin: 0 3% 0 0;
+    font-size: 0px;
+}
+.charOptions .dpOffSetsLabel > input {
+    width: 40%;
+}
+.charOptions > div > label:nth-of-type(4) {
+    border-top: 1px dashed var(--boxColor);
+    margin: 3px 0 0 0;
+    padding: 3px 10px 0 10px;
+}
+.charOptions > div > label:nth-of-type(11) {
+    border-top: 1px dashed var(--boxColor);
+    margin: 3px 0 0 0;
+    padding: 3px 10px 0 10px;
+}
+.charOptions > div > label:not(:nth-of-type(3)) > button {
+    width: 40%;
+    border-radius: 0px;
+    font-size: 0px;
+}
+.charOptions .shieldValuesLabel > input {
+    width: 19%;
+}
+.charOptions .shieldValuesLabel > span:nth-of-type(2) {
+    width: 2%;
+}
+.charOptions .shieldValuesLabel > span:nth-of-type(3) {
+    width: 19%;
+    text-align: center;
+}
+/* #endregion */
+
+/* #region @Extended-Settings @v2 */
+.extendedSettingsContainer {
+    display: flex;
+}
+.baseAbfalterV2 .extendedSettings {
+    width: 50%;
+}
+.baseAbfalterV2 .extendedSettings > label {
+    display: flex;
+    padding: 0 10px;
+}
+.extendedSettings > label > span {
+    width: 60%
+}
+.extendedSettings .setDoubleInput > input {
+    width: 19%;
+    align-self: center;
+}
+.extendedSettings .setDoubleInput > span:nth-of-type(2) {
+    width: 2%;
+    align-self: center;
+}
+.extendedSettings .setDoubleInput > span:nth-of-type(3) {
+    width: 19%;
+    text-align: center;
+    align-self: center;
+}
+.extendedSettings .setSingleInput > input {
+    width: 40%;
+    align-self: center;
+}
+.extendedSettings .setSingleInput > button {
+    width: 40%;
+    font-size: 0px;
+    align-self: center;
+}
+/* #endregion */
+
+
+
+
+
+
+/* #region @Innate-Bonuses MAYBE TODO*/
+.class-item {
+    padding: 0 2.5%;
+}
+.class-item:nth-child(2n) {
+    background: var(--itemOffSet);
+}
+.innateBonuses > div:first-of-type,
+.class-item > div:first-of-type {
+    display: flex;
+    justify-content: flex-start;
+}
+.innateBonuses > div:first-of-type {
+    border-bottom: 1px solid var(--boxColor);
+    margin: -11px 0 0 0;
+}
+.innateBonuses > div:last-of-type {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--boxColor);
+}
+.innateBonuses > div:first-of-type > span:first-of-type {
+    width: 79.8%;
+    margin: 0 0 0 2.5%;
+}
+.class-item > div:first-of-type > input:first-of-type {
+    width: 84%
+}
+.innateBonuses > div:first-of-type > span:last-of-type {
+    width: 9.5%;
+    margin: 0 0 0 0.95%;
+}
+.class-item > div:first-of-type > input:last-of-type {
+    width: 10%;
+    margin: 0 0 0 1%;
+}
+.class-item > div:first-of-type > a {
+    width: 5%;
+    font-size: 15px;
+}
+.class-item > div > a {
+    opacity: 0;
+}
+.class-item > div:hover > a {
+    opacity: 1;
+}
+/* #endregion */
+
+/* #region @Class-Item*/
+.classHeaderList {
+    display: grid;
+    grid-template-columns: 65% 35%;
+}
+.classContentSelect,
+.classContent  {
+    display: flex;
+}
+.classContentSelect > label {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 10px;
+    width: 100%;
+}
+.classContent > label {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 10px;
+    width: 50%;
+}
+.classContentSelect > label > span {
+    display: grid;
+    width: 37%;
+    margin: 0 3% 0 3%;
+    justify-content: flex-start;
+}
+.classContent > label > span {
+    display: grid;
+    width: 64%;
+    margin: 0 3% 0 3%;
+    justify-content: flex-start;
+}
+.classContentSelect > label > select {
+    width: 54%;
+    margin: 0 3% 0 0;
+}
+.classContentSelect::after {
+    right: 20px !important;
+}
+.classContentSelect {
+    width: 50%;
+}
+.classContent > label > input {
+    width: 27%;
+    margin: 0 3% 0 0;
+}
+.classHeader {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid var(--boxColor);
+    color: var(--boxColor);
+    padding: 3px 7px;
+    height: 25px;
+}
+.classHeader > span {
+    color: var(--boxColor);
+    font-size: 1.2rem;
+}
+.classHeader > a {
+    width: 4%;
+}
+.classHeader > a > i {
+    font-size: 1.3rem;
+}
+.classContent2 {
+    display: flex;
+}
+.classContent2 > label {
+    display: flex;
+    align-items: flex-start;
+    padding: 0 5px;
+    width: 50%;
+}
+.classContent2 > label > span {
+    display: grid;
+    width: 60%;
+    margin: 0 1%;
+    justify-content: flex-start;
+}
+.classContent2 > label > span:last-of-type {
+    width: 30%;
+}
+.classContent2 > label > input {
+    width: 10%;
+    margin: 0 1% 0 0;
+}
+.classContent3 {
+    display: flex;
+}
+.classContent3 > label {
+    display: flex;
+    justify-content: center;
+    padding: 0 5px;
+    width: 33%;
+}
+.classContent3 > label > span {
+    display: grid;
+    margin: 0 1%;
+    justify-content: flex-start;
+}
+.classContent3 > label > span:first-of-type {
+    justify-content: flex-end;
+}
+.classContent3 > label > span:last-of-type {
+    width: 5%;
+}
+.classContent3 > label > input {
+    width: 15%;
+    margin: 0 1% 0 0;
+}
+.dpcost > h6 {
+    justify-content: start;
+    border-bottom: 1px solid var(--boxColor);
+    font-size: 20px;
+}
+.classHeader2 {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--boxColor);
+    padding: 3px 0;
+    font-size: 17px;
+}
+.classHeader2 > span {
+    color: var(--boxColor);
+    font-size: 1.3rem;
+    margin: 0 5px;
+}
+.classHeader2 > button {
+    height: 20px;
+    border-radius: 0px;
+    border: none;
+    width: 35%;
+    font-size: 13px;
+}
+
+.ppClass > div {
+    width: 50%;
+    padding: 0 10px;
+}
+.ppClass > div::after {
+    right: 15px;
+}
+.ppClass > div > label {
+    display: flex;
+    width: 100%;
+}
+.ppClass > div > label > span {
+    width: 46%;
+    margin: 0 0 0 4%;
+    justify-content: flex-start;
+}
+.ppClass > div > label > select {
+    width: 50%;
+}
+/* #endregion */
+
+/* #region @dp-calculator*/
+.dpCostCalc span {
+    display: grid;
+}
+.dpCostHeader,
+.dpCostMainInfo,
+.dpCostMainInfo > label {
+    display: flex;
+}
+.dpCostHeader > span {
+    font-size: 23px;
+}
+.dpCostHeader > span:nth-of-type(2) {
+    margin-left: 5px;
+    margin-right: 3px;
+}
+.dpCostMainInfo > label > span {
+    font-size: 20px;
+}
+.dpCostMainInfo {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 7px 0;
+}
+.dpCostMainInfo > label {
+    display: flex;
+    width: 48%;
+}
+.dpCostMainInfo > label > span:first-of-type {
+    margin-right: 5px;
+}
+.dpCostMainInfo > label > span:nth-of-type(2) {
+    margin-right: 3px;
+}
+.dpCostStatscontainer > h6 {
+    justify-content: start;
+    border-bottom: 1px solid var(--boxColor);
+    font-size: 20px;
+}
+.dpCostContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+.dpCostContainer > div {
+    width: 33%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+.dpCostContainer > div > span {
+    display: block;
+    text-align: start;
+}
+/* #endregion */
+
+/*
+    *************
+    -------------
+    FOUNDRY SETTINGS
+    -------------
+    *************
+*/
+/* #region @Combat-Settings*/
+.combatHeaderInfo {
+    padding: 0 0 5px 0;
+}
+.combatHeaderInfo > label {
+    font-style: italic;
+    font-size: 0.8rem;
+}
+.combatHeader > label {
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--boxColor);
+}
+.combatRule > span {
+    color: var(--armorPen);
+}
+/* #endregion */
+
+
+
+/*
+    **************
+    --------------
+    ACTIVE EFFECTS
+    --------------
+    **************
+*/
+/* #region Actor Active Effects */
+.actorEffects .effects-list {
+    padding: 0 2%;
+}
+.actorEffects .effects-list > li {
+    font-size: 1.2rem;
+    background: var(--color-bg-btn-minor-inactive);
+    border: 1px solid var(--boxColor);
+    margin: 0;
+}
+.actorEffects .effects-list > li .effect-name {
+    padding: 0 0 0 5px;
+}
+.actorEffects .effects-list li .effect-source,
+.actorEffects .effects-list li .effect-duration {
+    text-align: center;
+}
+.actorEffects .effects-list > ol {
+    padding: 0px;
+    margin: 0 0 10px 0;
+}
+.actorEffects .effects-list > ol > li {
+    padding: 5px 0;
+}
+.actorEffects .effects-list > ol > li:nth-of-type(2n + 1) {
+    background: var(--itemOffSet);
+}
+.actorEffects .effects-list > ol > li {
+    font-size: 1rem;
+    font-family: 'Signika';
+    color: var(--textColor);
+    margin: 0;
+}
+.actorEffects .effects-list > ol > li > div:first-of-type {
+    font-weight: bold;
+    padding: 0 0 0 5px;
+}
+/* #endregion */
+
+/* #region Item Active Effects */
+.itemEffects .effects-list {
+    padding: 0 2%;
+}
+.itemEffects .effects-list > li {
+    font-size: 1rem;
+    background: var(--color-bg-btn-minor-inactive);
+    border: 1px solid var(--boxColor);
+    margin: 0;
+}
+.itemEffects .effects-list > li .effect-name {
+    padding: 0 0 0 5px;
+}
+.itemEffects .effects-list li .effect-source,
+.itemEffects .effects-list li .effect-duration {
+    text-align: center;
+}
+.itemEffects .effects-list > ol {
+    padding: 0px;
+    margin: 0 0 10px 0;
+}
+.itemEffects .effects-list > ol > li {
+    padding: 5px 0;
+}
+.itemEffects .effects-list > ol > li:nth-of-type(2n + 1) {
+    background: var(--itemOffSet);
+}
+.itemEffects .effects-list > ol > li {
+    font-size: 0.85rem;
+    font-family: 'Signika';
+    color: var(--textColor);
+    margin: 0;
+}
+.itemEffects .effects-list > ol > li > div:first-of-type {
+    padding: 0 0 0 5px;
+}
+/* #endregion */
+
+/*
+    ***********
+    -----------
+    ITEM LAYOUT
+    -----------
+    ***********
+*/
+/* #region Item-Global-Styles effects-list @V2 */
+.itemPageV2 {
+    min-width: 500px;
+    max-height: 850px;
+    padding: 0 3px 0 0;
+}
+.itemPageV2 > fieldset:not(:first-of-type) {
+    margin: 1rem 0 0 0;
+}
+.itemPageV2 > fieldset > legend {
+    text-align: left;
+    margin: 0 0 0 30px;
+    padding: 0 0.5rem;
+    color: var(--boxColor);
+    font-size: 1.5rem;
+}
+.itemPageV2 > fieldset > *:not(legend):last-child {
+    margin: 0 0 5px 0;
+}
+.itemPageV2 > fieldset > .csSelect::after {
+    right: 15px;
+    top: 0px;
+}
+.itemPageV2 fieldset {
+    border: 2px solid var(--boxColor);
+    padding: 0;
+    border-radius: 12px;
+}
+.itemSimpleLabel {
+    display: flex;
+    padding: 2px 10px 2px 10px !important;
+}
+.itemSimpleLabel > label {
+    display: flex;
+    width: 100%;
+}
+.itemSimpleLabel > label > span,
+.itemSimpleLabel > span {
+    width: 65%;
+    height: auto;
+}
+.itemSimpleLabel > label > select,
+.itemSimpleLabel > label > button,
+.itemSimpleLabel > button,
+.itemSimpleLabel > input {
+    width: 35%;
+}
+.itemSimpleLabel > label > button,
+.itemSimpleLabel > button {
+    font-size: 0px;
+    border: none;
+    align-self: center;
+}
+.itemLabelSpan {
+    display: flex;
+    padding: 4px 10px 2px 10px !important;
+}
+.itemSimpleSelectLabel {
+    display: flex;
+    padding: 2px 10px 2px 10px !important;
+}
+.itemSimpleSelectLabel > label {
+    display: flex;
+    width: 100%;
+}
+.itemSimpleSelectLabel > span {
+    width: 38%;
+}
+.baseAbfalterV2 .itemSimpleSelectLabel > button {
+    width: 25%;
+    margin: 0 2% 0 0;
+    font-size: 0px;
+    border: none;
+    align-self: center;
+}
+.baseAbfalterV2 .itemSimpleSelectLabel > div {
+    width: 25%;
+    margin: 0 2% 0 0;
+}
+.itemSimpleSelectLabel > select,
+.itemSimpleSelectLabel > input {
+    width: 35%;
+}
+.itemDoubleInputLabel {
+    display: flex;
+    padding: 2px 10px 2px 10px !important;
+}
+.itemDoubleInputLabel > span {
+    width: 65%;
+}
+.itemDoubleInputLabel > input {
+    width: 17%;
+}
+.itemDoubleInputLabel > span:nth-of-type(2) {
+    width: 1%;
+}
+.itemDoubleInputLabel > span:nth-of-type(3),
+.itemDoubleInputLabel > input:nth-of-type(2) {
+    width: 17%;
+    text-align: center;
+}
+.itemDoubleInputLabel > button {
+    font-size: 0px;
+    border: none;
+    align-self: center;
+}
+.itemDoubleInputButtonLabel {
+    display: flex;
+    padding: 2px 10px 2px 10px !important;
+}
+.itemDoubleInputButtonLabel > label {
+    display: flex;
+    width: 100%;
+}
+.itemDoubleInputButtonLabel > span {
+    width: 38%;
+}
+.baseAbfalterV2 .itemDoubleInputButtonLabel > button {
+    width: 25%;
+    margin: 0 2% 0 0;
+}
+.itemDoubleInputButtonLabel > input {
+    width: 17%;
+}
+.itemDoubleInputButtonLabel > span:nth-of-type(2) {
+    width: 1%;
+}
+.itemDoubleInputButtonLabel > span:nth-of-type(3),
+.itemDoubleInputButtonLabel > input:nth-of-type(2) {
+    width: 17%;
+    text-align: center;
+}
+.itemDoubleInputButtonLabel > button {
+    font-size: 0px;
+    border: none;
+    align-self: center;
+}
+.itemDoubleInputSelectLabel {
+    display: flex;
+    padding: 2px 10px 2px 10px !important;
+}
+.itemDoubleInputSelectLabel > label {
+    display: flex;
+    width: 100%;
+}
+.itemDoubleInputSelectLabel > span {
+    width: 38%;
+}
+.baseAbfalterV2 .itemDoubleInputSelectLabel > div {
+    width: 25%;
+    margin: 0 2% 0 0;
+}
+.itemDoubleInputSelectLabel > input {
+    width: 17%;
+}
+.itemDoubleInputSelectLabel > span:nth-of-type(2) {
+    width: 1%;
+}
+.itemDoubleInputSelectLabel > span:nth-of-type(3),
+.itemDoubleInputSelectLabel > input:nth-of-type(2) {
+    width: 17%;
+    text-align: center;
+}
+.itemDoubleInputSelectLabel > button {
+    font-size: 0px;
+    border: none;
+    align-self: center;
+}
+/* General Details @Weight & @Money */
+.itemContentSelectInput {
+    display: flex;
+    align-items: center;
+    padding: 2px 10px;
+}
+.itemContentSelectInput > label {
+    width: 36%;
+}
+.weightContainer > label {
+    width: 46%;
+}
+.itemContentSelectInput > label > span {
+    display: grid;
+}
+.itemContentSelectInput > div {
+    margin: 0 2%;
+    width: 25%;
+}
+.itemContentSelectInput .weightType {
+    margin: 0 2%;
+    width: 15%;
+}
+.itemContentSelectInput > div > label > select {
+    width: 100% !important;
+}
+.itemContentSelectInput > span:nth-of-type(1) {
+    width: 1%;
+    text-align: center;
+    display: grid;
+}
+.itemContentSelectInput > span:nth-of-type(2) {
+    width: 17%;
+    text-align: center;
+    display: grid;
+}
+.itemContentSelectInput > input {
+    width: 17%;
+}
+/* Property Container */
+.itemPropertyContainer {
+    display: flex;
+    padding: 2px 10px 2px 10px !important;
+    flex-direction: column;
+}
+.itemPropertyContainer > div  {
+    display: flex;
+    flex-flow: wrap;
+}
+.itemPropertyContainer > div > label {
+    display: flex;
+    width: 33.3%;
+
+}
+.itemPropertyContainer > div > label > input::before {
+    color: var(--color-checkbox-bg);
+}
+.itemPropertyContainer > div > label > input::after {
+    color: var(--boxColor);
+}
+.itemPropertyContainer > div > label > span {
+    align-self: center;
+    font-size: var(--font-size-13);
+}
+/* #endregion */
+
+/* #region Item-Global-Styles effects-list */
+.itemPage {
+    min-width: 500px;
+    max-height: 850px;
+    padding: 0 3px 0 0;
+}
+.itemPage > fieldset:not(:first-of-type) {
+    margin: 1rem 0 0 0;
+}
+.itemPage > fieldset > legend {
+    text-align: left;
+    margin: 0 0 0 30px;
+}
+.itemPage > fieldset > *:not(legend):last-child {
+    margin: 0 0 5px 0;
+}
+.itemPage > fieldset > .csSelect::after {
+    right: 15px;
+    top: 0px;
+}
+/* #endregion */
+
+/* #region Item-Header */
+.abfalter.item .sheet-header {
+    flex: 0 0 100px;
+    border-bottom: 2px groove var(--boxColor);
+    display: flex;
+}
+.abfalter.item .sheet-header img.item-img {
+    flex: 0 0 100px;
+    max-width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-right: 2px groove  var(--boxColor);
+}
+.abfalter.item .sheet-header .header-details {
+    font-family: "Modesto Condensed", "Palatino Linotype", serif;
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+}
+.abfalter.item .sheet-header h1 {
+    flex: 1;
+    border-bottom: none;
+    height: 60px;
+    margin: 0;
+    padding: 5px;
+}
+.abfalter.item .sheet-header h1 input {
+    display: block;
+    height: 50px;
+    font-size: 2rem;
+    margin: 0;
+    background: none;
+    text-align: start;
+    border: none;
+}
+.abfalter.item .sheet-header .item-subtitle {
+    flex: 0 0 100px;
+    height: 60px;
+    margin: 0;
+    padding: 5px;
+    text-align: right;
+    white-space: nowrap;
+}
+.abfalter.item .sheet-header .item-subtitle .item-type {
+    font-family: 'Modesto Condensed';
+    font-size: 24px;
+    line-height: 26px;
+    margin: 0;
+    color: var(--item-subTitle);
+}
+.abfalter.item .sheet-header .item-subtitle .item-subType {
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+}
+.abfalter.item .sheet-header .summary {
+    flex: 0 0 100%;
+    height: 40px;
+    margin: 0 0 -2px 0;
+    padding: 0;
+    list-style: none;
+    border-top: 2px groove  var(--boxColor);
+    border-bottom: none;
+}
+
+.abfalter.item .sheet-header .summary li {
+    display: flex;
+    margin: 0 0 0 5px;
+    padding: 0;
+    border-right: 2px groove  var(--boxColor);
+    /*line-height: 34px;*/
+    color: var(--item-summary);
+}
+.abfalter.item .sheet-header .summary li span {
+    padding-inline: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 400;
+}
+.abfalter.item .sheet-header .header-details .summary select {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    font-family: "Modesto Condensed", "Palatino Linotype", serif;
+    font-size: 1.4rem;
+    font-weight: 100;
+    text-align: left;
+    appearance: auto;
+    background: none;
+}
+
+.abfalter.item .sheet-header .summary li input {
+    height: 100%;
+    font-size: 1.4rem;
+}
+.abfalter.item .sheet-header .summary li:last-child {
+    border-right: none;
+}
+.abfalter.item .sheet-header .summary > li > label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.abfalter.item .sheet-header .summary > li > label > input {
+    font-size: 1.4rem;
+}
+.abfalter.item .sheet-header .summary > li > label > span {
+    height: fit-content;
+    font-size: 1.4rem;
+}
+.abfalter.item .sheet-header .summary > li > label > button {
+    padding: 0;
+    margin: 0px;
+    border-radius: 0px;
+    border: 0px;
+    height: fit-content;
+}
+.abfalter.item .sheet-header .summary > li > label > button > span {
+    height: fit-content;
+    font-size: 1.2rem;
+}
+
+.itemHeader35-60 label > :nth-child(1) {
+    width: 35%
+}
+.itemHeader35-60 label > :nth-child(2) {
+    width: 65%
+}
+.itemHeader65-30 label > :nth-child(1) {
+    width: 65%
+}
+.itemHeader65-30 label > :nth-child(2) {
+    width: 30%
+}
+.itemHeader75-20 label > :nth-child(1) {
+    width: 75%
+}
+.itemHeader75-20 label > :nth-child(2) {
+    max-width: 20%
+}
+/* #endregion */
+
+/* #region Item-Navigation-Bar */
+.abfalter.item .sheet-navigation {
+    margin-bottom: 5px;
+    font-size: 20px;
+    border: none;
+}
+.abfalter.item .sheet-navigation .item {
+    height: 30px;
+    line-height: 32px;
+    border-bottom: 3px solid #b5b3a4;
+    text-decoration: none;
+}
+.abfalter.item .sheet-navigation .item.active {
+    border-bottom: 3px solid #8da5fd;
+    color: var(--boxColor) !important;
+    text-decoration: none;
+}
+.abfalter.item .sheet-navigation .item {
+    color: var(--textColor);
+}
+/* #endregion */
+
+/* #region Item-Description-Tab  */
+.itemDescStyle h6 {
+    justify-content: start;
+    border-bottom: 1px solid var(--boxColor);
+    padding: 10px 0 0 0;
+}
+.itemDescStyle .editor {
+    overflow: visible;
+    height: 300px;
+}
+/* #endregion */
+
+
+/*
+    ***********
+    -----------
+    CHAT ROLLS
+    -----------
+    ***********
+*/
+
+/* #region @Prompt-Default-Buttons */
+.baseAbfalterV2 .window-content .standard-form {
+    gap: 0px;
+}
+.baseAbfalterV2 .window-content .standard-form .form-footer {
+    justify-content: center;
+}
+.baseAbfalterV2 .window-content .standard-form .form-footer > button {
+    background: var(--buttonBg);
+    color: var(--textColor);
+    line-height: normal;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    flex: none;
+    --button-size:  2rem;
+    width: 40%;
+}
+.baseAbfalterV2 .window-content .standard-form .form-footer > button:hover {
+    background: var(--buttonHover);
+}
+.baseAbfalterV2 .window-content .standard-form .form-footer > button:focus {
+    outline: 1px solid var(--buttonHover);
+    box-shadow: 0 0 4px var(--buttonHover);
+}
+/* #endregion */
+
+/* #region @Custom-Chat-Header */
+.abfalterChatHeader{
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+.abfalterChatPortrait {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+}
+.abfalterChatHeaderNames {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+.abfalterChatActor {
+    font-size: 1.2rem;
+}
+.abfalterCharUser {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+.abfResolutionTime {
+    margin-left: auto;
+    white-space: nowrap;
+    opacity: 0.7;
+    font-size: 0.75rem;
+    margin-bottom: auto;
+}
+/* #endregion */
+
+/* #region @Custom-Chat-Title */
+.chatCustomTitleContainer {
+  position: relative;
+}
+.chatCustomTitle {
+  visibility: hidden;
+  opacity: 0;
+  background-color: #333;
+  color: #fff; 
+  text-align: center;
+  border-radius: 4px;
+  padding: 5px;
+  position: absolute;
+  top: -100%;
+  z-index: 10;
+  left: 50%;
+  width: 200px;
+  transform: translateX(-50%);
+  transition: opacity 0.2s ease-in-out;
+  font-size: 14px;
+  pointer-events: none;
+}
+.chatCustomTitleContainer:hover .chatCustomTitle {
+  visibility: visible;
+  overflow: visible;
+  opacity: 1;
+}
+.chatCustomRoll {
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.chatCustomRoll > span:nth-of-type(1) {
+    max-width: 75%;
+}
+.chatCustomRoll > span:nth-of-type(2) {
+    align-self: center;
+}
+/* #endregion */
+
+/* #region @Roll-Default */
+.defaultRollMsg > div:first-of-type > span {
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+.defaultRollMsg > div:nth-of-type(2) {
+    margin: 0 7%;
+}
+
+.defaultRollMsg .resolveAcceptText, 
+.defaultRollMsg .resolveAcceptButton {
+    display: flex;
+    justify-content: space-between;
+}
+.defaultDefRoll {
+    border-bottom: 1px solid gray;
+}
+.defaultDefFumble {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    border-top: 1px dashed gray;
+}
+/* #endregion */
+
+/* #region @Roll-Characteristic */
+.characteristicRoll > div {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    margin: 0 7%;
+    font-size: 1rem;
+}
+.charExplodeRoll {
+    padding: 0 10%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+/* #endregion */
+
+/* #region @Roll-Resistance */
+.resistanceRoll > div {
+    margin: 0 7%;
+}
+.rollExplodeText {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+/* #endregion */
+
+/* #region @Prompt-Auto-Defense */
+.defenseAuto {
+    padding: 0 3%;
+}
+.defenseAuto > div {
+    display: flex;
+}
+.defenseAuto > label {
+    display: flex;
+    justify-content: space-between;
+}
+.defenseAuto > label:last-of-type  {
+    border-bottom: 1px dashed var(--boxColor);
+    padding: 0 0 5px 0;
+    margin: 0 0 5px 0;
+}
+.defenseAuto > label > span {
+    display: grid;
+    width: 55%;
+}
+.defenseAuto > label > input {
+    width: 45%;
+}
+.defenseAuto > label > select {
+    width: 45%;
+}
+.defenseAuto .profileNoteRow > span {
+    width: 100%;
+    height: auto;
+}
+.defenseAuto .armorRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.defenseAuto .armorRow > div {
+    display: flex;
+    text-align: center;
+    width: 45%;
+}
+.defenseAuto .armorRow > div > input {
+    width: 49%;
+}
+.defenseAuto .armorRow > div > span:first-of-type {
+    width: 2%;
+}
+.defenseAuto .armorRow > div > span:last-of-type {
+    width: 49%;
+}
+/* #endregion */
+
+/* #region Weapon Attack Prompt & Chat Card */
+.wepAtkDiceRoll {
+    padding: 0 3%;
+}
+.wepAtkDiceRoll > div {
+    display: flex;
+}
+.wepAtkDiceRoll > label {
+    display: flex;
+    justify-content: space-between;
+}
+.wepAtkDiceRoll > label:last-of-type  {
+    border-bottom: 1px dashed var(--boxColor);
+    padding: 0 0 5px 0;
+    margin: 0 0 5px 0;
+}
+.wepAtkDiceRoll > label > span {
+    display: grid;
+    width: 55%;
+}
+.wepAtkDiceRoll > label > input {
+    width: 45%;
+}
+.wepAtkDiceRoll > label > select {
+    width: 45%;
+}
+.weaponChatRollMsg > div:first-of-type {
+    display: grid;
+    font-size: 23px;
+    justify-items: center;
+}
+.weaponChatRollMsg > div:first-of-type > span:nth-of-type(2),
+.weaponChatRollMsg > div:first-of-type > span:nth-of-type(3) {
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 15px;
+}
+.chatAtkRoll {
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+}
+.chatAtkRoll > span:nth-of-type(1) {
+    padding-left: 7%;
+    max-width: 75%;
+}
+.chatAtkRoll > span:nth-of-type(2) {
+    padding-right: 7%;
+    align-self: center;
+}
+.weaponChatRollMsg > div:nth-last-of-type(2) {
+    border-image: url(../img/border.png) 10 stretch;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.weaponChatRollMsg > div:last-of-type > div {
+    display: flex;
+    justify-content: space-between;
+}
+.wepAtkDiceRoll .profileNoteRow > span {
+    width: 100%;
+    height: auto;
+    border-top: 1px solid var(--boxColor);
+    border-bottom: 1px solid var(--boxColor);
+    padding: 2px 0;
+    margin: 3px 0;
+}
+.wepAtkDiceRoll .target-preview-row > span:nth-of-type(2) {
+    width: 45%;
+}
+
+/* #endregion */
+
+
+/* #region @Roll-Offense-Defense */
+.rollTextMargin {
+    margin: 0 7%;
+}
+.offenseDmgPen {
+    display: flex;
+    justify-content: space-between;
+}
+.rollChatNote {
+    border-top: 1px dashed gray;
+    border-bottom: 1px dashed gray;
+}
+
+
+/* #endregion */
+
+/* #region @Workflow-Combat */
+.offenseTargetsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.offenseTargetsHeader::before,
+.offenseTargetsHeader::after {
+    content: "";
+    flex: 1;
+    border-top: 1px dotted #8a847f;
+    margin: 0 8px;
+}
+.offenseTargetsHeaderCenter {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+    line-height: 1;
+}
+.offenseTargetsHeaderIcon {
+    font-size: 0.8rem;
+    color: #8a847f;
+}
+.offenseTargetsHeaderText {
+    line-height: 1;
+}
+.offenseTargetsHeaderChevron {
+    font-size: 0.9rem;
+    color: #3f342d;
+}
+.abfDefendButton[disabled] {
+    opacity: 0.45;
+    cursor: not-allowed;
+    filter: grayscale(100%);
+    pointer-events: none;
+}
+.abfDefendButton.abf-disabled-defense,
+.abfDefendButton:disabled {
+    opacity: 0.4;
+    filter: grayscale(100%);
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.abfTargetList {
+    margin-top: 0.75rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(255,255,255,0.15);
+}
+.abfTargetRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin: 0.25rem 0;
+}
+.abfTargetRowLeft {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.abfTargetRowImg {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+/* #endregion */
+
+/* #region @Resolve-Chat-Combat */
+.resolveTargetsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.resolveTargetsHeader::before,
+.resolveTargetsHeader::after {
+    content: "";
+    flex: 1;
+    border-top: 1px dotted #8a847f;
+    margin: 0 8px;
+}
+.resolveTargetsHeaderCenter {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+    line-height: 1;
+}
+.resolveTargetsHeaderIcon {
+    font-size: 0.8rem;
+    color: #8a847f;
+}
+.resolveTargetsHeaderText {
+    line-height: 1;
+}
+.resolveTargetsHeaderChevron {
+    font-size: 0.9rem;
+    color: #3f342d;
+}
+.resolveTargetsBody .resolveDefenderContainer {
+    padding: 4px 0px;
+}
+.resolveTargetsBody .resolveDefenderContainer:not(:last-of-type) {
+    border-bottom: 1px solid gray;
+}
+.resolveTargetsBody .resolveTargetsBody {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.resolveTargetsBody .resolveDefenderTopRow {
+    display: flex;
+    align-items: center;
+}
+.resolveTargetsBody .resolveDefenderPortraitWrap {
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+}
+.resolveTargetsBody .resolveDefenderName {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    width: 100%;
+    font-size: 1.2rem;
+}
+.resolveTargetsBody .resolveDefenderTotalDamageValue {
+    font-size: 1.1rem;
+    padding: 0 5px 0 0;
+}
+.resolveTargetsBody .resolveDefenderMiddle {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+.resolveTargetsBody .resolveDefenderStatsRow {
+    font-size: 0.9rem;
+}
+.resolveTargetsBody .resolveDefenderStat {
+    white-space: nowrap;
+}
+.resolveTargetsBody .resolveDefenderInfoRow {
+    font-size: 0.9rem;
+}
+.resolveTargetsBody .resolveDefenderApplyContainer {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.resolveTargetsBody .resolveDefenderApplyContainer > span{
+    font-size: 1rem;
+    opacity: 0.5;
+}
+.resolveTargetsBody .resolveDefenderApplyDmg {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+.resolveTargetsBody .resolveDmgOption {
+    position: relative;
+    cursor: pointer;
+}
+.resolveTargetsBody .resolveDmgOption input {
+    display: none;
+}
+.resolveTargetsBody .resolveDmgOption span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 5px;
+    border: 2px solid #999;
+    border-radius: 6px;
+    min-width: 36px;
+}
+.resolveTargetsBody .resolveDmgOption input:checked + span {
+    border-color: #7a2b2b;
+    box-shadow: inset 0 0 0 2px #7a2b2b;
+}
+.resolveTargetsBody .resolveDmgOption span::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-left: 2px;
+}
+.resolveTargetsBody .resolveDmgOption input:checked + span::after {
+    background: #7a2b2b;
+}
+.resolveTargetsBody .resolveApplyButton {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0 0 0;
+}
+.resolveTargetsBody .applyDamageToActors {
+    margin: 0;
+    width: 50%
+}
+/* #endregion */
+
+
+/*
+    **********
+    ----------
+    CHAT ITEMS
+    ----------
+    **********
+*/
+
+/* #region @Shared-Item @Chat */
+.itemChat .chatActorHeader {
+    display: flex;
+    padding: 0 0 7px 0;
+}
+.itemChat .chatActorHeader > img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    min-width: 40px;
+    min-height: 40px;
+    align-self: center;
+}
+.itemChat .chatActorHeader > span {
+    font-size: var(--font-size-18);
+    align-self: center;
+    padding: 0 0 0 3px;
+}
+.itemChat .chatItemContent {
+    border: 1px solid #3f3f3f;
+    border-radius: 5px;
+    padding: 7px;
+}
+.itemChat .chatItemContent .chatItemHeader {
+    display: flex;
+    padding: 0 0 5px 0;
+}
+
+.itemChat .chatItemContent .chatItemHeader > img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    min-width: 32px;
+    min-height: 32px;
+    align-self: center;
+    border: 1px solid black;
+    box-shadow: 0px 0px 5px black;
+    border-radius: 7px;
+}
+.itemChat .chatItemContent .chatItemHeader > div {
+    display: flex;
+    flex-direction: column;
+    width: -webkit-fill-available;
+    padding: 0 0 0 5px;
+}
+.itemChat .chatItemContent .chatItemHeader > div > span {
+    font-size: var(--font-size-11);
+}
+.itemChat .chatItemContent .chatItemHeader > div > span:first-of-type {
+    font-size: var(--font-size-15);
+    color: black;
+    font-weight: 600;
+}
+.itemChat .chatItemContent .chatItemHeader > a {
+    width: 10%;
+    align-self: center;
+    text-align: center;
+}
+.itemChat .itemDescription {
+    display: none;
+}
+.itemChat .itemDescription.ItemDescOpen {
+    display: block;
+}
+.itemChat a.descToggle.ItemDescOpen i {
+    transform: rotate(90deg);
+}
+
+/* #endregion */
+
+/* #region @Loot-Item @Chat */
+
+/* #endregion */
+
+/* #region @Psychic-Matrix-Item @Chat */
+.psychicChatButtons {
+    display: flex;
+    flex-direction: column;
+}
+.psychicChatButtons > button {
+    width: 40%;
+    align-self: center;
+}
+/* #endregion */
+
+
+
+
+
+
+/* #region @Custom-Armor-Chat */
+.defenseArmorDisplay {
+    display: grid;
+    grid-template-rows: auto auto;
+    width: 100%;
+    text-align: center;
+    padding: 4px 0;
+    gap: 2px 0;
+}
+.defenseArmorDisplay .defenseArmorRow {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+}
+.defenseArmorDisplay .defenseArmorCell:not(:last-child) {
+    border-right: 1px dashed gray;
+}
+.defenseArmorDisplay .defenseArmorCell {
+    padding: 0px;
+}
+/* #endregion */
+
+
+
+
+
+.armorDisplay {
+    background: none;
+    border: none;
+    margin: 0;
+}
+.armorDisplay > tbody > tr {
+    background: none;
+    display: flex;
+    justify-content: space-around;
+}
+.armorDisplay > tbody > tr > td {
+    white-space: nowrap;
+    padding: 3px;
+}
+
+.iniExplodeRoll {
+    justify-content: center !important;
+    font-style: italic;
+}
+
+/* #region Basic Modifier Roll */
+.diceRollingTemp > label {
+    display: flex;
+    padding: 0 15%;
+}
+.diceRollingTemp > label:last-of-type {
+    border-bottom: 1px dashed var(--boxColor);
+    padding: 0 15% 5px 15%;
+    margin: 0 0 5px 0;
+}
+.diceRollingTemp > label > span {
+    width: 55%;
+}
+.diceRollingTemp > label > input {
+    width: 35%;
+}
+.diceRollingTemp > label > select {
+    width: 35%;
+}
+/* #endregion */
+.chat-message .message-header .message-metadata {
+    display: block;
+}
+
+/* #region Shared Chat Formats old-stuff */
+.oneModDialog .dialog-form {
+    gap: .7rem;
+}
+.oneModDialog .form-footer > button {
+    --button-size: 2rem;
+}
+.oneModDialog .form-footer > button > span {
+    font-size: .85rem;
+}
+.itemChatTitle > span {
+    display: flex;
+    justify-content: center;
+    font-size: 0.95rem;
+}
+.itemChatTitle > span:nth-of-type(2) {
+    font-size: 1.25rem;
+    border-image: url(../img/border.png) 10 stretch;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+}
+.explodeButtons {
+    display: flex;
+    justify-content: center;
+}
+.explodeButtons > button {
+    width: 75%;
+}
+/* #endregion */
+
+
+
+
+
+
+
+
+
+/*
+    --------
+    Sec Roll
+    --------
+*/
+.secondarychatmsg > div {
+    font-size: 17px;
+}
+.secondarychatmsg > div:nth-of-type(1) {
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+}
+.secondarychatmsg > div:not(:nth-of-type(1)) {
+    display: flex;
+    justify-content: space-between;
+}
+.chatPlainRoll.lastRoll {
+    border-image: url(../img/border.png) 10 stretch;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.chatPlainRoll {
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+}
+.chatPlainRoll > span:nth-of-type(1) {
+    padding-left: 7%;
+    max-width: 75%;
+}
+.chatPlainRoll > span:nth-of-type(2) {
+    padding-right: 7%;
+    align-self: center;
+}
+.secondarychatmsg .fumbleSeverity {
+    padding: 0 10%;
+}
+.secondarychatmsg > div:not(:nth-of-type(1)) > span:nth-of-type(1) {
+    padding-left: 10%;
+}
+.secondarychatmsg > div:not(:nth-of-type(1)) > span:nth-of-type(2) {
+    padding-right: 10%;
+}
+.fumbleSeverity {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.wepFumbleSeverity {
+    padding: 0 7%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    border-top: 1px dashed black;
+}
+.openRollMod,
+.fumblerollmod {
+    height: 25px;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    width: 80%;
+    display: initial;
+    margin-left: 10%;
+    background-color: #b5b3a4;
+}
+
+
+
+/*
+    ***************
+    ---------------
+         Temp
+    ---------------
+    ***************
+*/
+.dialog .dialog-buttons button {
+    background: var(--buttonBg);
+    color: var(--textColor);
+    border: none;
+}
+.form-fields > input,
+.journal-header > input {
+    background: var(--buttonBg);
+    border-radius: 0px;
+    border-bottom: 1px solid var(--inputBorder);
+    color: var(--textColor);
+}
+.form-fields > select {
+    height: 20px;
+    font-size: 13px;
+    border: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-bottom: 1px solid var(--inputBorder);
+    color: var(--textColor);
+    background-color: var(--buttonBg);
+}
+.restOptionsContainer > label {
+    display: flex;
+}
+/** Combat **/
+.combat,
+.mystic {
+    display:flex;
+}
+.compendium-footer > span {
+    display: initial;
+}
+.page-title, .page-number, chat-message {
+    height: inherit;
+}
+.editor-content > img {
+    border: none;
+}
+
+
+
+
+/*
+    ***************
+    ---------------
+       Macro Bar
+    ---------------
+    ***************
+*/
+/* #region Macro Bar */
+.customMacroWrapper {
+    position: fixed;
+    bottom: 75px;
+    left: 15px;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+.customActionBar {
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(8px);
+}
+.customActionBar .macros {
+    display: flex;
+}
+.customActionBar .macros > div {
+    display: flex;
+    border-top: 2px solid #666669;
+    border-bottom: 2px solid #666669;
+}
+.customMacro {
+    position: relative;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    width: 3.2rem;
+    height: 3.7rem;
+    margin: 0 0.25rem;
+}
+.img-top {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+.customMacro.hover .img-bottom {
+    display: none;
+}
+.customMacro.hover .img-top {
+    display: inline;
+}
+.customMacro img {
+    transition: all 0.3s ease-in-out;
+    border: none;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 0.5rem;
+    pointer-events: none;
+}
+
+/*Drag, Toggle, Lock Handles*/
+.macroDragHandle{
+    width: 1.5rem;
+    height: 3.7rem;
+    background: #666669;
+    color: #c7c7c7;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+.macroToggleHandle {
+    width: 1.5rem;
+    height: 3.7rem;
+    background: #666669;
+    color: #c7c7c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0;
+}
+.macroLockHandle {
+    width: 1.8rem;
+    height: 3.7rem;
+    background: #666669;
+    color: #c7c7c7;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    cursor: pointer;
+    user-select: none;
+}
+.macroToggleArrow {
+    transition: transform 0.2s ease-in-out;
+    display: inline-block;
+}
+.customMacroWrapper.collapsed .customActionBar {
+    display: none;
+}
+.customMacroWrapper.collapsed .macroToggleArrow {
+    transform: rotate(180deg);
+}
+
+/*Shortcut Overlay*/
+.macroShortcutOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    z-index: 50;
+    font-family: sans-serif;
+}
+.macroShortcutOverlay .shortcut-float {
+    position: absolute;
+    background: white;
+    color: #6e2917;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+    white-space: nowrap;
+}
+/* #endregion */
+
+/* #region kiTech Opener */
+.kiCreatorDialog .form-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+}
+.kiCreatorDialog .form-footer button {
+    width: 100%;
+    border: none;
+}
+.kiCreatorDialog .form-footer button > span {
+    font-size: 1rem;
+}
+/* #endregion */
+
+/* #region KiTech Creator */
+.kiTechCreator .window-content {
+    padding: 3px;
+}
+.kiTechCreatorContainer {
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    max-height: 1000px;
+    overflow-y: auto;
+    padding: 0 5px;
+}
+.kiTechCreatorContainer .kiTechCreatorTitle > span {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    height: 2.5rem;
+    font-family: monospace;
+}
+.kiTechCreatorContainer .kiTechCreatorTopLevel {
+    gap: 0.25rem;
+    display: flex;
+    flex-direction: column;
+}
+.kiTechCreatorContainer .kiTechCreatorTopLevel > label {
+    display: flex;
+    padding: 0 5px;
+    justify-content: space-between;
+}
+.kiTechCreatorContainer .kiTechCreatorTopLevel > label > span {
+    width: 60%;
+    align-items: center;
+}
+.kiTechCreatorContainer .kiTechCreatorTopLevel > label > button {
+    width: 35%;
+    align-items: center;
+    font-size: 0px;
+    border: none;
+}
+.kiTechCreatorContainer .kiTechCreatorTopLevel > label > select {
+    width: 35%;
+    align-items: center;
+}
+.kiTechCreatorContainer .kiTechCreatorAddAbility {
+    justify-content: center;
+    display: flex;
+}
+.kiTechCreatorContainer .kiTechCreatorAddAbility > button {
+    width: 50%;
+    font-size: 1rem;
+    border: none;
+}
+.kiTechAbility-list .kiTechAbility-header,
+.kiTechAbility-list .kiTechAbility-details {
+    display: flex;
+    padding: 0 5px;
+    justify-content: space-between;
+}
+.kiTechAbility-details {
+    padding: 3px 5px 0 5px;
+}
+.kiTechAbility-list .kiTechAbility-header {
+    flex-direction: column;
+}
+.kiTechAbility-list .kiTechAbility-headerLine {
+    border-bottom: 2px solid var(--boxColor);
+}
+.kiTechAbility-box {
+    margin: 0 0 10px 0;
+}
+.kiTechAbility-header > div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.kiTechAbility-header > div > span:first-of-type {
+    width: 65%;
+    justify-content: start;
+    align-items: start;
+    font-size: 1.2rem;
+    height: auto;
+}
+.kiTechAbility-header > div > span:nth-of-type(2) {
+    width: 18%;
+    align-items: center;
+    font-size: 1.2rem;
+    height: auto;
+}
+.kiTechAbility-header > div > a {
+    width: 5%;
+    align-items: center;
+    font-size: 1rem;
+    height: auto;
+}
+.kiTechAbility-header > span {
+    width: 100%;
+    align-items: start;
+    font-style: italic;
+    height: auto;
+}
+.kiTechAbility-optionals {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 4px;
+    padding: 3px 5px;
+}
+.kiTechAbility-optionals > label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.kiTechAbility-optionals > label > input {
+    margin-right: 4px;
+}
+.kiTechAbility-details {
+    border-top: 2px solid var(--boxColor);
+    border-radius: 13px 13px 0 0;
+}
+.kiTechAbility-details,
+.kiTechAbility-optionals {
+    border-left: 2px solid var(--boxColor);
+    border-right: 2px solid var(--boxColor);
+}
+.kiTechAbility-kiPoints > div:first-of-type {
+    border-bottom: 1px solid var(--boxColor);
+    margin: 0 0 5px 0;
+}
+.kiTechAbility-kiPoints {
+    padding: 0 5px;
+    border-bottom: 2px solid var(--boxColor);
+    border-left: 2px solid var(--boxColor);
+    border-right: 2px solid var(--boxColor);
+    border-radius: 0 0 13px 13px;
+}
+.kiTechAbility-kiPoints > div:first-of-type {
+    display: flex;
+    justify-content: space-between;
+}
+.kiTechAbility-kiPointsGrid {
+    display: grid;
+    grid-template-columns: 75px repeat(var(--char-count), 1fr);
+    gap: 8px;
+    text-align: center;
+    align-items: center;
+}
+.grid-label {
+    font-weight: bold;
+    text-align: left;
+}
+.grid-char-name {
+    font-weight: bold;
+    text-align: center;
+}
+.grid-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+.kiTechAbility-preview > span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    margin: 0 0 0.25rem 0;
+}
+.kiTechAbility-preview > span::before,
+.kiTechAbility-preview > span::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #666;
+    margin: 0 5px;
+}
+.kiTechAbility-previewTitle > label {
+    display: flex;
+    align-items: center;
+    font-size: .82rem;
+}
+.kiTechAbility-previewTitle > label > span {
+    display: flex;
+    flex-direction: row;
+    margin: 0 3px;
+}
+.kiTechAbility-previewTitle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 5px;
+    gap: 5px;
+}
+.kiTechAbility-previewTitle > *:nth-child(odd) {
+    justify-self: start;  
+}
+.kiTechAbility-previewTitle > *:nth-child(even) {
+    justify-self: end;
+}
+.kiTechAbility-previewTitle {
+    border-bottom: 1px solid var(--boxColor);
+    margin: 0 0 5px 0;
+}
+.kiTechAbility-previewTitle > *:nth-child(odd) {
+    justify-self: start;
+}
+.kiTechAbility-previewTitle > *:nth-child(even) {
+    justify-self: end;
+}
+.kiTechAbility-kiFinalGrid {
+    display: grid;
+    grid-template-columns: 75px repeat(var(--char2-count), 1fr);
+    gap: 8px;
+    text-align: center;
+    align-items: center;
+    padding: 0 5px;
+}
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+.custom-tooltip {
+    visibility: hidden;
+    opacity: 0;
+    background-color: var(--customTooltip);
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px;
+    position: absolute;
+    top: -100%;
+    z-index: 10;
+    left: 25%;
+    width: 250px;
+    height: auto !important;
+    transition: opacity 0.2s ease-in-out;
+    font-size: 0.85rem;
+    display: block;
+    pointer-events: none;
+}
+.custom-tooltip-right {
+    left: -150% !important;
+}
+.tooltip-container:hover .custom-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+.kiTechAbility-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 10px 5px 5px 5px;
+}
+.kiTechAbility-buttons > button {
+    width: 49%;
+    font-size: 1.1rem;
+    border: none;
+}
+/* #endregion */
+
+/* #region kiTech Ability Chooser */
+.kiTechAbilityContainer {
+    gap: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+}
+.kiTechAbilityContainer .kiTechAbilityTitle > span {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    height: 2.5rem;
+    font-family: monospace;
+}
+.kiTechAbilityContainer .effect-group,
+.kiTechAbilityContainer .primCharDisplay,
+.kiTechAbilityContainer .kiTechAbilityTopLevel {
+    gap: 0.35rem;
+    display: flex;
+    flex-direction: column;
+}
+.kiTechAbilityContainer .effect-group > label,
+.kiTechAbilityContainer .kiTechAbilityTopLevel > label {
+    display: flex;
+    padding: 0 10px;
+    justify-content: space-between;
+}
+.kiTechAbilityContainer .effect-group > label > span,
+.kiTechAbilityContainer .kiTechAbilityTopLevel > label > span {
+    width: 40%;
+    align-items: center;
+    font-size: 0.9rem;
+}
+.kiTechAbilityContainer .effect-group > label > select,
+.kiTechAbilityContainer .kiTechAbilityTopLevel > label > select {
+    width: 55%;
+    align-items: center;
+}
+.kiTechAbilityContainer .primCharDisplay > label {
+    display: flex;
+    padding: 0 10px;
+}
+.kiTechAbilityContainer .primCharDisplay > label > span:last-of-type {
+    padding: 0 0 0 2px;
+}
+.kiTechAbilityContainer .effect-group > label > label {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.kiTechAbilityContainer .effect-group:not(:last-of-type) {
+    margin: 0 0 .35rem 0;
+}
+.kiTechAbilityContainer .kiTechAbilityTopLevel > span,
+.kiTechAbilityContainer .charSelection > span,
+.kiTechAbilityContainer .statContainer > span,
+.kiTechAbilityContainer .additional-effects > span,
+.kiTechAbilityContainer .descriptionPreview > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    margin: 0 0 0.25rem 0;
+}
+.kiTechAbilityContainer .kiTechAbilityTopLevel > span::before,
+.kiTechAbilityContainer .kiTechAbilityTopLevel > span::after,
+.kiTechAbilityContainer .charSelection > span::before,
+.kiTechAbilityContainer .charSelection > span::after,
+.kiTechAbilityContainer .statContainer > span::before,
+.kiTechAbilityContainer .statContainer > span::after,
+.kiTechAbilityContainer .additional-effects > span::before,
+.kiTechAbilityContainer .additional-effects > span::after,
+.kiTechAbilityContainer .descriptionPreview > span::before,
+.kiTechAbilityContainer .descriptionPreview > span::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #666;
+    margin: 0 10px;
+}
+.kiTechAbilityContainer .charSelection > label:first-of-type {
+    margin: 0 0 0.35rem 0;
+}
+.kiTechAbilityContainer .charSelection > label:last-of-type > span {
+    align-self: center;
+}
+.kiTechAbilityContainer .charSelection > label {
+    display: flex;
+    padding: 0 10px;
+    justify-content: start;
+}
+.kiTechAbilityContainer .charSelection > label > span {
+    font-size: 0.9rem;
+}
+.kiTechAbilityContainer .charSelection > label:first-of-type > span {
+    padding: 0 3px 0 0;
+}
+.kiTechAbilityContainer .optionalContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  max-width: 100%;
+}
+.kiTechAbilityContainer .optionalContainer label {
+  flex: 1 1 calc(50% - 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.kiTechAbilityContainer .statContainer {
+    display: flex;
+    flex-direction: column;
+}
+.kiTechAbilityContainer .tierStatsTop {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px 12px;
+  padding: 8px 0;
+}
+.kiTechAbilityContainer .tierStatsBottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px 12px;
+  padding: 8px 0;
+}
+.kiTechAbilityContainer .stat-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.kiTechAbilityContainer .stat-block span {
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+}
+.kiAddAbilityDialog .form-footer > button {
+    border: none;
+}
+/* #endregion */
+
+/* #region kiTech Creator Finalize */
+.kiTechCreatorName .form-footer {
+    justify-content: space-around;
+}
+.kiTechCreatorName .form-footer button {
+    border: none;
+    width: 48%;
+    --button-size: none;
+    height: 37px;
+    flex: none;
+}
+.kiTechCreatorName .form-footer button > span{
+    font-size: 1.1rem;
+}
+/* #endregion */
+
+/*
+    ***************
+    ---------------
+      Changelog
+    ---------------
+    ***************
+*/
+/* #region Changelog */
+.changelog {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-height: 1000px;
+}
+.changelogHeader {
+    flex-shrink: 0;
+    padding: 10px;
+}
+.changelogBody {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+.changelogHeader > div {
+    display: flex;
+    justify-content: flex-end;
+}
+.changelogHeader > div > span {
+    font-size: 14px;
+    color: var(--boxColor);
+}
+.changelogHeader > h5 {
+    justify-content: start;
+    font-size: 35px;
+    border-bottom: 1px solid var(--boxColor);
+}
+.changelogSection {
+    padding: 15px 0 0 0;
+}
+.changelogSection > h6 {
+    justify-content: start;
+    font-size: 25px;
+}
+.changelogSection > span {
+    display: flex;
+    padding: 7px 0;
+}
+.changelogList > h5 {
+    justify-content: start;
+    font-size: 17px;
+}
+.changelogButtons {
+    display: flex;
+    justify-content: space-evenly;
+}
+.changelogButtons > button {
+    width: 45%;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0px;
+    border: 0px;
+    border: 1px solid var(--boxColor);
+}
+/* #endregion */

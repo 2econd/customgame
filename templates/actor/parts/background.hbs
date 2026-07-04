@@ -1,0 +1,413 @@
+﻿<section class="tab {{tabs.background.cssClass}} background actorPage baseAbfalter" data-group="{{tabs.background.group}}" data-tab="{{tabs.background.id}}">
+    <div class="fieldsetContainer">
+        <div class="fieldSetRow">
+            <fieldset class="backgroundProf">
+                <legend>{{localize "abfalter.prof"}}</legend>
+                <div>
+                    <span> {{localize "abfalter.name"}} </span>
+                    <span> {{localize "abfalter.type"}} </span>
+                    <span> {{localize "abfalter.cost"}} </span>
+                </div>
+                <div>
+                    {{#each proficiencys as |proficiency id|}}
+                    <div class="prof-item item itemStyle normal-item {{#if ../system.itemToggle.proficiency}}draggable{{/if}}" data-item-id="{{proficiency._id}}"
+                    data-can-edit="true" data-can-delete="true" data-can-equip="false" data-can-toggle="false">
+                        {{#if system.expand}}
+                        <div class="itemToggleB">
+                            <input class="prof-name inline-edit" data-field="name" type="text"
+                                value="{{proficiency.name}}" placeholder="{{localize " abfalter.nameItem"}}" />
+                            <div class="csSelect">
+                                <select class="inline-edit" name="system.type" data-field="system.type">
+                                    {{selectOptions ../proficiencyObjList selected=system.type localize=true}}
+                                </select>
+                            </div>
+                            <input class="prof-cost inline-edit" data-field="system.cost" type="number"
+                                value="{{proficiency.system.cost}}" />
+                            <a data-action="itemToggleValue" data-ability="{{system.expand}}" data-label="system.expand">
+                                <i class="{{#if system.expand}}fas fa-caret-up{{else}}fas fa-caret-down{{/if}}"></i>
+                            </a>
+                        </div>
+                        {{editor system.description target="system.description" editable=false button=false
+                        engine="prosemirror"}}
+                        {{else}}
+                        <div class="itemToggleA">
+                            <span> {{proficiency.name}} </span>
+                            <span> {{localize (concat "abfalter." system.type)}} </span>
+                            <span> {{proficiency.system.cost}} </span>
+                            <a data-action="itemToggleValue" data-ability="{{system.expand}}" data-label="system.expand">
+                                <i class="{{#if system.expand}}fas fa-caret-up{{else}}fas fa-caret-down{{/if}}"></i>
+                            </a>
+                        </div>
+                        {{#if system.toggleItem}}
+                        {{editor system.description target="system.description" editable=false button=false
+                        engine="prosemirror"}}
+                        {{/if}}
+                        {{/if}}
+                    </div>
+                    {{/each}}
+                </div>
+                <div class="itemControls">
+                    <a class="item-control" data-action="createItem" data-type="proficiency"><i class="fas fa-plus"></i> {{localize
+                        "abfalter.addProf"}} </a>
+                    <a data-action="toggleValue" class="{{#if system.itemToggle.proficiency}}armorpenalty{{/if}}"
+                        data-label="system.itemToggle.proficiency" data-ability="{{system.itemToggle.proficiency}}"><i
+                            class="{{#if system.itemToggle.proficiency}}fa-solid fa-bars-staggered{{else}}fa-solid fa-bars{{/if}}"></i>
+                        {{localize "abfalter.modify"}} </a>
+                </div>
+            </fieldset>
+
+            <fieldset class="backgroundStats">
+                <legend>Natura</legend>
+                <div class="simpleDetails">
+                    <label> 
+                        <span> {{localize "abfalter.destiny"}} </span> 
+                        <input type="number" name="system.info.destiny" value="{{system.info.destiny}}" />
+                    </label>
+                </div>
+                <div class="simpleDetails">
+                    <label> 
+                        <span> {{localize "abfalter.extraCP"}} </span> 
+                        <input type="number" name="system.levelinfo.extraCP" value="{{system.levelinfo.extraCP}}"/>
+                    </label>
+                </div>
+                <div class="simpleDetails">
+                    <label> 
+                        <span> {{localize "abfalter.totalCP"}} </span> 
+                        <input type="number" name="system.levelinfo.totalCP" value="{{system.levelinfo.totalCP}}" readonly/>
+                    </label>
+                </div>
+                {{#if system.toggles.mentalHealthStatus}}
+                <div class="mentalHealthFirst simpleDetails">
+                    <label> 
+                        <span> {{localize "abfalter.mentalHealthThreshold"}} </span> 
+                        <input type="number" name="system.otherStats.mentalThreshold" value="{{system.otherStats.mentalThreshold}}" readonly/>
+                    </label>
+                </div>
+                <div class="simpleDetails">
+                    <label> 
+                        <span> {{localize "abfalter.mentalHealth"}} </span> 
+                        <input type="number" name="system.mentalHealth.max" value="{{system.mentalHealth.max}}" readonly/>
+                    </label>
+                </div>
+                <div class="simpleDetails">
+                    <label> 
+                        <span> {{localize "abfalter.mentalHealthCurrent"}} </span> 
+                        <input type="number" name="system.mentalHealth.value" value="{{system.mentalHealth.value}}" />
+                    </label>
+                </div>
+                {{/if}}
+            </fieldset>
+        </div>
+
+        <div class="fieldSetRow {{#if system.toggles.elanStatus}}hidden{{/if}}">
+            <fieldset class="backgroundElan">
+                <legend>{{localize "abfalter.elan"}}</legend>
+                <div class="{{#if system.itemToggle.elan}}item-list{{/if}}">
+                    {{#each elans as |elan id|}}
+                    <div class="elan-item item itemStyle normal-item" data-item-id="{{elan._id}}"
+                    data-can-edit="true" data-can-delete="true" data-can-equip="false" data-can-toggle="false">
+                        {{#if system.expand}}
+                        <div class="itemToggleB">
+                            <img class="backgroundElanIcon" src="{{elan.img}}">
+                            <div class="backgroundElanInfo">
+                                <div>
+                                    <input class="item-name inline-edit" data-field="name" type="text" value="{{elan.name}}"
+                                        placeholder="{{localize " abfalter.newItem"}}" />
+                                    <input class="inline-edit" data-field="system.title" type="text"
+                                        value="{{elan.system.title}}" />
+                                </div>
+                                <input class="inline-edit" data-field="system.level" type="number"
+                                    value="{{elan.system.level}}" />
+                            </div>
+                            <a class="{{#if system.expand}}showOpacity{{/if}}" data-action="itemToggleValue" data-ability="{{system.expand}}" data-label="system.expand"><i
+                                    class="{{#if system.expand}}fas fa-caret-up{{else}}fas fa-caret-down{{/if}}"></i></a>
+                        </div>
+                        {{editor system.description target="system.description" editable=false button=false
+                        engine="prosemirror"}}
+                        <div class="backgrounElanDesc">
+                            <fieldset>
+                                <legend>{{localize "abfalter.loseElan"}}</legend>
+                                {{editor system.lose target="system.lose" editable=false button=false
+                                engine="prosemirror"}}
+                            </fieldset>
+                            <fieldset>
+                                {{#if system.upper}}
+                                <legend>{{localize "abfalter.gainUpperElan"}}</legend>
+                                {{editor system.gainUpper target="system.gainUpper" editable=false button=false
+                                engine="prosemirror"}}
+                                {{else}}
+                                <legend>{{localize "abfalter.gainElan"}}</legend>
+                                {{editor system.gain target="system.gain" editable=false button=false
+                                engine="prosemirror"}}
+                                {{/if}}
+                            </fieldset>
+                        </div>
+                        {{else}}
+                        <div class="itemToggleA">
+                            <img class="backgroundElanIcon" src="{{elan.img}}">
+                            <div class="backgroundElanInfo">
+                                <div>
+                                    <span> {{elan.name}} </span>
+                                    <span> {{elan.system.title}} </span>
+                                </div>
+                                <input class="inline-edit" data-field="system.level" type="number"
+                                    value="{{elan.system.level}}" />
+                            </div>
+                            <a class="{{#if system.expand}}showOpacity{{/if}}" data-action="itemToggleValue" data-ability="{{system.expand}}" data-label="system.expand"><i
+                                    class="{{#if system.expand}}fas fa-caret-up{{else}}fas fa-caret-down{{/if}}"></i></a>
+                        </div>
+                        {{#if system.showDesc}}
+                        {{editor system.description target="system.description" editable=false button=false
+                        engine="prosemirror"}}
+                        {{/if}}
+                        {{#if system.showGains}}
+                        <div class="backgrounElanDesc">
+                            <fieldset>
+                                <legend>{{localize "abfalter.loseElan"}}</legend>
+                                {{editor system.lose target="system.lose" editable=false button=false
+                                engine="prosemirror"}}
+                            </fieldset>
+                            <fieldset>
+                                {{#if system.upper}}
+                                <legend>{{localize "abfalter.gainUpperElan"}}</legend>
+                                {{editor system.gainUpper target="system.gainUpper" editable=false button=false
+                                engine="prosemirror"}}
+                                {{else}}
+                                <legend>{{localize "abfalter.gainElan"}}</legend>
+                                {{editor system.gain target="system.gain" editable=false button=false
+                                engine="prosemirror"}}
+                                {{/if}}
+                            </fieldset>
+                        </div>
+                        {{/if}}
+                        {{/if}}
+                        {{#each system.gifts as |gift key|}}
+                        {{#if gift.active}}
+                        <div class="backgroundElanGifts">
+                            <label class="{{#if this.showGift}}elanHideDescToggle{{else}}backElanBorder{{/if}}">
+                                <span>{{gift.name}}</span>
+                                <a data-action="toggleElanGift" data-label="showGift" data-value="{{gift.showGift}}" data-code="{{key}}">
+                                    {{#if this.showGift}} {{localize "abfalter.hide"}} {{else}} {{localize "abfalter.show"}} {{/if}}
+                                </a>
+                            </label>
+                            {{#if this.showGift}}
+                            <div>
+                                {{editor gift.desc target="system.gifts.{{key}}.desc" editable=false button=false engine="prosemirror"}}
+                            </div>
+                            {{/if}}
+                        </div>
+                        {{/if}}
+                        {{/each}}
+                    </div>
+                    {{/each}}
+                </div>
+                <div class="itemControls">
+                    <a class="item-control" data-action="createItem" data-type="elan"><i class="fas fa-plus"></i> {{localize
+                        "abfalter.addElan"}} </a>
+                    <a data-action="toggleValue" class="{{#if system.itemToggle.elan}}armorpenalty{{/if}}"
+                        data-label="system.itemToggle.elan" data-ability="{{system.itemToggle.elan}}"><i
+                            class="{{#if system.itemToggle.elan}}fa-solid fa-bars-staggered{{else}}fa-solid fa-bars{{/if}}"></i>
+                        {{localize "abfalter.modify"}} </a>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="fieldSetRow  {{#if system.toggles.bloodBondsStatus}}hidden{{/if}}">
+            <fieldset class="backgroundBlood">
+                <legend>{{localize "abfalter.bloodBonds"}}</legend>
+                <div>
+                    {{#each backgroundInfos as |backgroundInfo|}}
+                    {{#ifEquals system.type "bloodBond"}}
+                    <div class="backRace-item item itemStyle normal-item {{#if ../system.itemToggle.race}}draggable{{/if}}" data-item-id={{id}}
+                    data-can-edit="true" data-can-delete="true" data-can-equip="false" data-can-toggle="false">
+                        {{#if system.expand}}
+                        <div class="raceInfo itemToggleB">
+                            <input class="backInfo-name inline-edit" data-field="name" type="text" value="{{name}}" placeholder="{{localize " abfalter.nameItem"}}" />
+                            <label>
+                                <input class="inline-edit" data-field="system.levelMod" type="number" value="{{system.levelMod}}" />
+                                <span> {{localize "abfalter.lvlMod"}} </span>
+                            </label>
+                            <label>
+                                <input class="inline-edit" data-field="system.cpCost" type="number" value="{{system.cpCost}}" />
+                                <span> {{localize "abfalter.cpCost"}} </span>
+                            </label>
+                            <a data-action="itemToggleValue" data-ability="{{system.expand}}" data-label="system.expand">
+                                <i class="{{#if system.expand}}fas fa-caret-up{{else}}fas fa-caret-down{{/if}}"></i>
+                            </a>
+                        </div>
+                        {{editor system.description target="system.description" editable=false button=false engine="prosemirror"}}
+                        {{else}}
+                        <div class="raceInfo itemToggleA">
+                            <span> {{name}} </span>
+                            <label class="raceInfoBorder">
+                                <span> {{system.levelMod}} </span>
+                                <span> {{localize "abfalter.lvlMod"}} </span>
+                            </label>
+                            <label class="raceInfoBorder">
+                                <span> {{system.cpCost}} </span>
+                                <span> {{localize "abfalter.cpCost"}} </span>
+                            </label>
+                            <a data-action="itemToggleValue" data-ability="{{system.expand}}" data-label="system.expand">
+                                <i class="{{#if system.expand}}fas fa-caret-up{{else}}fas fa-caret-down{{/if}}"></i>
+                            </a>
+                        </div>
+                        {{#if system.descToggle}}
+                        {{editor system.description target="system.description" editable=false button=false engine="prosemirror"}}
+                        {{/if}}
+                        {{/if}}
+                    </div>
+                    {{/ifEquals}}
+                    {{/each}}
+                </div>
+                <div class="itemControls">
+                    <a class="item-control" data-action="createItem" data-ability="bloodBond" data-type="backgroundInfo"><i class="fas fa-plus"></i> {{localize "abfalter.addBloodBond"}} </a>
+                    <a data-action="toggleValue" class="{{#if system.itemToggle.bloodBonds}}armorpenalty{{/if}}" data-label="system.itemToggle.bloodBonds" data-ability="{{system.itemToggle.bloodBonds}}">
+                        <i class="{{#if system.itemToggle.bloodBonds}}fa-solid fa-bars-staggered{{else}}fa-solid fa-bars{{/if}}"></i>
+                        {{localize "abfalter.modify"}} 
+                    </a>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="fieldSetRow  {{#if system.toggles.raceRootsStatus}}hidden{{/if}}">
+            <fieldset class="backgrounRace">
+                <legend>{{localize "abfalter.raceTitle"}}</legend>
+                <div>
+                    {{#each backgroundInfos as |backgroundInfo|}}
+                    {{#ifEquals system.type "race"}}
+                    <div class="backRace-item item itemStyle normal-item {{#if ../system.itemToggle.race}}draggable{{/if}}" data-item-id={{id}}
+                    data-can-edit="true" data-can-delete="true" data-can-equip="false" data-can-toggle="false">
+                        {{#if system.expand}}
+                        <div class="raceInfo itemToggleB">
+                            <input class="inline-edit" data-field="name" type="text" value="{{name}}" placeholder="{{localize " abfalter.nameItem"}}" />
+                            <label>
+                                <input class="inline-edit" data-field="system.levelMod" type="number" value="{{system.levelMod}}" />
+                                <span> {{localize "abfalter.lvlMod"}} </span>
+                            </label>
+                            <label>
+                                <input class="inline-edit" data-field="system.expPen" type="number" value="{{system.expPen}}" />
+                                <span> {{localize "abfalter.expPen"}} </span>
+                            </label>
+                            <a data-action="itemToggleValue" data-ability="{{system.expand}}" data-label="system.expand">
+                                <i class="{{#if system.expand}}fas fa-caret-up{{else}}fas fa-caret-down{{/if}}"></i>
+                            </a>
+                        </div>
+                        {{editor system.description target="system.description" editable=false button=false engine="prosemirror"}}
+                        {{else}}
+                        <div class="raceInfo itemToggleA">
+                            <span> {{backgroundInfo.name}} </span>
+                            <label class="raceInfoBorder">
+                                <span> {{system.levelMod}} </span>
+                                <span> {{localize "abfalter.lvlMod"}} </span>
+                            </label>
+                            <label class="raceInfoBorder">
+                                <span> {{system.expPen}} </span>
+                                <span> {{localize "abfalter.expPen"}} </span>
+                            </label>
+                            <a data-action="itemToggleValue" data-ability="{{system.expand}}" data-label="system.expand">
+                                <i class="{{#if system.expand}}fas fa-caret-up{{else}}fas fa-caret-down{{/if}}"></i>
+                            </a>
+                        </div>
+                        {{#if system.descToggle}}
+                        {{editor system.description target="system.description" editable=false button=false engine="prosemirror"}}
+                        {{/if}}
+                        {{/if}}
+                    </div>
+                    {{/ifEquals}}
+                    {{/each}}
+                </div>
+                <div class="itemControls">
+                    <a class="item-control" data-action="createItem" data-ability="race" data-type="backgroundInfo"><i class="fas fa-plus"></i> {{localize "abfalter.addRace"}} </a>
+                    <a data-action="toggleValue" class="{{#if system.itemToggle.race}}armorpenalty{{/if}}" data-label="system.itemToggle.race" data-ability="{{system.itemToggle.race}}">
+                        <i class="{{#if system.itemToggle.race}}fa-solid fa-bars-staggered{{else}}fa-solid fa-bars{{/if}}"></i>
+                        {{localize "abfalter.modify"}}
+                    </a>
+                </div>
+            </fieldset>
+
+            <fieldset class="backgroundCultural">
+                <legend>{{localize "abfalter.culturalRootsTitle"}}</legend>
+                <div>
+                    {{#each backgroundInfos as |backgroundInfo|}}
+                    {{#ifEquals system.type "culturalRoot"}}
+                    <div class="cultureInfo-item item itemStyle normal-item {{#if ../system.itemToggle.race}}draggable{{/if}}" data-item-id={{id}}
+                    data-can-edit="true" data-can-delete="true" data-can-equip="false" data-can-toggle="false">
+                        {{#if system.expand}}
+                        <div class="culInfo itemToggleB">
+                            <input class="backInfo-name inline-edit" data-field="name" type="text" value="{{name}}" placeholder="{{localize " abfalter.nameItem"}}" />
+                            <a data-action="itemToggleValue" data-ability="{{system.expand}}" data-label="system.expand">
+                                <i class="{{#if system.expand}}fas fa-caret-up{{else}}fas fa-caret-down{{/if}}"></i>
+                            </a>
+                        </div>
+                        <div class="culInfoRowB">
+                            <label>
+                                <span> {{localize "abfalter.region"}} </span>
+                                <input class="inline-edit" data-field="system.region" type="text" value="{{system.region}}" />
+                            </label>
+                            <label>
+                                <span> {{localize "abfalter.city"}} </span>
+                                <input class="inline-edit" data-field="system.city" type="text" value="{{system.city}}" />
+                            </label>
+                        </div>
+                        {{editor system.description target="system.description" editable=false button=false engine="prosemirror"}}
+                        {{else}}
+                        <div class="culInfoB itemToggleA">
+                            <span> {{backgroundInfo.name}} </span>
+                            <a data-action="itemToggleValue" data-ability="{{system.expand}}" data-label="system.expand">
+                                <i class="{{#if system.expand}}fas fa-caret-up{{else}}fas fa-caret-down{{/if}}"></i>
+                            </a>
+                        </div>
+                        <div class="culInfoRow">
+                            <label>
+                                <span> {{localize "abfalter.region"}}: </span>
+                                <span> {{system.region}} </span>
+                            </label>
+                            <label>
+                                <span> {{localize "abfalter.city"}}: </span>
+                                <span> {{system.city}} </span>
+                            </label>
+                        </div>
+                        {{#if system.descToggle}}
+                        {{editor system.description target="system.description" editable=false button=false engine="prosemirror"}}
+                        {{/if}}
+                        {{/if}}
+                    </div>
+                    {{/ifEquals}}
+                    {{/each}}
+                </div>
+                <div class="itemControls">
+                    <a class="item-control" data-action="createItem" data-ability="culturalRoot" data-type="backgroundInfo"><i class="fas fa-plus"></i> {{localize
+                        "abfalter.addCulturalRoot"}} </a>
+                    <a data-action="toggleValue" class="{{#if system.itemToggle.culturalRoots}}armorpenalty{{/if}}"
+                        data-label="system.itemToggle.culturalRoots" data-ability="{{system.itemToggle.culturalRoots}}"><i
+                            class="{{#if system.itemToggle.culturalRoots}}fa-solid fa-bars-staggered{{else}}fa-solid fa-bars{{/if}}"></i>
+                        {{localize "abfalter.modify"}} </a>
+                </div>
+            </fieldset>
+        </div>
+        
+
+    </div>
+
+    <div class="e3">
+        <div>
+            <h5> {{localize "abfalter.note"}} </h5>
+            <div style="display: grid;">
+                <textarea class="textarea-auto-resize" name="system.info.notesOne"
+                    style="grid-area: 1 / 1 / 2/ 2;">{{system.info.notesOne}}</textarea>
+                <div class="textarea-auto-resize-sibling" aria-hidden="true"
+                    style="visibility: hidden; grid-area: 1 / 1 / 2 / 2;">{{system.info.notesOne}}</div>
+            </div>
+        </div>
+
+        <div>
+            <h5> {{localize "abfalter.note"}} </h5>
+            <div style="display: grid;">
+                <textarea class="textarea-auto-resize" name="system.info.notesTwo"
+                    style="grid-area: 1 / 1 / 2/ 2;">{{system.info.notesTwo}}</textarea>
+                <div class="textarea-auto-resize-sibling" aria-hidden="true"
+                    style="visibility: hidden; grid-area: 1 / 1 / 2 / 2;">{{system.info.notesTwo}}</div>
+            </div>
+        </div>
+    </div>
+</section>

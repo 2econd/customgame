@@ -1,0 +1,20 @@
+<div class="item-subtitle">
+    <h4 class="item-type">{{localize "abfalter.loot"}}</h4>
+    <span class="item-subType">{{system.rarity}}</span>
+</div>
+<ul class="summary flexrow">
+    <li>{{localize "abfalter.type"}}: {{localize (concat "abfalter." system.type)}}</li>
+    <li class="itemHeader65-30">
+        <label> 
+            <span> {{localize "abfalter.readOnly"}} </span>
+            <button type="button" data-action="toggleValue" class="{{#if system.readOnly}}kiBought{{/if}}"
+                data-label="system.readOnly" data-ability="{{system.readOnly}}">
+                {{#if system.readOnly}}
+                    <span> {{localize "abfalter.yes"}} </span>
+                {{else}}
+                    <span> {{localize "abfalter.no"}} </span>
+                {{/if}}
+            </button>
+        </label>
+    </li>
+</ul>

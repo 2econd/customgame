@@ -1,0 +1,24 @@
+<div class="abfalter weaponChatRollMsg" data-actor-id="{{actor._id}}">
+    <div>
+        <span> {{actor.name}} </span>
+        <span> {{breakDetails.wepName}} </span>
+        {{#ifEquals breakDetails.wepType "ranged"}}
+        <span> {{breakDetails.ammoName}} </span>
+        {{/ifEquals}}
+    </div>
+
+    <div class="chatAtkRoll atkCustomTitleContainer">
+        <span> {{breakDetails.label}}</span>
+        <span class="{{rollResult.color}}"> {{rollResult.newTotal}} </span>
+        <div class="atkCustomTitle">{{breakDetails.formula}}</div>
+    </div>
+
+    <div class="rollExplodeText">
+        {{#if rollResult.explode}}
+        <span class="openRoll"> {{localize "abfalter.dialogs.openRoll"}} </span>
+        {{/if}}
+        {{#if rollResult.fumble}}
+        <span class="fumbleRoll"> {{localize "abfalter.dialogs.fumble"}} </span>
+        {{/if}}
+    </div>
+</div>

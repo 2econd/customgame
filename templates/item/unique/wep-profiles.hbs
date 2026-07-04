@@ -1,0 +1,332 @@
+<section class="baseAbfalterV2 itemPageV2 tab {{tabs.profiles.cssClass}}" data-group="{{tabs.profiles.group}}" data-tab="{{tabs.profiles.id}}">
+    <div>
+        <div id="attack-list">
+            {{#each system.attacks as |attack key|}}
+            <div class="profile">
+                {{#if this.expand}}
+                <div class="abfDivFormat wepProfileName">
+                    <input type="text" name="system.attacks.{{key}}.name" value="{{attack.name}}" placeholder="Attack Name">
+                    <a data-action="removeWepAtk" data-code="{{key}}"><i class="fas fa-trash"></i></a>
+                    <a data-action="wepAtkToggle" data-label="expand" data-value="{{attack.expand}}" data-code="{{key}}"><i
+                        class="{{#if this.expand}}fas fa-caret-up{{else}}fas fa-caret-down{{/if}}"></i></a>
+                </div>
+                {{#ifIn wepType "hybrid melee ranged"}}
+                <div class="abfDivFormat wepProfileType">
+                    <div class="csSelect wepProfileSelector">
+                        <label>
+                            <span> {{localize "abfalter.profileType"}} </span>
+                            <select name="system.attacks.{{key}}.profileType">
+                                {{selectOptions ../profileTypeList selected=this.profileType localize=true}}
+                            </select>
+                        </label>
+                    </div>
+                    {{#ifIn profileType "both offensive"}}
+                    {{#ifIn wepType "melee ranged"}}
+                    <div class="wepProfileSelector">
+                        <label>
+                            <span> {{localize "abfalter.attackType"}}: </span>
+                            <span> {{localize (concat "abfalter." attack.wepType)}}</span>
+                        </label>
+                    </div>
+                    {{/ifIn}}
+                    {{#ifIn wepType "hybrid"}}
+                    <div class="csSelect wepProfileSelector">
+                        <label>
+                            <span> {{localize "abfalter.attackType"}}: </span>
+                            <select name="system.attacks.{{key}}.atkType">
+                                {{selectOptions ../wepProfileAtkTypeList selected=this.atkType localize=true}}
+                            </select>
+                        </label>
+                    </div>
+                    {{/ifIn}}
+                    {{/ifIn}}
+                </div>
+                {{/ifIn}}
+
+                <div class="itemPropertyContainer abfDivFormat">
+                    <span>{{localize "abfalter.profileOverrides"}}</span>
+                    <div>
+                        {{#each attack.properties as |prop keyTwo|}}
+                            {{#if prop.parent}}
+                            <label class="prop">
+                                <input type="checkbox" name="system.attacks.{{key}}.properties.{{keyTwo}}.bool" {{checked prop.bool}} />
+                                <span>{{localize (concat "abfalter." prop.label)}}</span>
+                            </label>
+                            {{/if}}
+                        {{/each}}
+                    </div>
+                </div>
+
+                <div class="abfDivFormat wepProfileStats">
+                    {{#ifIn profileType "offensive both"}}
+                    <label>
+                        <span> {{localize "abfalter.attack"}} </span>
+                        <input type="number" name="system.attacks.{{key}}.attack" value="{{attack.attack}}">
+                        <span> | </span>
+                        <span> {{this.finalAttack}} </span>
+                    </label>
+                    {{/ifIn}}
+
+                    {{#ifIn profileType "defensive both"}}
+                    <label>
+                        <span> {{localize "abfalter.block"}} </span>
+                        <input type="number" name="system.attacks.{{key}}.block" value="{{attack.block}}">
+                        <span> | </span>
+                        <span> {{this.finalBlock}} </span>
+                    </label>
+
+                    <label>
+                        <span> {{localize "abfalter.dodge"}} </span>
+                        <input type="number" name="system.attacks.{{key}}.dodge" value="{{attack.dodge}}">
+                        <span> | </span>
+                        <span> {{this.finalDodge}} </span>
+                    </label>
+                    {{/ifIn}}
+
+                    {{#ifIn profileType "offensive both"}}
+                    <label>
+                        <span> {{localize "abfalter.breakage"}} </span>
+                        <input type="number" name="system.attacks.{{key}}.breakage" value="{{attack.breakage}}">
+                        <span> | </span>
+                        <span> {{this.finalBreakage}} </span>
+                    </label>
+                    <label>
+                        <span> {{localize "abfalter.atPen"}} </span>
+                        <input type="number" name="system.attacks.{{key}}.atPen" value="{{attack.atPen}}">
+                        <span> | </span>
+                        <span> {{this.finalAtPen}} </span>
+                    </label>
+                    <label>
+                        <span> {{localize "abfalter.damage"}} </span>
+                        <input type="number" name="system.attacks.{{key}}.damage" value="{{attack.damage}}">
+                        <span> | </span>
+                        <span> {{this.finalDamage}} </span>
+                    </label>
+                    {{/ifIn}}
+                </div>
+
+                {{#if attack.properties.damageType.parent}}
+                {{#if attack.properties.damageType.bool}}
+                <div class="abfDivFormat wepProfileBasic wepProfileDmgTypeO">
+                    <label>
+                        <span> {{localize "abfalter.dmgTypeOverride"}} </span>
+                        <div class="csSelect">
+                            <label>
+                                {{#if system.spiritHomebrew}}
+                                <select name="system.attacks.{{key}}.damageType">
+                                    {{selectOptions ../profileDamageTypeSpiritObjList selected=this.damageType localize=true}}
+                                </select>
+                                {{else}}
+                                <select name="system.attacks.{{key}}.damageType">
+                                    {{selectOptions ../profileDamageTypeObjList selected=this.damageType localize=true}}
+                                </select>
+                                {{/if}}
+                            </label>
+                        </div>
+                    </label>
+                </div>
+                {{/if}}
+                {{/if}}
+
+                {{#if attack.properties.predetermined.bool}}
+                <div class="abfDivFormat wepProfileBasic">
+                    <label>
+                        <span>{{localize "abfalter.predeterminedText"}}</span>
+                    </label>
+                </div>
+                {{/if}}
+
+                {{#if attack.properties.precision.parent}}
+                {{#if attack.properties.precision.bool}}
+                <div class="abfDivFormat wepProfileBasic">
+                    <label>
+                        <span>{{localize "abfalter.precisionIgnoreText"}}</span>
+                    </label>
+                </div>
+                {{/if}}
+                {{/if}}
+
+                {{#if attack.properties.vorpal.parent}}
+                {{#if attack.properties.vorpal.bool}}
+                <div class="abfDivFormat wepProfileVorpalO wepProfileBasic">
+                    <label for="">
+                        <button data-action="wepAtkToggle" class="{{#if this.ignoreVorpal}}kiBought{{/if}}" data-label="ignoreVorpal"
+                                data-value="{{attack.ignoreVorpal}}" data-code="{{key}}">
+                            {{#if this.ignoreVorpal}}
+                            <span> {{localize "abfalter.ignoreVorpal"}} </span>
+                            {{else}}
+                            <span> {{localize "abfalter.vorpalOverride"}} </span>
+                            {{/if}}
+                        </button>
+                        {{#if this.ignoreVorpal}}
+                        <span>{{localize "abfalter.vorpalIgnoreText"}}</span>
+                        {{else}}
+                        <label>
+                            <span> {{localize "abfalter.location"}}</span>
+                            <div class="csSelect abfDivFormat">
+                                <label>
+                                    <select name="system.attacks.{{key}}.vorpalLocation">
+                                        {{selectOptions ../vorpalAtkList selected=attack.vorpalLocation localize=true}}
+                                    </select>
+                                </label>
+                            </div>
+                        </label>
+                        <label>
+                            <span> {{localize "abfalter.mod"}}</span>
+                            <input type="number" name="system.attacks.{{key}}.vorpalMod" value="{{attack.vorpalMod}}">
+                        </label>
+                        {{/if}}
+                    </label>
+                </div>
+                {{/if}}
+                {{/if}}
+
+                {{#if attack.properties.throwable.parent}}
+                {{#if attack.properties.throwable.bool}}
+                <div class="abfDivFormat wepProfileThrowableO wepProfileBasic">
+                    <label for="">
+                        <button data-action="wepAtkToggle" class="{{#if this.ignoreThrown}}kiBought{{/if}}" data-label="ignoreThrown"
+                             data-value="{{attack.ignoreThrown}}" data-code="{{key}}">
+                            {{#if this.ignoreThrown}}
+                            <span> {{localize "abfalter.ignoreThrown"}} </span>
+                            {{else}}
+                            <span> {{localize "abfalter.throwableOverride"}} </span>
+                            {{/if}}
+                        </button>
+                        {{#if this.ignoreThrown}}
+                        <span>{{localize "abfalter.throwIgnoreText"}}</span>
+                        {{else}}
+                        <button data-action="wepAtkToggle" class="{{#if this.fired}}kiBought{{/if}}" data-label="fired"
+                             data-value="{{attack.fired}}" data-code="{{key}}">
+                            {{#if this.fired}}
+                            <span> {{localize "abfalter.fired"}} </span>
+                            {{else}}
+                            <span> {{localize "abfalter.thrown"}} </span>
+                            {{/if}}
+                        </button>
+                        <button data-action="wepAtkToggle" class="{{#if this.quantityConsumed}}kiBought{{/if}}"
+                            data-label="quantityConsumed"  data-value="{{attack.quantityConsumed}}" data-code="{{key}}">
+                            {{#if this.quantityConsumed}}
+                            <span> {{localize "abfalter.returning"}} </span>
+                            {{else}}
+                            <span> {{localize "abfalter.ConsumesQuantity"}} </span>
+                            {{/if}}
+                        </button>
+                        {{#if this.quantityConsumed}}
+                        {{else}}
+                        <label>
+                            <span> {{localize "abfalter.throwConsumption"}} </span>
+                            <input type="number" name="system.attacks.{{key}}.consumedValue" value="{{attack.consumedValue}}">
+                        </label>
+                        {{/if}}
+                        {{/if}}
+                    </label>
+                </div>
+                {{/if}}
+                {{/if}}
+
+                {{#if attack.properties.trapping.parent}}
+                {{#if attack.properties.trapping.bool}}
+                <div class="abfDivFormat wepProfileTrappingO wepProfileBasic">
+                    <label for="">
+                        <button data-action="wepAtkToggle" class="{{#if this.ignoreTrapping}}kiBought{{/if}}" data-label="ignoreTrapping"
+                                data-value="{{attack.ignoreTrapping}}" data-code="{{key}}">
+                            {{#if this.ignoreTrapping}}
+                            <span> {{localize "abfalter.ignoreTrapping"}} </span>
+                            {{else}}
+                            <span> {{localize "abfalter.trappingOverride"}} </span>
+                            {{/if}}
+                        </button>
+                        {{#if this.ignoreTrapping}}
+                        <span>{{localize "abfalter.trapIgnoreText"}}</span>
+                        {{else}}
+                        <button data-action="wepAtkToggle" class="{{#if this.trappingType}}{{else}}kiBought{{/if}}"
+                            data-label="trappingType"  data-value="{{attack.trappingType}}" data-code="{{key}}">
+                            {{#if this.trappingType}}
+                            <span> {{localize "abfalter.flatAmount"}} </span>
+                            {{else}}
+                            <span> {{localize "abfalter.regTrap"}} </span>
+                            {{/if}}
+                        </button>
+                        <label>
+                            {{#if this.trappingType}}
+                            <span>{{localize "abfalter.enterFlatAmount"}}</span>
+                            {{else}}
+                            <span>{{localize "abfalter.enterCustomAmount"}} 1d10 + </span>
+                            {{/if}}
+                            <input type="number" name="system.attacks.{{key}}.trappingValue" value="{{attack.trappingValue}}">
+                        </label>
+                        {{/if}}
+                    </label>
+                </div>
+                {{/if}}
+                {{/if}}
+
+                {{#if attack.properties.ammunition.parent}}
+                {{#if attack.properties.ammunition.bool}}
+                <div class="abfDivFormat wepProfileAmmunitionO wepProfileBasic">
+                    <label for="">
+                        <span> {{localize "abfalter.ammunitionOverride"}} </span>
+
+                        <button data-action="wepAtkToggle" class="{{#if this.rangedAmmoFired}}kiBought{{/if}}" data-label="rangedAmmoFired"
+                             data-value="{{attack.rangedAmmoFired}}" data-code="{{key}}">
+                            {{#if this.rangedAmmoFired}}
+                            <span> {{localize "abfalter.fired"}} </span>
+                            {{else}}
+                            <span> {{localize "abfalter.thrown"}} </span>
+                            {{/if}}
+                        </button>
+                        <button data-action="wepAtkToggle" class="{{#if this.rangedAmmoConsumed}}kiBought{{/if}}"
+                            data-label="rangedAmmoConsumed"  data-value="{{attack.rangedAmmoConsumed}}" data-code="{{key}}">
+                            {{#if this.rangedAmmoConsumed}}
+                            <span> {{localize "abfalter.infiniteAmmo"}} </span>
+                            {{else}}
+                            <span> {{localize "abfalter.consumesAmmo"}} </span>
+                            {{/if}}
+                        </button>
+
+                        {{#if this.rangedAmmoConsumed}}
+                        {{else}}
+                        <label>
+                            <span> {{localize "abfalter.ammoPerAtk"}} </span>
+                            <input type="number" name="system.attacks.{{key}}.rangedAmmoConsumedValue" value="{{attack.rangedAmmoConsumedValue}}">
+                        </label>
+                        {{/if}}
+                    </label>
+                </div>
+                {{/if}}
+                {{/if}}
+
+                {{#if attack.properties.note.bool}}
+                <div class="abfDivFormat wepProfileNotesO wepProfileBasic">
+                    <label>
+                        <span>{{localize "abfalter.promptNotes"}}</span>
+                        <textarea name="system.attacks.{{key}}.attackNote">{{attack.attackNote}}</textarea>
+                    </label>
+                    <label>
+                        <span>{{localize "abfalter.chatNotes"}}</span>
+                        <textarea name="system.attacks.{{key}}.chatNote">{{attack.chatNote}}</textarea>
+                    </label>
+                </div>
+                {{/if}}
+
+
+
+                {{else}}
+                <div class="abfDivFormat wepProfileName">
+                    <span>{{this.name}}</span>
+                    <a data-action="removeWepAtk" data-code="{{key}}"><i class="fas fa-trash"></i></a>
+                    <a data-action="wepAtkToggle" data-label="expand" data-value="{{attack.expand}}" data-code="{{key}}"><i
+                        class="{{#if this.expand}}fas fa-caret-up{{else}}fas fa-caret-down{{/if}}"></i></a>
+                </div>
+                <div>
+                    <span>{{this.standardInfo}}</span>
+                </div>
+
+                {{/if}}
+            </div>
+            {{/each}}
+        </div>
+        <button class="addElanGifts" type="button" data-action="addWepAtk"><i class="fas fa-plus"></i> {{localize "abfalter.addAtk"}}</button>
+    </div>
+</section>

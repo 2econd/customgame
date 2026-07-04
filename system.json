@@ -1,0 +1,279 @@
+{
+  "id": "abfalter",
+  "title": "Anima Beyond Fantasy Altered",
+  "description": "Engligh Version of 'Fantasy Flight Games' Anima Beyond Fantasy System altered by some house rules.",
+  "version": "1.6.3",
+  "compatibility": {
+    "minimum": 14,
+    "verified": "14.363"
+  },
+  "authors": [
+    {
+      "name": "Jesse Davis (Luminita)",
+      "email": "Davis.Jesse97@outlook.com",
+      "discord": "lumenita"
+    }
+  ],
+  "esmodules": [
+    "module/abfalter.js"
+  ],
+  "styles": [
+    "css/abfalter.css"
+  ],
+  "primaryTokenAttribute": "lp",
+  "grid": {
+    "distance": 5,
+    "units": "ft"
+  },
+  "license": "LICENSE.txt",
+  "url": "https://github.com/Lumenita/abfalter",
+  "manifest": "https://raw.githubusercontent.com/Lumenita/abfalter/main/system.json",
+  "download": "https://github.com/Lumenita/abfalter/releases/download/v1.6.3/abfalter.zip",
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "es",
+      "name": "Español",
+      "path": "lang/es.json"
+    },
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
+    },
+    {
+      "lang": "ru",
+      "name": "русский",
+      "path": "lang/ru.json"
+    }
+  ],
+  "packs": [
+    {
+      "name": "compendiums",
+      "label": "System Tutorials",
+      "system": "abfalter",
+      "path": "./packs/compendiums",
+      "type": "JournalEntry",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "classes",
+      "label": "Classes",
+      "system": "abfalter",
+      "path": "./packs/classes",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "advantages-and-disadvantages",
+      "label": "Advantages & Disadvantages",
+      "system": "abfalter",
+      "path": "./packs/advantages-and-disadvantages",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "equipment",
+      "label": "Equipment",
+      "system": "abfalter",
+      "path": "./packs/equipment",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "spells",
+      "label": "Spells",
+      "system": "abfalter",
+      "path": "./packs/spells",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "psychic-powers",
+      "label": "Psychic Powers",
+      "system": "abfalter",
+      "path": "./packs/psychic-powers",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "martial-arts",
+      "label": "Martial Arts",
+      "system": "abfalter",
+      "path": "./packs/martial-arts",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "incarnations",
+      "label": "Incarnations",
+      "system": "abfalter",
+      "path": "./packs/incarnations",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "invocations",
+      "label": "Invocations",
+      "system": "abfalter",
+      "path": "./packs/invocations",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+
+    {
+      "name": "creature-powersabilities",
+      "label": "Creature Powers",
+      "system": "abfalter",
+      "path": "./packs/creature-powersabilities",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "combat-modules",
+      "label": "Combat Modules",
+      "system": "abfalter",
+      "path": "./packs/combat-modules",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "ki-techniques",
+      "label": "Ki Techniques",
+      "system": "abfalter",
+      "path": "./packs/ki-techniques",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "roll-tables",
+      "label": "Roll Tables",
+      "system": "abfalter",
+      "path": "./packs/roll-tables",
+      "type": "RollTable",
+      "private": false
+    },
+    {
+      "name": "macros",
+      "label": "System Macros",
+      "system": "abfalter",
+      "path": "./packs/macros",
+      "type": "Macro",
+      "private": false
+    },
+    {
+      "name": "characters-and-creatures",
+      "label": "Characters & Creatures",
+      "system": "abfalter",
+      "path": "./packs/characters-and-creatures",
+      "type": "Actor",
+      "private": false
+    },
+    {
+      "name": "references",
+      "label": "References",
+      "system": "abfalter",
+      "path": "./packs/references",
+      "type": "JournalEntry",
+      "private": false
+    },
+    {
+      "name": "backgrounds",
+      "label": "Background Items",
+      "system": "abfalter",
+      "path": "./packs/backgrounds",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "cultural-roots",
+      "label": "Cultural Roots",
+      "system": "abfalter",
+      "path": "./packs/cultural-roots",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "elan",
+      "label": "Elan",
+      "system": "abfalter",
+      "path": "./packs/elan",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "raceslegacies",
+      "label": "Races & Legacies",
+      "system": "abfalter",
+      "path": "./packs/raceslegacies",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "General Items",
+      "sorting": "m",
+      "packs": [
+        "classes",
+        "advantages-and-disadvantages",
+        "equipment",
+        "creature-powersabilities",
+        "backgrounds",
+        "cultural-roots",
+        "elan",
+        "raceslegacies"
+      ]
+    },
+    {
+      "name": "Martial Items",
+      "sorting": "m",
+      "packs": [
+        "combat-modules",
+        "ki-techniques",
+        "martial-arts"
+      ]
+    },
+    {
+      "name": "Magic/Psychic Items",
+      "sorting": "m",
+      "packs": [
+        "spells",
+        "incarnations",
+        "invocations",
+        "psychic-powers"
+      ]
+    },
+    {
+      "name": "Macros & more",
+      "sorting": "m",
+      "packs": [
+        "characters-and-creatures",
+        "macros",
+        "roll-tables",
+        "references",
+        "compendiums"
+      ]
+    }
+  ]
+}

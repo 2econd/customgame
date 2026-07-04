@@ -1,0 +1,30 @@
+<section class="tab {{tabs.bio.cssClass}} actorPage baseAbfalterV2" data-group="{{tabs.bio.group}}" data-tab="{{tabs.bio.id}}">
+    <div class="bio">
+        <div class="bioPictures">
+            <div>
+                <img class="profile-img" src="{{document.prototypeToken.texture.src}}" />
+            </div>
+            <div>
+                <img class="profile-img" src="{{document.img}}" data-action="editImage" data-edit="img" />
+            </div>
+        </div>
+        <div class="bioInformation">
+            <div class="abfDivFormat">
+                <label><span>{{localize "abfalter.gender"}}</span> <input type="text" name="system.info.gender" value="{{system.info.gender}}" placeholder="" /> </label>
+                <label><span>{{localize "abfalter.race"}}</span> <input type="text" name="system.info.race" value="{{system.info.race}}" placeholder="" /> </label>
+                <label><span>{{localize "abfalter.appear"}}</span> <input type="text" name="system.info.appearance" value="{{system.info.appearance}}" placeholder="" /> </label>
+            </div>
+            <div class="abfDivFormat">
+                <label><span>{{localize "abfalter.height"}}</span> <input type="text" name="system.info.height" value="{{system.info.height}}" placeholder="" /> </label>
+                <label><span>{{localize "abfalter.weight"}}</span> <input type="text" name="system.info.weight" value="{{system.info.weight}}" placeholder="" /> </label>
+                <label><span>{{localize "abfalter.age"}}</span> <input type="text" name="system.info.age" value="{{system.info.age}}" placeholder="" /> </label>
+            </div>
+        </div>
+        <div class="abfEditorFormat bioText">
+            <span>{{localize "abfalter.biography"}}</span>
+            <prose-mirror name="system.info.bio" value="{{system.info.bio}}" toggled>
+                {{{enrichedBio}}}
+            </prose-mirror>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,103 @@
+<div class="abfalter weaponChatRollMsg" data-actor-id="{{actor._id}}">
+    <div>
+        <span> {{actor.name}} </span>
+        <span> {{attackDetails.wepName}} </span>
+        {{#ifEquals attackDetails.profileType "offensive"}}
+        {{#ifEquals attackDetails.wepType "ranged"}}
+        <span> {{attackDetails.ammoName}} </span>
+        {{/ifEquals}}
+        {{/ifEquals}}
+    </div>
+
+    {{#each rollData as |roll i|}}
+    <div class="chatAtkRoll atkCustomTitleContainer">
+        <span> {{roll.label}}</span>
+        <span class="{{roll.color}}"> {{roll.total}} </span>
+        <div class="atkCustomTitle">{{roll.formula}}</div>
+    </div>
+    {{#if roll.showSeverity}}
+    <div class="wepFumbleSeverity" title="{{rollResult.result}}">
+        <span> {{localize "abfalter.dialogs.fumbleSeverity"}} </span>
+        <span class="fumbleRoll"> -{{roll.fumbleS}} </span>
+    </div>
+    {{/if}}
+    {{/each}}
+
+    {{#ifEquals attackDetails.profileType "offensive"}}
+    <div>
+        <div>
+            <span> {{localize "abfalter.dmgShort"}}: {{attackDetails.dmg}} {{attackDetails.dmgType}}</span>
+            <span> {{localize "abfalter.atPen"}}: {{attackDetails.atPen}}</span>
+        </div>
+        <div>
+            <span> {{localize "abfalter.targetAim"}}: {{localize (concat "abfalter." attackDetails.target)}}</span>
+        </div>
+        {{#if attackDetails.hasNote}}
+        <div>
+            <span>{{attackDetails.note}}</span>
+        </div>
+        {{/if}}
+    </div>
+    {{/ifEquals}}
+
+    {{#ifEquals attackDetails.profileType "defensive"}}
+    <div>
+        <div>
+            {{{attackDetails.chosenAt}}}
+        </div>
+    </div>
+    {{/ifEquals}}
+
+    {{#ifEquals attackDetails.profileType "offensive"}}
+    {{#if workflow.selectedDefenderIds.length}}
+    <section class="abfTargetList">
+        <div> TARGETS </div>
+
+        {{#each targetList}}
+        <div class="abfTargetRow" data-token-id="{{this.tokenId}}">
+            <div class="abfTargetRowLeft">
+                {{#if this.img}}
+                    <img class="abfTargetRowImg" src="{{this.img}}" alt="{{this.name}}">
+                {{/if}}
+                <span>{{this.name}}</span>
+            </div>
+
+            <div>
+                <button
+                    type="button"
+                    class="abfDefendButton"
+                    data-token-id="{{this.tokenId}}"
+                    data-actor-id="{{this.actorId}}"
+                    data-locked-by-roll="{{#if ../defendLocked}}true{{else}}false{{/if}}"
+                    {{#if ../defendLocked}}disabled{{/if}}
+                >
+                    Defend
+                </button>
+            </div>
+        </div>
+        {{/each}}
+
+        {{#if defendLocked}}
+        <div>
+            Waiting for open roll / fumble resolution.
+        </div>
+        {{/if}}
+    </section>
+    {{/if}}
+    {{/ifEquals}}
+
+
+    {{#each rollData as |roll i|}}
+    <label class="explodeButtons">
+        {{#if roll.explode}}
+        <button class="wepOpenRoll" data-actor-id="{{actor._id}}"> {{localize "abfalter.dialogs.openRoll"}} </button>
+        {{/if}}
+        {{#if roll.fumble}}
+        <button class="wepFumbleRoll" data-actor-id="{{actor._id}}"> {{localize "abfalter.dialogs.fumbleSeverity2"}} </button>
+        {{/if}}
+    </label>
+    {{/each}}
+
+
+    
+</div>
