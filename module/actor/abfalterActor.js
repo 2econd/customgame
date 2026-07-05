@@ -1582,232 +1582,63 @@ export default class abfalterActor extends Actor {
 
         //Movement
         system.movement.final = Math.floor(system.stats.Agility.final + system.movement.spec + system.movement.temp + system.movement.bonus + system.movement.sizeBase - system.movement.pen + Math.min(0, Math.ceil(system.aamField.final / 20)) + system.armor.wearArmor.totalMovePen);
-        switch (system.movement.final) {
-            case 1:
-                if (system.other.useMeters) {
-                    system.movement.fullMove = "<1 m.";
-                    system.movement.fourthMove = "<1 m.";
-                    system.movement.runningMove = "<1 m.";
-                } else {
-                    system.movement.fullMove = "3 ft";
-                    system.movement.fourthMove = "1 ft";
-                    system.movement.runningMove = "N/A";
-                }
-                break;
-            case 2:
-                if (system.other.useMeters) {
-                    system.movement.fullMove = "4 m.";
-                    system.movement.fourthMove = "1 m.";
-                    system.movement.runningMove = "2 m.";
-                } else {
-                    system.movement.fullMove = "15 ft";
-                    system.movement.fourthMove = "3 ft";
-                    system.movement.runningMove = "7 ft";
-                }
-                break;
-            case 3:
-                if (system.other.useMeters) {
-                    system.movement.fullMove = "8 m.";
-                    system.movement.fourthMove = "2 m.";
-                    system.movement.runningMove = "4 m.";
-                } else {
-                    system.movement.fullMove = "25 ft";
-                    system.movement.fourthMove = "6 ft";
-                    system.movement.runningMove = "12 ft";
-                }
-                break;
-            case 4:
-                if (system.other.useMeters) {
-                    system.movement.fullMove = "15 m.";
-                    system.movement.fourthMove = "4 m.";
-                    system.movement.runningMove = "8 m.";
-                } else {
-                    system.movement.fullMove = "50 ft";
-                    system.movement.fourthMove = "12 ft";
-                    system.movement.runningMove = "15 ft";
-                }
-                break;
-            case 5:
-                if (system.other.useMeters) {
-                    system.movement.fullMove = "20 m.";
-                    system.movement.fourthMove = "5 m.";
-                    system.movement.runningMove = "8 m.";
-                } else {
-                    system.movement.fullMove = "65 ft";
-                    system.movement.fourthMove = "16 ft";
-                    system.movement.runningMove = "25 ft";
-                }
-                break;
-            case 6:
-                if (system.other.useMeters) {
-                    system.movement.fullMove = "22 m.";
-                    system.movement.fourthMove = "5 m.";
-                    system.movement.runningMove = "15 m.";
-                } else {
-                    system.movement.fullMove = "70 ft";
-                    system.movement.fourthMove = "17 ft";
-                    system.movement.runningMove = "50 ft";
-                }
-                break;
-            case 7:
-                if (system.other.useMeters) {
-                    system.movement.fullMove = "25 m.";
-                    system.movement.fourthMove = "6 m.";
-                    system.movement.runningMove = "20 m.";
-                } else {
-                    system.movement.fullMove = "80 ft";
-                    system.movement.fourthMove = "20 ft";
-                    system.movement.runningMove = "65 ft";
-                }
-                break;
-            case 8:
-                if (system.other.useMeters) {
-                    system.movement.fullMove = "28 m.";
-                    system.movement.fourthMove = "7 m.";
-                    system.movement.runningMove = "22 m.";
-                } else {
-                    system.movement.fullMove = "90 ft";
-                    system.movement.fourthMove = "22 ft";
-                    system.movement.runningMove = "70 ft";
-                }
-                break;
-            case 9:
-                if (system.other.useMeters) {
-                    system.movement.fullMove = "32 m.";
-                    system.movement.fourthMove = "8 m.";
-                    system.movement.runningMove = "25 m.";
-                } else {
-                    system.movement.fullMove = "105 ft";
-                    system.movement.fourthMove = "26 ft";
-                    system.movement.runningMove = "80 ft";
-                }
-                break;
-            case 10:
-                if (system.other.useMeters) {
-                    system.movement.fullMove = "35 m.";
-                    system.movement.fourthMove = "9 m.";
-                    system.movement.runningMove = "28 m.";
-                } else {
-                    system.movement.fullMove = "115 ft";
-                    system.movement.fourthMove = "28 ft";
-                    system.movement.runningMove = "90 ft";
-                }
-                break;
-            case 11:
-                if (system.other.useMeters) {
-                    system.movement.fullMove = "40 m.";
-                    system.movement.fourthMove = "10 m.";
-                    system.movement.runningMove = "32 m.";
-                } else {
-                    system.movement.fullMove = "130 ft";
-                    system.movement.fourthMove = "32 ft";
-                    system.movement.runningMove = "105 ft";
-                }
-                break;
-            case 12:
-                if (system.other.useMeters) {
-                    system.movement.fullMove = "50 m.";
-                    system.movement.fourthMove = "12 m.";
-                    system.movement.runningMove = "35 m.";
-                } else {
-                    system.movement.fullMove = "160 ft";
-                    system.movement.fourthMove = "40 ft";
-                    system.movement.runningMove = "115 ft";
-                }
-                break;
-            case 13:
-                if (system.other.useMeters) {
-                    system.movement.fullMove = "80 m.";
-                    system.movement.fourthMove = "20 m.";
-                    system.movement.runningMove = "40 m.";
-                } else {
-                    system.movement.fullMove = "250 ft";
-                    system.movement.fourthMove = "62 ft";
-                    system.movement.runningMove = "130 ft";
-                }
-                break;
-            case 14:
-                if (system.other.useMeters) {
-                    system.movement.fullMove = "150 m.";
-                    system.movement.fourthMove = "37 m.";
-                    system.movement.runningMove = "50 m.";
-                } else {
-                    system.movement.fullMove = "500 ft";
-                    system.movement.fourthMove = "125 ft";
-                    system.movement.runningMove = "160 ft";
-                }
-                break;
-            case 15:
-                if (system.other.useMeters) {
-                    system.movement.fullMove = "250 m.";
-                    system.movement.fourthMove = "62 m.";
-                    system.movement.runningMove = "80 m.";
-                } else {
-                    system.movement.fullMove = "800 ft";
-                    system.movement.fourthMove = "200 ft";
-                    system.movement.runningMove = "250 ft";
-                }
-                break;
-            case 16:
-                if (system.other.useMeters) {
-                    system.movement.fullMove = "500 m.";
-                    system.movement.fourthMove = "125 m.";
-                    system.movement.runningMove = "150 m.";
-                } else {
-                    system.movement.fullMove = "1500 ft";
-                    system.movement.fourthMove = "375 ft";
-                    system.movement.runningMove = "500 ft";
-                }
-                break;
-            case 17:
-                if (system.other.useMeters) {
-                    system.movement.fullMove = "1 Km.";
-                    system.movement.fourthMove = "250 m.";
-                    system.movement.runningMove = "500 m.";
-                } else {
-                    system.movement.fullMove = "3000 ft";
-                    system.movement.fourthMove = "750 ft";
-                    system.movement.runningMove = "1500 ft";
-                }
-                break;
-            case 18:
-                if (system.other.useMeters) {
-                    system.movement.fullMove = "5 Km.";
-                    system.movement.fourthMove = "1.2 Km.";
-                    system.movement.runningMove = "2.5 Km.";
-                } else {
-                    system.movement.fullMove = "3 miles";
-                    system.movement.fourthMove = "3960 ft";
-                    system.movement.runningMove = "1.5 miles";
-                }
-                break;
-            case 19:
-                if (system.other.useMeters) {
-                    system.movement.fullMove = "25 Km.";
-                    system.movement.fourthMove = "6.2 Km.";
-                    system.movement.runningMove = "12.5 Km.";
-                } else {
-                    system.movement.fullMove = "15 miles";
-                    system.movement.fourthMove = "3.75 miles";
-                    system.movement.runningMove = "7.5 miles";
-                }
-                break;
-            case 20:
-                    system.movement.fullMove = game.i18n.localize('abfalter.special');
-                    system.movement.fourthMove = game.i18n.localize('abfalter.special');
-                    system.movement.runningMove = game.i18n.localize('abfalter.special');
-                break;
-            default:
-                    system.movement.fullMove = "0";
-                    system.movement.fourthMove = "0";
-                    system.movement.runningMove = "0";
-                break;
-        }
-        if (system.movement.final > 20) {
-            system.movement.fullMove = game.i18n.localize('abfalter.special');
-            system.movement.fourthMove = game.i18n.localize('abfalter.special');
-            system.movement.runningMove = game.i18n.localize('abfalter.special');
-        }
+       // --- Tunable movement formula ---
+const MOVEMENT_FORMULA = {
+    // Exact-fit polynomial through all ten hand-authored points (v=1..10)
+    baseCoeffs: [20, -49073/252, 223291/560, -968879/2835, 149911/960,
+                 -22351/540, 3157/480, -9347/15120, 71/2240, -31/45360],
+    baseDomain: { lo: 1, hi: 10 },
+
+    // Acceleration ramp: kicks in only past v=10, solved so v=18 hits exactly 15840 ft (3 miles)
+    anchorValue: 10,
+    anchorFeet: 115,
+    localGrowth: 115 / 105,
+    accel: 0.7209631715856807,
+
+    fourthRatio: 0.25,
+    runningRatio: 1.5,
+    feetPerMeter: 3.28084
+};
+
+function evalPoly(coeffs, x) {
+    return coeffs.reduce((acc, c, k) => acc + c * Math.pow(x, k), 0);
+}
+
+function fullFeetFor(move) {
+    const { baseCoeffs, baseDomain, anchorValue, anchorFeet, localGrowth, accel } = MOVEMENT_FORMULA;
+
+    const clampedInput = Math.max(baseDomain.lo, Math.min(baseDomain.hi, move));
+    const base = evalPoly(baseCoeffs, clampedInput);
+
+    const ramp = Math.max(0, move - anchorValue);
+    const exponent = ramp + accel * ramp * ramp;
+    const accelTerm = anchorFeet * (Math.pow(localGrowth, exponent) - 1);
+
+    return base + accelTerm;
+}
+
+function formatDistance(feet, unitSystem) {
+    if (unitSystem === "meters") {
+        const meters = feet / MOVEMENT_FORMULA.feetPerMeter;
+        return meters >= 1000
+            ? `${(meters / 1000).toFixed(2)} Km.`
+            : `${Math.round(meters)} m.`;
+    }
+    return feet >= 5280
+        ? `${(feet / 5280).toFixed(2)} miles`
+        : `${Math.round(feet)} ft`;
+}
+
+// --- Movement calculation ---
+const move = system.movement.final;
+const fullFeet = fullFeetFor(move);
+const fourthFeet = fullFeet * MOVEMENT_FORMULA.fourthRatio;
+const runningFeet = fullFeet * MOVEMENT_FORMULA.runningRatio;
+
+const unitSystem = system.other.useMeters ? "meters" : "feet";
+system.movement.fullMove = formatDistance(fullFeet, unitSystem);
+system.movement.fourthMove = formatDistance(fourthFeet, unitSystem);
+system.movement.runningMove = formatDistance(runningFeet, unitSystem);
 
         //Lifepoint Calculation
         let hpClassMonstMult = (system.toggles?.dmgRes && system.lifepoints?.hpMult) ? system.lifepoints.hpMult : 1;
