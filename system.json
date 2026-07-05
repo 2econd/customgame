@@ -24,7 +24,7 @@
     "units": "ft"
   },
   "license": "LICENSE.txt",
-  "url": "https://github.com/Lumenita/abfalter",
+  "url": "https://github.com/2econd/customgame",
   "manifest": "https://raw.githubusercontent.com/2econd/customgame/refs/heads/main/system.json",
   "download": "https://github.com/2econd/customgame/releases/download/v1.6.3/customgame-main.zip",
   "languages": [
