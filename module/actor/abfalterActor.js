@@ -1582,9 +1582,9 @@ export default class abfalterActor extends Actor {
 
         //Movement
         system.movement.final = Math.floor(system.stats.Agility.final + system.movement.spec + system.movement.temp + system.movement.bonus + system.movement.sizeBase - system.movement.pen + Math.min(0, Math.ceil(system.aamField.final / 20)) + system.armor.wearArmor.totalMovePen);
-       // --- Tunable movement formula ---
+       // --- Tunable movement formula (module-level, define once outside prepareData) ---
 const MOVEMENT_FORMULA = {
-    // Exact-fit polynomial through all ten hand-authored points (v=1..10)
+    // Exact-fit polynomial through the ten hand-authored points (v=1..10)
     baseCoeffs: [20, -49073/252, 223291/560, -968879/2835, 149911/960,
                  -22351/540, 3157/480, -9347/15120, 71/2240, -31/45360],
     baseDomain: { lo: 1, hi: 10 },
@@ -1596,7 +1596,6 @@ const MOVEMENT_FORMULA = {
     accel: 0.7209631715856807,
 
     fourthRatio: 0.25,
-    runningRatio: 1.5,
     feetPerMeter: 3.28084
 };
 
@@ -1629,11 +1628,11 @@ function formatDistance(feet, unitSystem) {
         : `${Math.round(feet)} ft`;
 }
 
-// --- Movement calculation ---
+// --- Movement calculation (per-actor, inside prepareData) ---
 const move = system.movement.final;
 const fullFeet = fullFeetFor(move);
 const fourthFeet = fullFeet * MOVEMENT_FORMULA.fourthRatio;
-const runningFeet = fullFeet * MOVEMENT_FORMULA.runningRatio;
+const runningFeet = fullFeetFor(move - 2);
 
 const unitSystem = system.other.useMeters ? "meters" : "feet";
 system.movement.fullMove = formatDistance(fullFeet, unitSystem);
