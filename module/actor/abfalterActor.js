@@ -1582,7 +1582,7 @@ export default class abfalterActor extends Actor {
 
         //Movement
         system.movement.final = Math.floor(system.stats.Agility.final + system.movement.spec + system.movement.temp + system.movement.bonus + system.movement.sizeBase - system.movement.pen + Math.min(0, Math.ceil(system.aamField.final / 20)) + system.armor.wearArmor.totalMovePen);
-       // --- Tunable movement formula (module-level, define once outside prepareData) ---
+      // --- Tunable movement formula (module-level, define once outside prepareData) ---
 const MOVEMENT_FORMULA = {
     // Exact-fit polynomial through the ten hand-authored points (v=1..10)
     baseCoeffs: [20, -49073/252, 223291/560, -968879/2835, 149911/960,
@@ -1595,7 +1595,10 @@ const MOVEMENT_FORMULA = {
     localGrowth: 115 / 105,
     accel: 0.7209631715856807,
 
-    fourthRatio: 0.25,
+    // running(v) = full(v-2) for v>=3; below that there's no real anchor to shift from,
+    // so use the ratio observed at v=3 (running(3)/full(3) = 3/25) applied to full(v) itself.
+    lowEndRunningRatio: 0.12,
+
     feetPerMeter: 3.28084
 };
 
@@ -1616,27 +1619,54 @@ function fullFeetFor(move) {
     return base + accelTerm;
 }
 
-function formatDistance(feet, unitSystem) {
+function runningFeetFor(move) {
+    if (move >= 3) {
+        return fullFeetFor(move - 2);
+    }
+    return fullFeetFor(move) * MOVEMENT_FORMULA.lowEndRunningRatio;
+}
+
+function roundToNearest(value, granularity) {
+    return Math.round(value / granularity) * granularity;
+}
+
+function displayValue(feet, unitSystem) {
+    // Returns { value, unit } — the rounded display number and its unit label.
+    // Below 5 (in whatever the base unit for that system is), the exact value is kept unrounded.
     if (unitSystem === "meters") {
         const meters = feet / MOVEMENT_FORMULA.feetPerMeter;
-        return meters >= 1000
-            ? `${(meters / 1000).toFixed(2)} Km.`
-            : `${Math.round(meters)} m.`;
+        if (meters < 5) {
+            return { value: Math.round(meters * 100) / 100, unit: "m." };
+        }
+        if (meters >= 1000) {
+            return { value: roundToNearest(meters / 1000, 1), unit: "Km." };
+        }
+        return { value: roundToNearest(meters, 5), unit: "m." };
     }
-    return feet >= 5280
-        ? `${(feet / 5280).toFixed(2)} miles`
-        : `${Math.round(feet)} ft`;
+    if (feet < 5) {
+        return { value: Math.round(feet * 100) / 100, unit: "ft" };
+    }
+    if (feet >= 5280) {
+        return { value: roundToNearest(feet / 5280, 1), unit: "miles" };
+    }
+    return { value: roundToNearest(feet, 5), unit: "ft" };
+}
+
+function formatDistance(feet, unitSystem) {
+    const { value, unit } = displayValue(feet, unitSystem);
+    return `${value} ${unit}`;
 }
 
 // --- Movement calculation (per-actor, inside prepareData) ---
 const move = system.movement.final;
 const fullFeet = fullFeetFor(move);
-const fourthFeet = fullFeet * MOVEMENT_FORMULA.fourthRatio;
-const runningFeet = fullFeetFor(move - 2);
+const runningFeet = runningFeetFor(move);
 
 const unitSystem = system.other.useMeters ? "meters" : "feet";
-system.movement.fullMove = formatDistance(fullFeet, unitSystem);
-system.movement.fourthMove = formatDistance(fourthFeet, unitSystem);
+const fullDisplay = displayValue(fullFeet, unitSystem);
+
+system.movement.fullMove = `${fullDisplay.value} ${fullDisplay.unit}`;
+system.movement.fourthMove = `${fullDisplay.value / 4} ${fullDisplay.unit}`;
 system.movement.runningMove = formatDistance(runningFeet, unitSystem);
 
         //Lifepoint Calculation
