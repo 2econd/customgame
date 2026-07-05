@@ -1626,48 +1626,61 @@ function runningFeetFor(move) {
     return fullFeetFor(move) * MOVEMENT_FORMULA.lowEndRunningRatio;
 }
 
+// --- Display formatting ---
+const UNIT_TIERS = {
+    feet:   { unit: "ft", coarseSize: 5280, coarseUnit: "miles" },
+    meters: { unit: "m.", coarseSize: 1000, coarseUnit: "Km." }
+};
+
 function roundToNearest(value, granularity) {
     return Math.round(value / granularity) * granularity;
 }
 
-function displayValue(feet, unitSystem) {
-    // Returns { value, unit } — the rounded display number and its unit label.
-    // Below 5 (in whatever the base unit for that system is), the exact value is kept unrounded.
-    if (unitSystem === "meters") {
-        const meters = feet / MOVEMENT_FORMULA.feetPerMeter;
-        if (meters < 5) {
-            return { value: Math.round(meters * 100) / 100, unit: "m." };
-        }
-        if (meters >= 1000) {
-            return { value: roundToNearest(meters / 1000, 1), unit: "Km." };
-        }
-        return { value: roundToNearest(meters, 5), unit: "m." };
-    }
-    if (feet < 5) {
-        return { value: Math.round(feet * 100) / 100, unit: "ft" };
-    }
-    if (feet >= 5280) {
-        return { value: roundToNearest(feet / 5280, 1), unit: "miles" };
-    }
-    return { value: roundToNearest(feet, 5), unit: "ft" };
+// Round to nearest 5, but never let the result stall/regress relative to the
+// previous movement rank's displayed value in this same unit — if it would,
+// use the exact (unrounded) value instead.
+function tierRound(exact, priorValue) {
+    if (exact < 5) return exact;
+    const candidate = roundToNearest(exact, 5);
+    return candidate > priorValue ? candidate : exact;
 }
 
-function formatDistance(feet, unitSystem) {
-    const { value, unit } = displayValue(feet, unitSystem);
+function displayValue(feet, unitSystem, priorFeet) {
+    const tier = UNIT_TIERS[unitSystem];
+    const toBase = (f) => (unitSystem === "meters" ? f / MOVEMENT_FORMULA.feetPerMeter : f);
+
+    const baseValue = toBase(feet);
+    const priorBaseValue = toBase(priorFeet);
+
+    if (baseValue < tier.coarseSize) {
+        return { value: tierRound(baseValue, priorBaseValue), unit: tier.unit };
+    }
+
+    const exactCoarse = baseValue / tier.coarseSize;
+    const priorCoarse = priorBaseValue / tier.coarseSize;
+    const stepA = tierRound(exactCoarse, priorCoarse);
+    const stepB = roundToNearest(stepA, 0.5);
+    return { value: stepB, unit: tier.coarseUnit };
+}
+
+function formatDistance(feet, unitSystem, priorFeet) {
+    const { value, unit } = displayValue(feet, unitSystem, priorFeet);
     return `${value} ${unit}`;
 }
 
 // --- Movement calculation (per-actor, inside prepareData) ---
 const move = system.movement.final;
 const fullFeet = fullFeetFor(move);
+const priorFullFeet = fullFeetFor(move - 1);
 const runningFeet = runningFeetFor(move);
+const priorRunningFeet = runningFeetFor(move - 1);
 
 const unitSystem = system.other.useMeters ? "meters" : "feet";
-const fullDisplay = displayValue(fullFeet, unitSystem);
+const fullDisplay = displayValue(fullFeet, unitSystem, priorFullFeet);
 
 system.movement.fullMove = `${fullDisplay.value} ${fullDisplay.unit}`;
 system.movement.fourthMove = `${fullDisplay.value / 4} ${fullDisplay.unit}`;
-system.movement.runningMove = formatDistance(runningFeet, unitSystem);
+system.movement.runningMove = formatDistance(runningFeet, unitSystem, priorRunningFeet);
 
         //Lifepoint Calculation
         let hpClassMonstMult = (system.toggles?.dmgRes && system.lifepoints?.hpMult) ? system.lifepoints.hpMult : 1;
